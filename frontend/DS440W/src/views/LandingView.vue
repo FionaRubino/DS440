@@ -36,7 +36,8 @@ const recipes = [
   "Unstuffed Peppers",
   "Meatloaf",
   "Beef and Avocado Burrito",
-  "Veggie Sandwich"
+  "Veggie Sandwich",
+  "Spaghetti Carbonara"
 ]
 
 const selectedTab = ref(0)
