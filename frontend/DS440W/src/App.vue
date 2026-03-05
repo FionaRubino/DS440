@@ -20,8 +20,18 @@
               Menu
             </v-btn>
           </template>
+          <!-- Menu Content -->
+          <v-list>
+            <!-- Go to Home -->
+            <v-list-item :to="{ name: 'home' }">
+              <v-list-item-title>Home</v-list-item-title>
+            </v-list-item>
+            <!-- Go to Model Page -->
+            <v-list-item :to="{ name: 'model' }">
+              <v-list-item-title>Model Page</v-list-item-title>
+            </v-list-item>
+          </v-list>
         </v-menu>
-
       </v-container>
     </v-app-bar>
     
