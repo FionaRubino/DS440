@@ -8,7 +8,7 @@
       <div style="width: 100%; max-width: 1400px; text-align: center;">
 
         <!-- App Title -->
-        <h1 class="mb-8">State College Nutrition Tracker</h1>
+        <h1 class="main-title">State College Nutrition Tracker</h1>
 
         <!-- Tabs with Side Arrows -->
         <div class="d-flex align-center justify-center mt-4" style="max-width: 900px; margin: auto; width: 100%;">
@@ -32,6 +32,7 @@
               v-for="(recipe, index) in recipes"
               :key="index"
               :value="index"
+              :class="{ 'active-tab': selectedTab === index }"
             >
               {{ recipe }}
             </v-tab>
@@ -139,3 +140,17 @@ const selectedTab = ref(0)
 /* NEW STATE */
 const selectedSection = ref('recipe')
 </script>
+
+<style scoped>
+.main-title {
+  font-weight: 800;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.active-tab {
+  transform: scale(1.1);
+}
+.v-tab {
+  opacity: 0.7;
+}
+</style>
