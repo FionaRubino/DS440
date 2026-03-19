@@ -212,21 +212,3 @@ const recipes = [
 
 ]
 </script>
-
-<style scoped>
-.main-title {
-  font-weight: 800;
-  margin-top: 15px;
-  margin-bottom: 25px;
-  display: flex;
-  align-items: center;       /* vertically align logo and text */
-  justify-content: center;   /* center the container horizontally */
-  gap: 12px;                 /* space between logo and title */
-}
-.psu-logo {
-  height: 40px;  /* adjust as needed */
-  width: auto;   /* maintain aspect ratio */
-}
-
-</style>
-
