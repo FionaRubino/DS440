@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid class="fill-height d-flex flex-column">
+    <v-container fluid class="align center -height d-flex flex-column">
 
       <h1 class="mb-8">Welcome to Your Recipe App!</h1>
 
@@ -21,7 +21,7 @@
           :key="recipe.name"
         >
 
-          <v-card class="pa-6">
+          <v-card class="pa-6 w-100">
 
             <h2 class="text-center mb-4">{{ recipe.name }}
 
@@ -70,8 +70,14 @@
               <v-window-item :value="1">
 
                 <p><strong>Calories:</strong> {{ recipe.nutrition.calories }}</p>
-                <p><strong>Protein:</strong> {{ recipe.nutrition.protein }}</p>
-                <p><strong>Carbs:</strong> {{ recipe.nutrition.carbs }}</p>
+
+                <div class="d-flex justify-center mt-4">
+                  <NutritionChart
+                    :protein="recipe.nutrition.protein"
+                    :carbs="recipe.nutrition.carbs"
+                    :fat="recipe.nutrition.fat"
+                  />
+                </div>
 
               </v-window-item>
 
@@ -105,6 +111,8 @@
 <!-- ALL INFO INPUTTED BELOW -->
 <script setup lang="ts">
 import { ref } from 'vue'
+import NutritionChart from '@/components/NutritionChart.vue'
+
 
 const selectedTab = ref(0)
 const selectedSubTab = ref(0)
@@ -126,10 +134,11 @@ const recipes = [
     "A creamy baked pasta dish where feta and tomatoes roast together to create a rich sauce.",
 
   nutrition: {
-    calories: "520",
-    protein: "18g",
-    carbs: "60g"
-  },
+  calories: "520",
+  protein: 18,
+  carbs: 60,
+  fat: 20
+ },
 
   instructions: [
     "Preheat oven to 400°F",
@@ -153,168 +162,16 @@ const recipes = [
     "An easy make-ahead breakfast that sits overnight in the fridge.",
 
   nutrition: {
-    calories: "320",
-    protein: "12g",
-    carbs: "45g"
-  },
+  calories: "520",
+  protein: 18,
+  carbs: 60,
+  fat: 20
+ },
 
   instructions: [
     "Mix ingredients",
     "Refrigerate overnight",
     "Eat cold in the morning"
-  ]
-},
-
-{
-  name: "Quesadilla",
-
-  ingredients: [
-    "Tortilla",
-    "Cheese",
-    "Chicken",
-    "Peppers"
-  ],
-
-  ingredientBlurb:
-    "A quick stovetop meal with melted cheese and fillings.",
-
-  nutrition: {
-    calories: "450",
-    protein: "28g",
-    carbs: "35g"
-  },
-
-  instructions: [
-    "Heat pan",
-    "Add tortilla and fillings",
-    "Cook until cheese melts",
-    "Fold and serve"
-  ]
-},
-
-{
-  name: "Taco Soup",
-
-  ingredients: [
-    "enter here"
-  ],
-
-  ingredientBlurb:
-    "Blurb",
-
-  nutrition: {
-    calories: "x",
-    protein: "x",
-    carbs: "x"
-  },
-
-  instructions: [
-    "Blurb"
-  ]
-},
-
-{
-  name: "Pancakes",
-
-  ingredients: [
-    "enter here"
-  ],
-
-  ingredientBlurb:
-    "Blurb",
-
-  nutrition: {
-    calories: "x",
-    protein: "x",
-    carbs: "x"
-  },
-
-  instructions: [
-    "Blurb"
-  ]
-},
-
-{
-  name: "Chicken Caesar Salad",
-
-  ingredients: [
-    "enter here"
-  ],
-
-  ingredientBlurb:
-    "Blurb",
-
-  nutrition: {
-    calories: "x",
-    protein: "x",
-    carbs: "x"
-  },
-
-  instructions: [
-    "Blurb"
-  ]
-},
-
-{
-  name: "Unstuffed Peppers",
-
-  ingredients: [
-    "enter here"
-  ],
-
-  ingredientBlurb:
-    "Blurb",
-
-  nutrition: {
-    calories: "x",
-    protein: "x",
-    carbs: "x"
-  },
-
-  instructions: [
-    "Blurb"
-  ]
-},
-
-{
-  name: "Meatloaf",
-
-  ingredients: [
-    "enter here"
-  ],
-
-  ingredientBlurb:
-    "Blurb",
-
-  nutrition: {
-    calories: "x",
-    protein: "x",
-    carbs: "x"
-  },
-
-  instructions: [
-    "Blurb"
-  ]
-},
-
-{
-  name: "Beef and Avocado Burrito",
-
-  ingredients: [
-    "enter here"
-  ],
-
-  ingredientBlurb:
-    "Blurb",
-
-  nutrition: {
-    calories: "x",
-    protein: "x",
-    carbs: "x"
-  },
-
-  instructions: [
-    "Blurb"
   ]
 },
 
@@ -329,10 +186,11 @@ const recipes = [
     "Blurb",
 
   nutrition: {
-    calories: "x",
-    protein: "x",
-    carbs: "x"
-  },
+  calories: "520",
+  protein: 18,
+  carbs: 60,
+  fat: 20
+ },
 
   instructions: [
     "Blurb"
