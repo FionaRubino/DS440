@@ -1,17 +1,31 @@
 <template>
     <v-container fluid class="align center -height d-flex flex-column">
 
-      <h1 class="mb-8">Welcome to Your Recipe App!</h1>
+      <!-- TITLE -->
+      <div class="main-title">
+          <img
+            src="https://th.bing.com/th/id/OIP.1axdzj_b8TA5WMqnvJKx7gHaFj?w=256&h=192&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+            alt="PSU Logo"
+            class="psu-logo"
+          />
+          <h1 class="main-title">State College Nutrition Tracker</h1>
+        </div>
 
       <!-- RECIPE TABS -->
-      <v-tabs v-model="selectedTab" color="primary">
-        <v-tab
-          v-for="(recipe, index) in recipes"
-          :key="recipe.name"
-        >
-          {{ recipe.name }}
-        </v-tab>
+      <div style="max-width: 1200px; width: 100%; margin: 0 auto;">
+        <v-tabs
+          v-model="selectedTab"
+          color="primary"
+          show-arrows
+      >
+          <v-tab
+            v-for="(recipe, index) in recipes"
+              :key="recipe.name"
+          >
+              {{ recipe.name }}
+          </v-tab>
       </v-tabs>
+    </div>
 
       <!-- RECIPE CONTENT -->
       <v-window v-model="selectedTab" class="mt-6">
@@ -21,7 +35,7 @@
           :key="recipe.name"
         >
 
-          <v-card class="pa-6 w-100">
+          <v-card class="pa-6">
 
             <h2 class="text-center mb-4">{{ recipe.name }}
 
@@ -32,6 +46,7 @@
               v-model="selectedSubTab"
               color="secondary"
               align-tabs="center"
+              
             >
               <v-tab>Ingredients</v-tab>
               <v-tab>Nutrition</v-tab>
@@ -62,12 +77,10 @@
 
                 </div>
 
-              
-
               </v-window-item>
 
               <!-- NUTRITION -->
-              <v-window-item :value="1">
+               <v-window-item :value="1">
 
                 <p><strong>Calories:</strong> {{ recipe.nutrition.calories }}</p>
 
@@ -112,7 +125,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import NutritionChart from '@/components/NutritionChart.vue'
-
 
 const selectedTab = ref(0)
 const selectedSubTab = ref(0)
@@ -175,6 +187,7 @@ const recipes = [
   ]
 },
 
+
 {
   name: "Veggie Sandwich",
 
@@ -199,3 +212,21 @@ const recipes = [
 
 ]
 </script>
+
+<style scoped>
+.main-title {
+  font-weight: 800;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;       /* vertically align logo and text */
+  justify-content: center;   /* center the container horizontally */
+  gap: 12px;                 /* space between logo and title */
+}
+.psu-logo {
+  height: 40px;  /* adjust as needed */
+  width: auto;   /* maintain aspect ratio */
+}
+
+</style>
+
