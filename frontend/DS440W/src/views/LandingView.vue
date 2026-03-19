@@ -1,43 +1,350 @@
 <template>
-  <v-container class="fill-height d-flex flex-column align-center justify-center">
-    
-    <h1 class="mb-8">Welcome to Your Recipe App!</h1>
+    <v-container fluid class="fill-height d-flex flex-column">
 
-    <!-- Tabs -->
-    <v-tabs v-model="selectedTab" color="primary">
-      <v-tab v-for="(recipe, index) in recipes" :key="index">
-        {{ recipe }}
-      </v-tab>
-    </v-tabs>
+      <h1 class="mb-8">Welcome to Your Recipe App!</h1>
 
-    <!-- Content -->
-    <v-window v-model="selectedTab" class="mt-6">
-      <v-window-item v-for="(recipe, index) in recipes" :key="index">
-        <v-card width="400" class="pa-4 text-center">
-          <h2>{{ recipe }}</h2>
-          <p>Here you can add details for {{ recipe }}.</p>
-        </v-card>
-      </v-window-item>
-    </v-window>
+      <!-- RECIPE TABS -->
+      <div style="max-width: 1200px; width: 100%; margin: 0 auto;">
+        <v-tabs
+          v-model="selectedTab"
+          color="primary"
+          show-arrows
+      >
+          <v-tab
+            v-for="(recipe, index) in recipes"
+              :key="recipe.name"
+          >
+              {{ recipe.name }}
+          </v-tab>
+      </v-tabs>
+    </div>
 
-  </v-container>
+      <!-- RECIPE CONTENT -->
+      <v-window v-model="selectedTab" class="mt-6">
+
+        <v-window-item
+          v-for="(recipe, index) in recipes"
+          :key="recipe.name"
+        >
+
+          <v-card class="pa-6">
+
+            <h2 class="text-center mb-4">{{ recipe.name }}
+
+            </h2>
+
+            <!-- SUB TABS -->
+            <v-tabs
+              v-model="selectedSubTab"
+              color="secondary"
+              align-tabs="center"
+              
+            >
+              <v-tab>Ingredients</v-tab>
+              <v-tab>Nutrition</v-tab>
+              <v-tab>Instructions</v-tab>
+            </v-tabs>
+
+            <!-- SUB TAB CONTENT -->
+            <v-window v-model="selectedSubTab" class="mt-4">
+
+              <!-- INGREDIENTS -->
+              <v-window-item :value="0">
+
+                <!-- blurb -->
+                <p class="text-body-1">
+                  {{ recipe.ingredientBlurb }}
+                </p>
+                
+                <!-- horizontal ingredients -->
+                <div class="d-flex flex-wrap ga-3 mt-2">
+
+                  <v-chip
+                    v-for="ingredient in recipe.ingredients"
+                    :key="ingredient"
+                    color="primary"
+                  >
+                    {{ ingredient }}
+                  </v-chip>
+
+                </div>
+
+              
+
+              </v-window-item>
+
+              <!-- NUTRITION -->
+              <v-window-item :value="1">
+
+                <p><strong>Calories:</strong> {{ recipe.nutrition.calories }}</p>
+                <p><strong>Protein:</strong> {{ recipe.nutrition.protein }}</p>
+                <p><strong>Carbs:</strong> {{ recipe.nutrition.carbs }}</p>
+
+              </v-window-item>
+
+              <!-- INSTRUCTIONS -->
+              <v-window-item :value="2">
+
+                <ol>
+                  <li
+                    v-for="step in recipe.instructions"
+                    :key="step"
+                  >
+                    {{ step }}
+                  </li>
+                </ol>
+
+              </v-window-item>
+
+            </v-window>
+
+          </v-card>
+
+        </v-window-item>
+
+      </v-window>
+
+    </v-container>
 </template>
 
+
+
+<!-- ALL INFO INPUTTED BELOW -->
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const recipes = [
-  "Baked Feta Pasta",
-  "Overnight Oats",
-  "Quesadilla",
-  "Taco Soup",
-  "Pancakes",
-  "Chicken Caesar Salad",
-  "Unstuffed Peppers",
-  "Meatloaf",
-  "Beef and Avocado Burrito",
-  "Veggie Sandwich"
-]
-
 const selectedTab = ref(0)
+const selectedSubTab = ref(0)
+
+const recipes = [
+
+{
+  name: "Baked Feta Pasta",
+
+  ingredients: [
+    "Feta cheese",
+    "Cherry tomatoes",
+    "Olive oil",
+    "Garlic",
+    "Pasta"
+  ],
+
+  ingredientBlurb:
+    "A creamy baked pasta dish where feta and tomatoes roast together to create a rich sauce.",
+
+  nutrition: {
+    calories: "520",
+    protein: "18g",
+    carbs: "60g"
+  },
+
+  instructions: [
+    "Preheat oven to 400°F",
+    "Bake feta with tomatoes",
+    "Cook pasta",
+    "Mix everything together"
+  ]
+},
+
+{
+  name: "Overnight Oats",
+
+  ingredients: [
+    "Oats",
+    "Milk",
+    "Chia seeds",
+    "Honey"
+  ],
+
+  ingredientBlurb:
+    "An easy make-ahead breakfast that sits overnight in the fridge.",
+
+  nutrition: {
+    calories: "320",
+    protein: "12g",
+    carbs: "45g"
+  },
+
+  instructions: [
+    "Mix ingredients",
+    "Refrigerate overnight",
+    "Eat cold in the morning"
+  ]
+},
+
+{
+  name: "Quesadilla",
+
+  ingredients: [
+    "Tortilla",
+    "Cheese",
+    "Chicken",
+    "Peppers"
+  ],
+
+  ingredientBlurb:
+    "A quick stovetop meal with melted cheese and fillings.",
+
+  nutrition: {
+    calories: "450",
+    protein: "28g",
+    carbs: "35g"
+  },
+
+  instructions: [
+    "Heat pan",
+    "Add tortilla and fillings",
+    "Cook until cheese melts",
+    "Fold and serve"
+  ]
+},
+
+{
+  name: "Taco Soup",
+
+  ingredients: [
+    "enter here"
+  ],
+
+  ingredientBlurb:
+    "Blurb",
+
+  nutrition: {
+    calories: "x",
+    protein: "x",
+    carbs: "x"
+  },
+
+  instructions: [
+    "Blurb"
+  ]
+},
+
+{
+  name: "Pancakes",
+
+  ingredients: [
+    "enter here"
+  ],
+
+  ingredientBlurb:
+    "Blurb",
+
+  nutrition: {
+    calories: "x",
+    protein: "x",
+    carbs: "x"
+  },
+
+  instructions: [
+    "Blurb"
+  ]
+},
+
+{
+  name: "Chicken Caesar Salad",
+
+  ingredients: [
+    "enter here"
+  ],
+
+  ingredientBlurb:
+    "Blurb",
+
+  nutrition: {
+    calories: "x",
+    protein: "x",
+    carbs: "x"
+  },
+
+  instructions: [
+    "Blurb"
+  ]
+},
+
+{
+  name: "Unstuffed Peppers",
+
+  ingredients: [
+    "enter here"
+  ],
+
+  ingredientBlurb:
+    "Blurb",
+
+  nutrition: {
+    calories: "x",
+    protein: "x",
+    carbs: "x"
+  },
+
+  instructions: [
+    "Blurb"
+  ]
+},
+
+{
+  name: "Meatloaf",
+
+  ingredients: [
+    "enter here"
+  ],
+
+  ingredientBlurb:
+    "Blurb",
+
+  nutrition: {
+    calories: "x",
+    protein: "x",
+    carbs: "x"
+  },
+
+  instructions: [
+    "Blurb"
+  ]
+},
+
+{
+  name: "Beef and Avocado Burrito",
+
+  ingredients: [
+    "enter here"
+  ],
+
+  ingredientBlurb:
+    "Blurb",
+
+  nutrition: {
+    calories: "x",
+    protein: "x",
+    carbs: "x"
+  },
+
+  instructions: [
+    "Blurb"
+  ]
+},
+
+{
+  name: "Veggie Sandwich",
+
+  ingredients: [
+    "enter here"
+  ],
+
+  ingredientBlurb:
+    "Blurb",
+
+  nutrition: {
+    calories: "x",
+    protein: "x",
+    carbs: "x"
+  },
+
+  instructions: [
+    "Blurb"
+  ]
+}
+
+]
 </script>
