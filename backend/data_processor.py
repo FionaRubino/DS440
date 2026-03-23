@@ -34,7 +34,8 @@ def calculate_score(row):
     return round(max(0, min(100, score)), 1)
 
 # Load data
-df = pd.read_csv('Ingredients & Nutrition.xlsx - Nutrition.csv')
+df = pd.read_excel('Ingredients_Nutrition.xlsx'
+                   , sheet_name='Nutrition', engine='openpyxl')
 df.columns = [c.strip() for c in df.columns]
 
 recipes = []
