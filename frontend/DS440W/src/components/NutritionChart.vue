@@ -11,7 +11,8 @@ import Chart from "chart.js/auto"
 const props = defineProps({
   protein: Number,
   carbs: Number,
-  fat: Number
+  fat: Number,
+  sodium: Number
 })
 
 const chartRef = ref<HTMLCanvasElement | null>(null)
@@ -19,7 +20,7 @@ let chartInstance: Chart | null = null
 
 // Redraw chart whenever props change or component becomes visible
 watch(
-  [() => props.protein, () => props.carbs, () => props.fat],
+  [() => props.protein, () => props.carbs, () => props.fat, () => props.sodium, ],
   async () => {
     await nextTick()
     if (!chartRef.value) return
@@ -30,15 +31,16 @@ watch(
     chartInstance = new Chart(chartRef.value, {
       type: "pie",
       data: {
-        labels: ["Protein", "Carbs", "Fat"],
+        labels: ["Protein", "Carbs", "Fat", "Sodium"],
         datasets: [
           {
             data: [
               props.protein || 0,
               props.carbs || 0,
-              props.fat || 0
+              props.fat || 0,
+              props.sodium || 0
             ],
-            backgroundColor: ["#42A5F5", "#66BB6A", "#FFA726"]
+            backgroundColor: ["#42A5F5", "#66BB6A", "#FFA726", "#FF3856"]
           }
         ]
       },

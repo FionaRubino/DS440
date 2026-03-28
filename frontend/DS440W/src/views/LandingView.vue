@@ -88,7 +88,8 @@
                   <NutritionChart
                     :protein="recipe.nutrition.protein"
                     :carbs="recipe.nutrition.carbs"
-                    :fat="recipe.nutrition.fat"
+                    :fat="recipe.nutrition.fat",
+                    :sodium="recipe.nutrition.sodium"
                   />
                 </div>
 
@@ -149,7 +150,8 @@ const recipes = [
   calories: "520",
   protein: 18,
   carbs: 60,
-  fat: 20
+  fat: 20,
+  sodium: 20
  },
 
   instructions: [
@@ -177,7 +179,8 @@ const recipes = [
   calories: "520",
   protein: 18,
   carbs: 60,
-  fat: 20
+  fat: 20,
+  sodium: 20
  },
 
   instructions: [
@@ -202,7 +205,8 @@ const recipes = [
   calories: "520",
   protein: 18,
   carbs: 60,
-  fat: 20
+  fat: 20,
+  sodium: 20
  },
 
   instructions: [
@@ -212,3 +216,20 @@ const recipes = [
 
 ]
 </script>
+
+<style scoped>
+.main-title {
+  font-weight: 800;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;       /* vertically align logo and text */
+  justify-content: center;   /* center the container horizontally */
+  gap: 12px;                 /* space between logo and title */
+}
+.psu-logo {
+  height: 40px;  /* adjust as needed */
+  width: auto;   /* maintain aspect ratio */
+}
+
+</style>
