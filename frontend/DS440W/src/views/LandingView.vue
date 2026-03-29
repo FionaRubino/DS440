@@ -80,18 +80,48 @@
               </v-window-item>
 
               <!-- NUTRITION -->
-               <v-window-item :value="1">
+               <v-window-item :value="1" class="pa-4">
 
-                <p><strong>Calories:</strong> {{ recipe.nutrition.calories }}</p>
+                <v-row>
 
-                <div class="d-flex justify-left mt-4">
-                  <NutritionChart
-                    :protein="recipe.nutrition.protein"
-                    :carbs="recipe.nutrition.carbs"
-                    :fat="recipe.nutrition.fat",
-                    :sodium="recipe.nutrition.sodium"
-                  />
-                </div>
+                  <!-- 🟢 LEFT COLUMN: Pie Chart -->
+                  <v-col cols="12" md="6">
+
+                    <!-- 📘 Top-left explanation -->
+                    <p class="text-body-2 text-medium-emphasis mb-2">
+                      This chart shows how calories are distributed between protein, carbs, and fat.
+                      Each section represents the percentage of total calories from each macronutrient.
+                    </p>
+
+                    <!-- 🍩 Chart -->
+                    <div class="d-flex justify-center mt-4">
+                      <NutritionChart
+                        :protein="recipe.nutrition.protein"
+                        :carbs="recipe.nutrition.carbs"
+                        :fat="recipe.nutrition.fat"
+                        :calories="recipe.nutrition.calories"
+                      />
+                    </div>
+
+                    <!-- 🧂 Sodium -->
+                    <p class="text-center mt-4">
+                      <strong>Sodium:</strong> {{ recipe.nutrition.sodium }} mg
+                    </p>
+
+                  </v-col>
+
+                  <!-- 🔵 RIGHT COLUMN: Nutrition Score) -->
+                  <v-col cols="12" md="6">
+
+                    <!-- 👉 Put anything here -->
+                    <div>
+                      <!-- Example placeholder -->
+                      <p class="text-body-1">Nutriton Score Goes ehre</p>
+                    </div>
+
+                  </v-col>
+
+                </v-row>
 
               </v-window-item>
 
@@ -160,13 +190,13 @@ const recipes = [
   ingredientBlurb:
     "A creamy baked pasta dish where feta and tomatoes roast together to create a rich sauce. Serves 4.",
 
-  nutrition: {
-  calories: "520",
-  protein: 18,
-  carbs: 60,
-  fat: 20,
-  sodium: 20
- },
+    nutrition: {
+    calories: "520",
+    protein: 18,
+    carbs: 60,
+    fat: 20,
+    sodium: 20
+  },
 
   instructions: [
   {
