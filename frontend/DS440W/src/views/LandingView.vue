@@ -60,7 +60,7 @@
               <v-window-item :value="0">
 
                 <!-- blurb -->
-                <p class="text-body-1">
+                <p class="text-body-1 text-center">
                   {{ recipe.ingredientBlurb }}
                 </p>
                 
@@ -84,7 +84,7 @@
 
                 <p><strong>Calories:</strong> {{ recipe.nutrition.calories }}</p>
 
-                <div class="d-flex justify-center mt-4">
+                <div class="d-flex justify-left mt-4">
                   <NutritionChart
                     :protein="recipe.nutrition.protein"
                     :carbs="recipe.nutrition.carbs"
@@ -98,16 +98,27 @@
               <!-- INSTRUCTIONS -->
               <v-window-item :value="2">
 
-                <ol>
+              <div v-for="section in recipe.instructions" :key="section.section" class="mb-6">
+
+                <!-- Section Title -->
+                <h3 class="text-subtitle-1 font-weight-bold mb-2 text-center">
+                  {{ section.section }}
+                </h3>
+
+                <!-- Steps -->
+                <ol class="text-left" style="max-width: 600px; margin: 0 auto;">
                   <li
-                    v-for="step in recipe.instructions"
+                    v-for="step in section.steps"
                     :key="step"
+                    class="mb-1"
                   >
                     {{ step }}
                   </li>
                 </ol>
 
-              </v-window-item>
+              </div>
+
+            </v-window-item>
 
             </v-window>
 
@@ -136,15 +147,18 @@ const recipes = [
   name: "Baked Feta Pasta",
 
   ingredients: [
-    "Feta cheese",
-    "Cherry tomatoes",
-    "Olive oil",
-    "Garlic",
-    "Pasta"
+    "8 Oz Baby Spinach",
+    "1 Cup Cherry Tomatoes",
+    "8 Oz Pasta (Any)",
+    "2 Tbsp Olive Oil",
+    "1 Feta Cheese Block",
+    "Salt",
+    "Pepper",
+    "1 Tbsp Minced Garlic"
   ],
 
   ingredientBlurb:
-    "A creamy baked pasta dish where feta and tomatoes roast together to create a rich sauce.",
+    "A creamy baked pasta dish where feta and tomatoes roast together to create a rich sauce. Serves 4.",
 
   nutrition: {
   calories: "520",
@@ -155,11 +169,34 @@ const recipes = [
  },
 
   instructions: [
-    "Preheat oven to 400°F",
-    "Bake feta with tomatoes",
-    "Cook pasta",
-    "Mix everything together"
-  ]
+  {
+    section: "Sauce",
+    steps: [
+      "Preheat oven to 400 degrees",
+      "Place feta block in the middle of a oven safe pan",
+      "Add spinach and cherry tomatoes to pan",
+      "Drizzle pan with olive oil and minced garlic",
+      "Season with salt and pepper",
+      "Place in oven and cook for 25 minutes or until tomatoes have softened"
+    ]
+  },
+  {
+    section: "Pasta (While sauce is cooking)",
+    steps: [
+      "Bring a large pot of salted water to a boil",
+      "Cook pasta as instructed on box",
+      "Drain pasta with collander and set until when done"
+    ]
+  },
+  {
+    section: "Assembly",
+    steps: [
+      "Once sauce is removed from the oven, stir everything until combined",
+      "Toss in the pasta the sauce until it is fully dressed",
+      "Enjoy!"
+    ]
+  }
+]
 },
 
 {
@@ -187,30 +224,6 @@ const recipes = [
     "Mix ingredients",
     "Refrigerate overnight",
     "Eat cold in the morning"
-  ]
-},
-
-
-{
-  name: "Veggie Sandwich",
-
-  ingredients: [
-    "enter here"
-  ],
-
-  ingredientBlurb:
-    "Blurb",
-
-  nutrition: {
-  calories: "520",
-  protein: 18,
-  carbs: 60,
-  fat: 20,
-  sodium: 20
- },
-
-  instructions: [
-    "Blurb"
   ]
 }
 
