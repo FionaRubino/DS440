@@ -58,25 +58,43 @@
 
               <!-- INGREDIENTS -->
               <v-window-item :value="0">
+                <div class="d-flex flex-wrap align-start ga-6">
 
-                <!-- blurb -->
-                <p class="text-body-1 text-center">
-                  {{ recipe.ingredientBlurb }}
-                </p>
-                
-                <!-- horizontal ingredients -->
-                <div class="d-flex flex-wrap ga-3 mt-2">
+                  <!-- LEFT SIDE: text + ingredients -->
+                  <div style="flex: 1; min-width: 250px;">
 
-                  <v-chip
-                    v-for="ingredient in recipe.ingredients"
-                    :key="ingredient"
-                    color="primary"
-                  >
-                    {{ ingredient }}
-                  </v-chip>
+                    <p class="text-subtitle-1 mb-1" style="font-weight: 700; margin-top: 16px; color: #1976d2;">
+                      Recipe Description:
+                    </p>
+                    <p class="text-body-1" style = "margin-bottom: 16px">
+                      {{ recipe.ingredientBlurb }}
+                    </p>
+
+                    <!-- ingredients -->
+                    <div class="d-flex flex-wrap ga-3 mt-2">
+                      <v-chip
+                        v-for="ingredient in recipe.ingredients"
+                        :key="ingredient"
+                        color="primary"
+                        class="ingredient-chip"
+                      >
+                        {{ ingredient }}
+                      </v-chip>
+                    </div>
+
+                  </div>
+
+                  <!-- RIGHT SIDE: image -->
+                  <div style="flex: 1; min-width: 250px;">
+                    <v-img
+                      :src="recipe.image"
+                      height="350"
+                      contain
+                      style="border-radius: 12px;"
+                    />
+                  </div>
 
                 </div>
-
               </v-window-item>
 
               <!-- NUTRITION -->
@@ -84,16 +102,16 @@
 
                 <v-row>
 
-                  <!-- 🟢 LEFT COLUMN: Pie Chart -->
+                  <!-- LEFT COLUMN: Pie Chart -->
                   <v-col cols="12" md="6">
 
                     <!-- 📘 Top-left explanation -->
-                    <p class="text-body-2 text-medium-emphasis mb-2">
+                    <p class="text-body-1">
                       This chart shows how calories are distributed between protein, carbs, and fat.
                       Each section represents the percentage of total calories from each macronutrient.
                     </p>
 
-                    <!-- 🍩 Chart -->
+                    <!-- Pie Chart -->
                     <div class="d-flex justify-center mt-4">
                       <NutritionChart
                         :protein="recipe.nutrition.protein"
@@ -103,20 +121,18 @@
                       />
                     </div>
 
-                    <!-- 🧂 Sodium -->
+                    <!-- Sodium -->
                     <p class="text-center mt-4">
                       <strong>Sodium:</strong> {{ recipe.nutrition.sodium }} mg
                     </p>
 
                   </v-col>
 
-                  <!-- 🔵 RIGHT COLUMN: Nutrition Score) -->
+                  <!-- RIGHT COLUMN: Nutrition Score) -->
                   <v-col cols="12" md="6">
-
-                    <!-- 👉 Put anything here -->
                     <div>
                       <!-- Example placeholder -->
-                      <p class="text-body-1">Nutriton Score Goes ehre</p>
+                      <p class="text-body-1">Nutrition score blurb goes here and score goes below</p>
                     </div>
 
                   </v-col>
@@ -162,7 +178,6 @@
 </template>
 
 
-
 <!-- ALL INFO INPUTTED BELOW -->
 <script setup lang="ts">
 import { ref } from 'vue'
@@ -175,6 +190,8 @@ const recipes = [
 
 {
   name: "Baked Feta Pasta",
+
+  image: "https://helloyummy.co/wp-content/uploads/2021/02/baked-feta-pasta-recipe12.jpg",
 
   ingredients: [
     "8 Oz Baby Spinach",
@@ -232,6 +249,8 @@ const recipes = [
 {
   name: "Overnight Oats",
 
+  image: "https://vegangirlsguide.com/wp-content/uploads/2024/09/overnight-oats-recipe-1725865416.jpg",
+
   ingredients: [
     "Oats",
     "Milk",
@@ -258,7 +277,12 @@ const recipes = [
 }
 
 ]
+
+
 </script>
+
+
+/* Formatting Below */
 
 <style scoped>
 .main-title {
