@@ -109,6 +109,7 @@
                     <p class="text-body-1">
                       This chart shows how calories are distributed between protein, carbs, and fat.
                       Each section represents the percentage of total calories from each macronutrient.
+                      It is listed in kcals/grams.
                     </p>
 
                     <!-- Pie Chart -->
@@ -143,146 +144,188 @@
 
               <!-- INSTRUCTIONS -->
               <v-window-item :value="2">
+                <div v-for="(section, sIndex) in recipes[selectedTab].instructions" :key="section.section || sIndex">
+                  <!-- Optional section title -->
+                  <h3 v-if="section.section" style="margin-top: 16px; color:#000000;">
+                    {{ section.section }}
+                  </h3>
 
-              <div v-for="section in recipe.instructions" :key="section.section" class="mb-6">
+                  <ol class="recipe-checklist" style="max-width: 600px; margin: 0 auto;">
+                    <li v-for="(step, stepIndex) in section.steps" :key="step">
+                      <label style="cursor: pointer; display: flex; align-items: center;">
+                        <input
+                          type="checkbox"
+                          v-model="checkedSteps[sIndex][stepIndex]"
+                          style="margin-right: 12px;"
+                        />
+                        <span style="font-weight: 700; margin-right: 6px; color: #1976d2;">
+                          {{ stepIndex + 1 }}.
+                        </span>
+                        <span :style="{ textDecoration: checkedSteps[sIndex][stepIndex] ? 'line-through' : 'none', color: '#333' }">
+                          {{ step }}
+                        </span>
+                      </label>
+                    </li>
+                  </ol>
+                </div>
+              </v-window-item>
 
-                <!-- Section Title -->
-                <h3 class="text-subtitle-1 font-weight-bold mb-2 text-center">
-                  {{ section.section }}
-                </h3>
+          </v-window>
 
-                <!-- Steps -->
-                <ol class="text-left" style="max-width: 600px; margin: 0 auto;">
-                  <li
-                    v-for="step in section.steps"
-                    :key="step"
-                    class="mb-1"
-                  >
-                    {{ step }}
-                  </li>
-                </ol>
+        </v-card>
 
-              </div>
+      </v-window-item>
 
-            </v-window-item>
+    </v-window>
 
-            </v-window>
-
-          </v-card>
-
-        </v-window-item>
-
-      </v-window>
-
-    </v-container>
+  </v-container>
 </template>
 
-
-<!-- ALL INFO INPUTTED BELOW -->
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import NutritionChart from '@/components/NutritionChart.vue'
 
 const selectedTab = ref(0)
 const selectedSubTab = ref(0)
 
 const recipes = [
-
-{
-  name: "Baked Feta Pasta",
-
-  image: "https://helloyummy.co/wp-content/uploads/2021/02/baked-feta-pasta-recipe12.jpg",
-
-  ingredients: [
-    "8 Oz Baby Spinach",
-    "1 Cup Cherry Tomatoes",
-    "8 Oz Pasta (Any)",
-    "2 Tbsp Olive Oil",
-    "1 Feta Cheese Block",
-    "Salt",
-    "Pepper",
-    "1 Tbsp Minced Garlic"
-  ],
-
-  ingredientBlurb:
-    "A creamy baked pasta dish where feta and tomatoes roast together to create a rich sauce. Serves 4.",
-
-    nutrition: {
-    calories: "520",
-    protein: 18,
-    carbs: 60,
-    fat: 20,
-    sodium: 20
-  },
-
-  instructions: [
   {
-    section: "Sauce",
-    steps: [
-      "Preheat oven to 400 degrees",
-      "Place feta block in the middle of a oven safe pan",
-      "Add spinach and cherry tomatoes to pan",
-      "Drizzle pan with olive oil and minced garlic",
-      "Season with salt and pepper",
-      "Place in oven and cook for 25 minutes or until tomatoes have softened"
-    ]
-  },
+    name: "Baked Feta Pasta",
+    image: "https://helloyummy.co/wp-content/uploads/2021/02/baked-feta-pasta-recipe12.jpg",
+    ingredients: ["8 Oz Baby Spinach", "1 Cup Cherry Tomatoes", "8 Oz Pasta (Any)", "2 Tbsp Olive Oil", "1 Feta Cheese Block", "Salt",  "Pepper",  "1 Tbsp Minced Garlic"],
+    ingredientBlurb: "A creamy baked pasta dish where feta and tomatoes roast together to create a rich sauce.",
+    nutrition: {calories: "382", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Sauce",
+      steps: [
+        "Preheat oven to 400 degrees",
+        "Place feta block in the middle of a oven safe pan",
+        "Add spinach and cherry tomatoes to pan",
+        "Drizzle pan with olive oil and minced garlic",
+        "Season with salt and pepper",
+        "Place in oven and cook for 25 minutes or until tomatoes have softened"]},
+    {section: "Pasta (While sauce is cooking)",
+      steps: [
+        "Bring a large pot of salted water to a boil",      "Cook pasta as instructed on box",
+        "Drain pasta with collander and set until when done"]},
+    {section: "Assembly",
+      steps: [
+        "Once sauce is removed from the oven, stir everything until combined",
+        "Toss in the pasta the sauce until it is fully dressed",
+        "Enjoy!"]}
+  ]},
   {
-    section: "Pasta (While sauce is cooking)",
-    steps: [
-      "Bring a large pot of salted water to a boil",
-      "Cook pasta as instructed on box",
-      "Drain pasta with collander and set until when done"
-    ]
-  },
+    name: "Overnight Oats",
+    image: "https://vegangirlsguide.com/wp-content/uploads/2024/09/overnight-oats-recipe-1725865416.jpg",
+    ingredients: ["1/2 Cup Rolled Oats", "1/2 Cup Greek YOgurt", "1/2 Cup Milk", "Salt", "1 Tsp Chia Seeds", "2 Tsp Honey", "1/4 Cup Berries"],
+    ingredientBlurb: "An easy make-ahead breakfast that sits overnight in the fridge.",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Assembly",
+      steps: [
+        "Combine oats, yogurt, milk, salt, and chia seeds in a jar and stir well",
+        "Refrigerate for 8-10 hours",
+        "Top with fresh berries and honey",
+        "Enjoy!"]},
+  ]},
   {
-    section: "Assembly",
-    steps: [
-      "Once sauce is removed from the oven, stir everything until combined",
-      "Toss in the pasta the sauce until it is fully dressed",
-      "Enjoy!"
-    ]
-  }
+    name: "Quesidilla",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]},
+   {
+    name: "Taco Soup",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]},
+   {
+    name: "Pancakes",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]},
+   {
+    name: "Chicken Caesar Salad",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]},
+   {
+    name: "Unstuffed Peppers",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]},
+   {
+    name: "Meatloaf",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]},
+  {
+    name: "Beef & Avocado Burrito",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]},
+  {
+    name: "Veggie Sandwich",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]}
 ]
-},
 
-{
-  name: "Overnight Oats",
+// Interactive checklist state
+const checkedSteps = ref(recipes[0].instructions.map(() => false))
 
-  image: "https://vegangirlsguide.com/wp-content/uploads/2024/09/overnight-oats-recipe-1725865416.jpg",
-
-  ingredients: [
-    "Oats",
-    "Milk",
-    "Chia seeds",
-    "Honey"
-  ],
-
-  ingredientBlurb:
-    "An easy make-ahead breakfast that sits overnight in the fridge.",
-
-  nutrition: {
-  calories: "520",
-  protein: 18,
-  carbs: 60,
-  fat: 20,
-  sodium: 20
- },
-
-  instructions: [
-    "Mix ingredients",
-    "Refrigerate overnight",
-    "Eat cold in the morning"
-  ]
-}
-
-]
-
-
+// Reset checklist when switching recipes
+watch(selectedTab, (newVal) => {
+  checkedSteps.value = recipes[newVal].instructions.map(() => false)
+})
 </script>
-
-
-/* Formatting Below */
 
 <style scoped>
 .main-title {
@@ -290,13 +333,41 @@ const recipes = [
   margin-top: 15px;
   margin-bottom: 25px;
   display: flex;
-  align-items: center;       /* vertically align logo and text */
-  justify-content: center;   /* center the container horizontally */
-  gap: 12px;                 /* space between logo and title */
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 .psu-logo {
-  height: 40px;  /* adjust as needed */
-  width: auto;   /* maintain aspect ratio */
+  height: 40px;
+  width: auto;
+}
+.bold-title {
+  font-weight: 800;
+  font-size: 28px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
+/* Checklist styling */
+.recipe-checklist {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 12px;
+}
+
+.recipe-checklist li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* Ingredient chip hover effect */
+.ingredient-chip {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.ingredient-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
 </style>
