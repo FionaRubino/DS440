@@ -58,193 +58,273 @@
 
               <!-- INGREDIENTS -->
               <v-window-item :value="0">
+                <div class="d-flex flex-wrap align-start ga-6">
 
-                <!-- blurb -->
-                <p class="text-body-1">
-                  {{ recipe.ingredientBlurb }}
-                </p>
-                
-                <!-- horizontal ingredients -->
-                <div class="d-flex flex-wrap ga-3 mt-2">
+                  <!-- LEFT SIDE: text + ingredients -->
+                  <div style="flex: 1; min-width: 250px;">
 
-                  <v-chip
-                    v-for="ingredient in recipe.ingredients"
-                    :key="ingredient"
-                    color="primary"
-                  >
-                    {{ ingredient }}
-                  </v-chip>
+                    <p class="text-subtitle-1 mb-1" style="font-weight: 700; margin-top: 16px; color: #1976d2;">
+                      Recipe Description:
+                    </p>
+                    <p class="text-body-1" style = "margin-bottom: 16px">
+                      {{ recipe.ingredientBlurb }}
+                    </p>
+
+                    <!-- ingredients -->
+                    <div class="d-flex flex-wrap ga-3 mt-2">
+                      <v-chip
+                        v-for="ingredient in recipe.ingredients"
+                        :key="ingredient"
+                        color="primary"
+                        class="ingredient-chip"
+                      >
+                        {{ ingredient }}
+                      </v-chip>
+                    </div>
+
+                  </div>
+
+                  <!-- RIGHT SIDE: image -->
+                  <div style="flex: 1; min-width: 250px;">
+                    <v-img
+                      :src="recipe.image"
+                      height="350"
+                      contain
+                      style="border-radius: 12px;"
+                    />
+                  </div>
 
                 </div>
-
               </v-window-item>
 
               <!-- NUTRITION -->
-               <v-window-item :value="1">
+               <v-window-item :value="1" class="pa-4">
 
-                <p><strong>Calories:</strong> {{ recipe.nutrition.calories }}</p>
+                <v-row>
 
-                <div class="d-flex justify-center mt-4">
-                  <NutritionChart
-                    :protein="recipe.nutrition.protein"
-                    :carbs="recipe.nutrition.carbs"
-                    :fat="recipe.nutrition.fat"
-                  />
-                </div>
+                  <!-- LEFT COLUMN: Pie Chart -->
+                  <v-col cols="12" md="6">
+
+                    <!-- 📘 Top-left explanation -->
+                    <p class="text-body-1">
+                      This chart shows how calories are distributed between protein, carbs, and fat.
+                      Each section represents the percentage of total calories from each macronutrient.
+                      It is listed in kcals/grams.
+                    </p>
+
+                    <!-- Pie Chart -->
+                    <div class="d-flex justify-center mt-4">
+                      <NutritionChart
+                        :protein="recipe.nutrition.protein"
+                        :carbs="recipe.nutrition.carbs"
+                        :fat="recipe.nutrition.fat"
+                        :calories="recipe.nutrition.calories"
+                      />
+                    </div>
+
+                    <!-- Sodium -->
+                    <p class="text-center mt-4">
+                      <strong>Sodium:</strong> {{ recipe.nutrition.sodium }} mg
+                    </p>
+
+                  </v-col>
+
+                  <!-- RIGHT COLUMN: Nutrition Score) -->
+                  <v-col cols="12" md="6">
+                    <div>
+                      <!-- Example placeholder -->
+                      <p class="text-body-1">Nutrition score blurb goes here and score goes below</p>
+                    </div>
+
+                  </v-col>
+
+                </v-row>
 
               </v-window-item>
 
               <!-- INSTRUCTIONS -->
               <v-window-item :value="2">
+                <div v-for="(section, sIndex) in recipes[selectedTab].instructions" :key="section.section || sIndex">
+                  <!-- Optional section title -->
+                  <h3 v-if="section.section" style="margin-top: 16px; color:#000000;">
+                    {{ section.section }}
+                  </h3>
 
-                <ol>
-                  <li
-                    v-for="step in recipe.instructions"
-                    :key="step"
-                  >
-                    {{ step }}
-                  </li>
-                </ol>
-
+                  <ol class="recipe-checklist" style="max-width: 600px; margin: 0;">
+                    <li v-for="(step, stepIndex) in section.steps" :key="step">
+                      <label style="cursor: pointer; display: flex; align-items: center;">
+                        <input
+                          type="checkbox"
+                          v-model="checkedSteps[sIndex][stepIndex]"
+                          style="margin-right: 12px;"
+                        />
+                        <span style="font-weight: 700; margin-right: 6px; color: #1976d2;">
+                          {{ stepIndex + 1 }}.
+                        </span>
+                        <span :style="{ textDecoration: checkedSteps[sIndex][stepIndex] ? 'line-through' : 'none', color: '#333' }">
+                          {{ step }}
+                        </span>
+                      </label>
+                    </li>
+                  </ol>
+                </div>
               </v-window-item>
 
-            </v-window>
+          </v-window>
 
-          </v-card>
+        </v-card>
 
-        </v-window-item>
+      </v-window-item>
 
-      </v-window>
+    </v-window>
 
-    </v-container>
+  </v-container>
 </template>
 
-
-
-<!-- ALL INFO INPUTTED BELOW -->
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import axios from 'axios'
 import NutritionChart from '@/components/NutritionChart.vue'
 
 const selectedTab = ref(0)
 const selectedSubTab = ref(0)
 
 const recipes = [
-
-const selectedTab = ref(0)
-
-// store results per tab
-const recommendations = ref<{ [key: number]: any[] }>({})
-const loading = ref<{ [key: number]: boolean }>({})
-
-// fetch function
-const fetchRecommendations = async (index: number) => {
-  loading.value[index] = true
-  try {
-    const res = await axios.post("http://127.0.0.1:5000/api/recommend", {
-      recipe_id: index + 1,  // make sure CSV recipe IDs match
-      min_budget: 0,        // adjust budget as needed
-      max_budget: 100
-    })
-    recommendations.value[index] = res.data.recommendations
-  } catch (err) {
-    console.error("Error fetching recommendations:", err)
-    recommendations.value[index] = []
-  } finally {
-    loading.value[index] = false
-  }
-}
-
-// run when tab changes
-watch(selectedTab, (newIndex) => {
-  if (!recommendations.value[newIndex]) {
-    fetchRecommendations(newIndex)
-  }
-})
-
-// initial fetch for first tab
-fetchRecommendations(0)
-{
-  name: "Baked Feta Pasta",
-
-  ingredients: [
-    "Feta cheese",
-    "Cherry tomatoes",
-    "Olive oil",
-    "Garlic",
-    "Pasta"
-  ],
-
-  ingredientBlurb:
-    "A creamy baked pasta dish where feta and tomatoes roast together to create a rich sauce.",
-
-  nutrition: {
-  calories: "520",
-  protein: 18,
-  carbs: 60,
-  fat: 20
- },
-
-  instructions: [
-    "Preheat oven to 400°F",
-    "Bake feta with tomatoes",
-    "Cook pasta",
-    "Mix everything together"
-  ]
-},
-
-{
-  name: "Overnight Oats",
-
-  ingredients: [
-    "Oats",
-    "Milk",
-    "Chia seeds",
-    "Honey"
-  ],
-
-  ingredientBlurb:
-    "An easy make-ahead breakfast that sits overnight in the fridge.",
-
-  nutrition: {
-  calories: "520",
-  protein: 18,
-  carbs: 60,
-  fat: 20
- },
-
-  instructions: [
-    "Mix ingredients",
-    "Refrigerate overnight",
-    "Eat cold in the morning"
-  ]
-},
-
-
-{
-  name: "Veggie Sandwich",
-
-  ingredients: [
-    "enter here"
-  ],
-
-  ingredientBlurb:
-    "Blurb",
-
-  nutrition: {
-  calories: "520",
-  protein: 18,
-  carbs: 60,
-  fat: 20
- },
-
-  instructions: [
-    "Blurb"
-  ]
-}
-
+  {
+    name: "Baked Feta Pasta",
+    image: "https://helloyummy.co/wp-content/uploads/2021/02/baked-feta-pasta-recipe12.jpg",
+    ingredients: ["8 Oz Baby Spinach", "1 Cup Cherry Tomatoes", "8 Oz Pasta (Any)", "2 Tbsp Olive Oil", "1 Feta Cheese Block", "Salt",  "Pepper",  "1 Tbsp Minced Garlic"],
+    ingredientBlurb: "A creamy baked pasta dish where feta and tomatoes roast together to create a rich sauce.",
+    nutrition: {calories: "382", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Sauce",
+      steps: [
+        "Preheat oven to 400 degrees",
+        "Place feta block in the middle of a oven safe pan",
+        "Add spinach and cherry tomatoes to pan",
+        "Drizzle pan with olive oil and minced garlic",
+        "Season with salt and pepper",
+        "Place in oven and cook for 25 minutes or until tomatoes have softened"]},
+    {section: "Pasta (While sauce is cooking)",
+      steps: [
+        "Bring a large pot of salted water to a boil",      "Cook pasta as instructed on box",
+        "Drain pasta with collander and set until when done"]},
+    {section: "Assembly",
+      steps: [
+        "Once sauce is removed from the oven, stir everything until combined",
+        "Toss in the pasta the sauce until it is fully dressed",
+        "Enjoy!"]}
+  ]},
+  {
+    name: "Overnight Oats",
+    image: "https://vegangirlsguide.com/wp-content/uploads/2024/09/overnight-oats-recipe-1725865416.jpg",
+    ingredients: ["1/2 Cup Rolled Oats", "1/2 Cup Greek YOgurt", "1/2 Cup Milk", "Salt", "1 Tsp Chia Seeds", "2 Tsp Honey", "1/4 Cup Berries"],
+    ingredientBlurb: "An easy make-ahead breakfast that sits overnight in the fridge.",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Assembly",
+      steps: [
+        "Combine oats, yogurt, milk, salt, and chia seeds in a jar and stir well",
+        "Refrigerate for 8-10 hours",
+        "Top with fresh berries and honey",
+        "Enjoy!"]},
+  ]},
+  {
+    name: "Quesidilla",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]},
+   {
+    name: "Taco Soup",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]},
+   {
+    name: "Pancakes",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]},
+   {
+    name: "Chicken Caesar Salad",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]},
+   {
+    name: "Unstuffed Peppers",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]},
+   {
+    name: "Meatloaf",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]},
+  {
+    name: "Beef & Avocado Burrito",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]},
+  {
+    name: "Veggie Sandwich",
+    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
+    ingredients: ["enter here"],
+    ingredientBlurb: "Blurb",
+    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    instructions: [
+    {section: "Step Name",
+      steps: [
+        "Instruction"]},
+  ]}
 ]
+
+// Interactive checklist state
+const checkedSteps = ref(recipes[0].instructions.map(() => false))
+
+// Reset checklist when switching recipes
+watch(selectedTab, (newVal) => {
+  checkedSteps.value = recipes[newVal].instructions.map(() => false)
+})
 </script>
 
 <style scoped>
@@ -253,15 +333,41 @@ fetchRecommendations(0)
   margin-top: 15px;
   margin-bottom: 25px;
   display: flex;
-  align-items: center;       /* vertically align logo and text */
-  justify-content: center;   /* center the container horizontally */
-  gap: 12px;                 /* space between logo and title */
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 .psu-logo {
-  height: 40px;  /* adjust as needed */
-  width: auto;   /* maintain aspect ratio */
+  height: 40px;
+  width: auto;
+}
+.bold-title {
+  font-weight: 800;
+  font-size: 28px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
+/* Checklist styling */
+.recipe-checklist {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 12px;
+}
+
+.recipe-checklist li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* Ingredient chip hover effect */
+.ingredient-chip {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.ingredient-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
 </style>
-
-
