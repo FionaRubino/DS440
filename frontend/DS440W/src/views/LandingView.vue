@@ -150,7 +150,7 @@
                     {{ section.section }}
                   </h3>
 
-                  <ol class="recipe-checklist" style="max-width: 600px; margin: 0 auto;">
+                  <ol class="recipe-checklist" style="max-width: 600px; margin: 0;">
                     <li v-for="(step, stepIndex) in section.steps" :key="step">
                       <label style="cursor: pointer; display: flex; align-items: center;">
                         <input
