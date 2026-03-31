@@ -66,7 +66,6 @@
                 
                 <!-- horizontal ingredients -->
                 <div class="d-flex flex-wrap ga-3 mt-2">
-
                   <v-chip
                     v-for="ingredient in recipe.ingredients"
                     :key="ingredient"
@@ -74,7 +73,46 @@
                   >
                     {{ ingredient }}
                   </v-chip>
+                </div>
 
+                <!-- BUDGET INPUTS -->
+                <div class="d-flex align-center mt-4 gap-3">
+                  <v-text-field
+                    v-model.number="minBudget[selectedTab]"
+                    label="Min Budget"
+                    type="number"
+                    outlined
+                    dense
+                  ></v-text-field>
+
+                  <v-text-field
+                    v-model.number="maxBudget[selectedTab]"
+                    label="Max Budget"
+                    type="number"
+                    outlined
+                    dense
+                  ></v-text-field>
+
+                  <v-btn color="primary" @click="submitBudget(selectedTab)">Submit</v-btn>
+                </div>
+
+                <!-- RECOMMENDATIONS RESULTS -->
+                <div class="mt-4">
+                  <div v-if="loading[selectedTab]" class="text-center">
+                    Loading recommendations...
+                  </div>
+                  <div v-else>
+                    <div v-for="(rec, idx) in recommendations[selectedTab]" :key="idx" class="pa-2 mb-2">
+                      <v-card outlined class="pa-2">
+                        <v-card-title>Recommendation {{ idx + 1 }}</v-card-title>
+                        <v-card-text>
+                          <div v-for="(value, key) in rec" :key="key" class="mb-1">
+                            <strong>{{ formatKey(key) }}:</strong> {{ value }}
+                          </div>
+                        </v-card-text>
+                      </v-card>
+                    </div>
+                  </div>
                 </div>
 
               </v-window-item>
@@ -126,45 +164,17 @@
 import { ref, watch } from 'vue'
 import axios from 'axios'
 import NutritionChart from '@/components/NutritionChart.vue'
+const minBudget = ref<{ [key: number]: number }>({})
+const maxBudget = ref<{ [key: number]: number }>({})
 
 const selectedTab = ref(0)
 const selectedSubTab = ref(0)
-
-const recipes = [
-
-const selectedTab = ref(0)
-
-// store results per tab
-const recommendations = ref<{ [key: number]: any[] }>({})
-const loading = ref<{ [key: number]: boolean }>({})
-
-// fetch function
-const fetchRecommendations = async (index: number) => {
-  loading.value[index] = true
-  try {
-    const res = await axios.post("http://127.0.0.1:5000/api/recommend", {
-      recipe_id: index + 1,  // make sure CSV recipe IDs match
-      min_budget: 0,        // adjust budget as needed
-      max_budget: 100
-    })
-    recommendations.value[index] = res.data.recommendations
-  } catch (err) {
-    console.error("Error fetching recommendations:", err)
-    recommendations.value[index] = []
-  } finally {
-    loading.value[index] = false
-  }
+const submitBudget = (index: number) => {
+  fetchRecommendations(index)
 }
 
-// run when tab changes
-watch(selectedTab, (newIndex) => {
-  if (!recommendations.value[newIndex]) {
-    fetchRecommendations(newIndex)
-  }
-})
-
-// initial fetch for first tab
-fetchRecommendations(0)
+// RECIPE DATA (unchanged)
+const recipes = [
 {
   name: "Baked Feta Pasta",
 
@@ -180,11 +190,11 @@ fetchRecommendations(0)
     "A creamy baked pasta dish where feta and tomatoes roast together to create a rich sauce.",
 
   nutrition: {
-  calories: "520",
-  protein: 18,
-  carbs: 60,
-  fat: 20
- },
+    calories: "520",
+    protein: 18,
+    carbs: 60,
+    fat: 20
+  },
 
   instructions: [
     "Preheat oven to 400°F",
@@ -208,11 +218,11 @@ fetchRecommendations(0)
     "An easy make-ahead breakfast that sits overnight in the fridge.",
 
   nutrition: {
-  calories: "520",
-  protein: 18,
-  carbs: 60,
-  fat: 20
- },
+    calories: "520",
+    protein: 18,
+    carbs: 60,
+    fat: 20
+  },
 
   instructions: [
     "Mix ingredients",
@@ -220,7 +230,6 @@ fetchRecommendations(0)
     "Eat cold in the morning"
   ]
 },
-
 
 {
   name: "Veggie Sandwich",
@@ -233,18 +242,50 @@ fetchRecommendations(0)
     "Blurb",
 
   nutrition: {
-  calories: "520",
-  protein: 18,
-  carbs: 60,
-  fat: 20
- },
+    calories: "520",
+    protein: 18,
+    carbs: 60,
+    fat: 20
+  },
 
   instructions: [
     "Blurb"
   ]
 }
+] // <-- close recipes array here
 
-]
+// store results per tab
+const recommendations = ref<{ [key: number]: any[] }>({})
+const loading = ref<{ [key: number]: boolean }>({})
+
+// fetch function
+const fetchRecommendations = async (index: number, min = 0, max = 100) => {
+  loading.value[index] = true
+  try {
+    const res = await axios.post("http://127.0.0.1:5000/api/recommend", {
+      recipe_id: index + 1,
+      min_budget: min,
+      max_budget: max
+    })
+
+    // Log the full response for debugging
+    console.log("Backend response for tab", index, res.data)
+
+    // Store only the first 10 items
+    recommendations.value[index] = (res.data.recommendations || []).slice(0, 10)
+  } catch (err) {
+    console.error("Error fetching recommendations:", err)
+    recommendations.value[index] = []
+  } finally {
+    loading.value[index] = false
+  }
+}
+
+const formatKey = (key: string) => {
+  // Replace underscores with spaces and capitalize first letter
+  return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+}
+
 </script>
 
 <style scoped>
