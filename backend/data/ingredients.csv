@@ -1,0 +1,801 @@
+Ingredient,Store,Price
+Baby Spinach,Wegmans,3.29
+Baby Spinach,Trader Joe's,2.29
+Baby Spinach,McLanahans,2.99
+Baby Spinach,Weis,1.52
+Baby Spinach,Target D,2.19
+Baby Spinach,Giant,3.49
+Baby Spinach,Sam's Club,2.38
+Baby Spinach,Target U,2.29
+Baby Spinach,Aldi,2.85
+Baby Spinach,Walmart,2.18
+Cherry Tomatoes,Wegmans,6.49
+Cherry Tomatoes,Trader Joe's,4.99
+Cherry Tomatoes,McLanahans,2.89
+Cherry Tomatoes,Weis,2.49
+Cherry Tomatoes,Target D,2.59
+Cherry Tomatoes,Giant,4.99
+Cherry Tomatoes,Sam's Club,2.77
+Cherry Tomatoes,Target U,2.49
+Cherry Tomatoes,Aldi,2.19
+Cherry Tomatoes,Walmart,2.63
+Feta block,Wegmans,4.99
+Feta block,Trader Joe's,3.79
+Feta block,McLanahans,TBD
+Feta block,Weis,4.99
+Feta block,Target D,5.29
+Feta block,Giant,3.99
+Feta block,Sam's Club,2.44
+Feta block,Target U,5.29
+Feta block,Aldi,3.85
+Feta block,Walmart,5.46
+Olive oil  ,Wegmans,0.29
+Olive oil  ,Trader Joe's,0.3
+Olive oil  ,McLanahans,0.52
+Olive oil  ,Weis,0.69
+Olive oil  ,Target D,0.39
+Olive oil  ,Giant,0.42
+Olive oil  ,Sam's Club,0.19
+Olive oil  ,Target U,0.38
+Olive oil  ,Aldi,0.37
+Olive oil  ,Walmart,0.35
+Salt/Pepper,Wegmans,0.01
+Salt/Pepper,Trader Joe's,0.01
+Salt/Pepper,McLanahans,0.1
+Salt/Pepper,Weis,0.1
+Salt/Pepper,Target D,0.06
+Salt/Pepper,Giant,0.11
+Salt/Pepper,Sam's Club,0.08
+Salt/Pepper,Target U,0.15
+Salt/Pepper,Aldi,0.15
+Salt/Pepper,Walmart,0.01
+Minced garlic,Wegmans,0.44
+Minced garlic,Trader Joe's,-
+Minced garlic,McLanahans,0.49
+Minced garlic,Weis,0.32
+Minced garlic,Target D,0.66
+Minced garlic,Giant,0.62
+Minced garlic,Sam's Club,0.12
+Minced garlic,Target U,0.47
+Minced garlic,Aldi,0.36
+Minced garlic,Walmart,0.51
+Pasta ,Wegmans,0.5
+Pasta ,Trader Joe's,1
+Pasta ,McLanahans,1.28
+Pasta ,Weis,0.83
+Pasta ,Target D,0.5
+Pasta ,Giant,0.5
+Pasta ,Sam's Club,0.71
+Pasta ,Target U,0.5
+Pasta ,Aldi,1.05
+Pasta ,Walmart,0.49
+Old fashioned oats,Wegmans,0.07
+Old fashioned oats,Trader Joe's,0.33
+Old fashioned oats,McLanahans,TBD
+Old fashioned oats,Weis,0.12
+Old fashioned oats,Target D,0.22
+Old fashioned oats,Giant,0.07
+Old fashioned oats,Sam's Club,0.1
+Old fashioned oats,Target U,0.93
+Old fashioned oats,Aldi,0.22
+Old fashioned oats,Walmart,0.1
+Greek yogurt,Wegmans,0.09
+Greek yogurt,Trader Joe's,0.37
+Greek yogurt,McLanahans,0.56
+Greek yogurt,Weis,0.37
+Greek yogurt,Target D,0.23
+Greek yogurt,Giant,0.25
+Greek yogurt,Sam's Club,0.21
+Greek yogurt,Target U,1.5
+Greek yogurt,Aldi,0.21
+Greek yogurt,Walmart,0.41
+Milk (2%?),Wegmans,0.1
+Milk (2%?),Trader Joe's,-
+Milk (2%?),McLanahans,0.1
+Milk (2%?),Weis,0.15
+Milk (2%?),Target D,0.1
+Milk (2%?),Giant,0.14
+Milk (2%?),Sam's Club,0.18
+Milk (2%?),Target U,0.11
+Milk (2%?),Aldi,0.12
+Milk (2%?),Walmart,0.2
+Chia Seeds,Wegmans,0.1
+Chia Seeds,Trader Joe's,-
+Chia Seeds,McLanahans,0.18
+Chia Seeds,Weis,0.14
+Chia Seeds,Target D,TBD
+Chia Seeds,Giant,0.24
+Chia Seeds,Sam's Club,N/A
+Chia Seeds,Target U,0.33
+Chia Seeds,Aldi,0.11
+Chia Seeds,Walmart,0.18
+Blueberries,Wegmans,0.5
+Blueberries,Trader Joe's,0.07
+Blueberries,McLanahans,0.42
+Blueberries,Weis,0.39
+Blueberries,Target D,0.5
+Blueberries,Giant,0.62
+Blueberries,Sam's Club,0.29
+Blueberries,Target U,0.29
+Blueberries,Aldi,0.26
+Blueberries,Walmart,0.27
+Honey,Wegmans,10
+Honey,Trader Joe's,-
+Honey,McLanahans,0.1
+Honey,Weis,0.21
+Honey,Target D,0.19
+Honey,Giant,0.15
+Honey,Sam's Club,0.06
+Honey,Target U,0.13
+Honey,Aldi,0.1
+Honey,Walmart,0.16
+Tortilla (Large?),Wegmans,2.49
+Tortilla (Large?),Trader Joe's,1.99
+Tortilla (Large?),McLanahans,3.49
+Tortilla (Large?),Weis,2.69
+Tortilla (Large?),Target D,1.99
+Tortilla (Large?),Giant,2.99
+Tortilla (Large?),Sam's Club,1.22
+Tortilla (Large?),Target U,4.69
+Tortilla (Large?),Aldi,2.35
+Tortilla (Large?),Walmart,2.12
+Butter,Wegmans,0.16
+Butter,Trader Joe's,-
+Butter,McLanahans,0.19
+Butter,Weis,0.12
+Butter,Target D,0.12
+Butter,Giant,0.1
+Butter,Sam's Club,0.07
+Butter,Target U,0.11
+Butter,Aldi,0.1
+Butter,Walmart,0.16
+Chicken breast,Wegmans,6.43
+Chicken breast,Trader Joe's,7.49
+Chicken breast,McLanahans,4.43
+Chicken breast,Weis,3.99
+Chicken breast,Target D,2.5
+Chicken breast,Giant,2.5
+Chicken breast,Sam's Club,4.14
+Chicken breast,Target U,6.39
+Chicken breast,Aldi,5.79
+Chicken breast,Walmart,5.88
+Black beans,Wegmans,-
+Black beans,Trader Joe's,0.99
+Black beans,McLanahans,1.65
+Black beans,Weis,0.79
+Black beans,Target D,0.99
+Black beans,Giant,0.89
+Black beans,Sam's Club,1
+Black beans,Target U,1.59
+Black beans,Aldi,0.95
+Black beans,Walmart,0.86
+Shredded cheddar cheese,Wegmans,-
+Shredded cheddar cheese,Trader Joe's,4.29
+Shredded cheddar cheese,McLanahans,0.67
+Shredded cheddar cheese,Weis,0.6
+Shredded cheddar cheese,Target D,0.25
+Shredded cheddar cheese,Giant,0.25
+Shredded cheddar cheese,Sam's Club,2.74
+Shredded cheddar cheese,Target U,1.99
+Shredded cheddar cheese,Aldi,2.65
+Shredded cheddar cheese,Walmart,1.97
+Salt/Pepper,Wegmans,-
+Salt/Pepper,Trader Joe's,0.01
+Salt/Pepper,McLanahans,0.1
+Salt/Pepper,Weis,0.1
+Salt/Pepper,Target D,0.22
+Salt/Pepper,Giant,0.06
+Salt/Pepper,Sam's Club,0.08
+Salt/Pepper,Target U,0.15
+Salt/Pepper,Aldi,0.1
+Salt/Pepper,Walmart,0.01
+Olive oil (sub with vegetable),Wegmans,-
+Olive oil (sub with vegetable),Trader Joe's,0.3
+Olive oil (sub with vegetable),McLanahans,0.52
+Olive oil (sub with vegetable),Weis,0.35
+Olive oil (sub with vegetable),Target D,0.19
+Olive oil (sub with vegetable),Giant,0.21
+Olive oil (sub with vegetable),Sam's Club,0.1
+Olive oil (sub with vegetable),Target U,0.19
+Olive oil (sub with vegetable),Aldi,0.18
+Olive oil (sub with vegetable),Walmart,0.17
+Ground Beef,Wegmans,-
+Ground Beef,Trader Joe's,6.49
+Ground Beef,McLanahans,10.59
+Ground Beef,Weis,7.29
+Ground Beef,Target D,6.19
+Ground Beef,Giant,6.89
+Ground Beef,Sam's Club,5.96
+Ground Beef,Target U,7.99
+Ground Beef,Aldi,6.95
+Ground Beef,Walmart,6.26
+Onion (yellow?),Wegmans,-
+Onion (yellow?),Trader Joe's,1.19
+Onion (yellow?),McLanahans,0.99
+Onion (yellow?),Weis,0.5
+Onion (yellow?),Target D,0.99
+Onion (yellow?),Giant,0.54
+Onion (yellow?),Sam's Club,N/A
+Onion (yellow?),Target U,0.89
+Onion (yellow?),Aldi,0.44
+Onion (yellow?),Walmart,0.78
+Diced tomatos,Wegmans,-
+Diced tomatos,Trader Joe's,-
+Diced tomatos,McLanahans,1.95
+Diced tomatos,Weis,0.99
+Diced tomatos,Target D,0.99
+Diced tomatos,Giant,1
+Diced tomatos,Sam's Club,1.24
+Diced tomatos,Target U,3.79
+Diced tomatos,Aldi,0.99
+Diced tomatos,Walmart,0.96
+Taco seasoning,Wegmans,-
+Taco seasoning,Trader Joe's,1.19
+Taco seasoning,McLanahans,1.39
+Taco seasoning,Weis,0.59
+Taco seasoning,Target D,0.99
+Taco seasoning,Giant,0.79
+Taco seasoning,Sam's Club,0.7
+Taco seasoning,Target U,0.99
+Taco seasoning,Aldi,0.55
+Taco seasoning,Walmart,0.97
+Kidney beans,Wegmans,-
+Kidney beans,Trader Joe's,1.19
+Kidney beans,McLanahans,1.55
+Kidney beans,Weis,0.79
+Kidney beans,Target D,1.19
+Kidney beans,Giant,0.89
+Kidney beans,Sam's Club,1
+Kidney beans,Target U,1.49
+Kidney beans,Aldi,0.95
+Kidney beans,Walmart,0.86
+Sweet corn,Wegmans,-
+Sweet corn,Trader Joe's,0.99
+Sweet corn,McLanahans,1.79
+Sweet corn,Weis,0.89
+Sweet corn,Target D,0.59
+Sweet corn,Giant,0.75
+Sweet corn,Sam's Club,1.05
+Sweet corn,Target U,0.99
+Sweet corn,Aldi,0.85
+Sweet corn,Walmart,0.76
+Salt/Pepper,Wegmans,-
+Salt/Pepper,Trader Joe's,0.01
+Salt/Pepper,McLanahans,0.1
+Salt/Pepper,Weis,0.1
+Salt/Pepper,Target D,0.06
+Salt/Pepper,Giant,0.06
+Salt/Pepper,Sam's Club,0.08
+Salt/Pepper,Target U,0.15
+Salt/Pepper,Aldi,0.1
+Salt/Pepper,Walmart,0.01
+Shredded cheddar cheese,Wegmans,-
+Shredded cheddar cheese,Trader Joe's,4.29
+Shredded cheddar cheese,McLanahans,4.04
+Shredded cheddar cheese,Weis,2.84
+Shredded cheddar cheese,Target D,1.33
+Shredded cheddar cheese,Giant,1.49
+Shredded cheddar cheese,Sam's Club,2.74
+Shredded cheddar cheese,Target U,2.99
+Shredded cheddar cheese,Aldi,5.3
+Shredded cheddar cheese,Walmart,1.97
+Fritos,Wegmans,-
+Fritos,Trader Joe's,-
+Fritos,McLanahans,1.99
+Fritos,Weis,2.49
+Fritos,Target D,2.35
+Fritos,Giant,2.75
+Fritos,Sam's Club,2.24
+Fritos,Target U,2.35
+Fritos,Aldi,0.15
+Fritos,Walmart,1.99
+Sour cream,Wegmans,-
+Sour cream,Trader Joe's,1.25
+Sour cream,McLanahans,1.33
+Sour cream,Weis,1.69
+Sour cream,Target D,1.29
+Sour cream,Giant,1.29
+Sour cream,Sam's Club,1.42
+Sour cream,Target U,1
+Sour cream,Aldi,1
+Sour cream,Walmart,1.24
+Whole Wheat Flour,Wegmans,-
+Whole Wheat Flour,Trader Joe's,2.2
+Whole Wheat Flour,McLanahans,1.95
+Whole Wheat Flour,Weis,0.35
+Whole Wheat Flour,Target D,0.27
+Whole Wheat Flour,Giant,0.39
+Whole Wheat Flour,Sam's Club,0.32
+Whole Wheat Flour,Target U,0.28
+Whole Wheat Flour,Aldi,0.23
+Whole Wheat Flour,Walmart,0.59
+White Sugar,Wegmans,-
+White Sugar,Trader Joe's,14
+White Sugar,McLanahans,0.17
+White Sugar,Weis,0.05
+White Sugar,Target D,0.04
+White Sugar,Giant,0.05
+White Sugar,Sam's Club,0.03
+White Sugar,Target U,0.04
+White Sugar,Aldi,0.04
+White Sugar,Walmart,0.09
+Baking Powder,Wegmans,-
+Baking Powder,Trader Joe's,-
+Baking Powder,McLanahans,0.14
+Baking Powder,Weis,0.16
+Baking Powder,Target D,0.08
+Baking Powder,Giant,0.11
+Baking Powder,Sam's Club,0.06
+Baking Powder,Target U,0.11
+Baking Powder,Aldi,0.09
+Baking Powder,Walmart,0.08
+Baking Soda,Wegmans,-
+Baking Soda,Trader Joe's,-
+Baking Soda,McLanahans,0.01
+Baking Soda,Weis,0.01
+Baking Soda,Target D,0.01
+Baking Soda,Giant,0.01
+Baking Soda,Sam's Club,0.03
+Baking Soda,Target U,0.01
+Baking Soda,Aldi,0.01
+Baking Soda,Walmart,0.01
+Salt,Wegmans,-
+Salt,Trader Joe's,0.01
+Salt,McLanahans,0.15
+Salt,Weis,0.1
+Salt,Target D,0.03
+Salt,Giant,0.03
+Salt,Sam's Club,0.08
+Salt,Target U,0.15
+Salt,Aldi,0.01
+Salt,Walmart,0.01
+Buttermilk,Wegmans,-
+Buttermilk,Trader Joe's,-
+Buttermilk,McLanahans,TBD
+Buttermilk,Weis,1.06
+Buttermilk,Target D,0.38
+Buttermilk,Giant,1.01
+Buttermilk,Sam's Club,N/A
+Buttermilk,Target U,0.76
+Buttermilk,Aldi,TBD
+Buttermilk,Walmart,1.2
+Eggs,Wegmans,-
+Eggs,Trader Joe's,1
+Eggs,McLanahans,0.61
+Eggs,Weis,0.33
+Eggs,Target D,0.33
+Eggs,Giant,0.33
+Eggs,Sam's Club,0.37
+Eggs,Target U,0.5
+Eggs,Aldi,0.37
+Eggs,Walmart,0.38
+Vegetable Oil,Wegmans,-
+Vegetable Oil,Trader Joe's,-
+Vegetable Oil,McLanahans,0.37
+Vegetable Oil,Weis,0.25
+Vegetable Oil,Target D,0.17
+Vegetable Oil,Giant,0.21
+Vegetable Oil,Sam's Club,0.13
+Vegetable Oil,Target U,0.23
+Vegetable Oil,Aldi,0.16
+Vegetable Oil,Walmart,0.37
+Romaine Lettuce,Wegmans,-
+Romaine Lettuce,Trader Joe's,2.99
+Romaine Lettuce,McLanahans,1.34
+Romaine Lettuce,Weis,0.56
+Romaine Lettuce,Target D,1.03
+Romaine Lettuce,Giant,1.5
+Romaine Lettuce,Sam's Club,0.48
+Romaine Lettuce,Target U,1.79
+Romaine Lettuce,Aldi,1.1
+Romaine Lettuce,Walmart,1.91
+Chicken Breast,Wegmans,-
+Chicken Breast,Trader Joe's,3.75
+Chicken Breast,McLanahans,1.77
+Chicken Breast,Weis,2.66
+Chicken Breast,Target D,2.5
+Chicken Breast,Giant,2.5
+Chicken Breast,Sam's Club,1.44
+Chicken Breast,Target U,3.19
+Chicken Breast,Aldi,2.9
+Chicken Breast,Walmart,2.21
+Shredded Parmesan Cheese,Wegmans,-
+Shredded Parmesan Cheese,Trader Joe's,0.99
+Shredded Parmesan Cheese,McLanahans,0.25
+Shredded Parmesan Cheese,Weis,0.45
+Shredded Parmesan Cheese,Target D,0.33
+Shredded Parmesan Cheese,Giant,0.33
+Shredded Parmesan Cheese,Sam's Club,0.9
+Shredded Parmesan Cheese,Target U,0.66
+Shredded Parmesan Cheese,Aldi,1.55
+Shredded Parmesan Cheese,Walmart,0.35
+Croutons,Wegmans,-
+Croutons,Trader Joe's,1.5
+Croutons,McLanahans,#REF!
+Croutons,Weis,0.15
+Croutons,Target D,TBD
+Croutons,Giant,0.08
+Croutons,Sam's Club,0.11
+Croutons,Target U,0.23
+Croutons,Aldi,0.15
+Croutons,Walmart,0.07
+Caesar Salad Dressing,Wegmans,-
+Caesar Salad Dressing,Trader Joe's,0.36
+Caesar Salad Dressing,McLanahans,0.34
+Caesar Salad Dressing,Weis,0.13
+Caesar Salad Dressing,Target D,0.21
+Caesar Salad Dressing,Giant,1.37
+Caesar Salad Dressing,Sam's Club,N/A
+Caesar Salad Dressing,Target U,0.23
+Caesar Salad Dressing,Aldi,0.13
+Caesar Salad Dressing,Walmart,0.12
+Bell Peppers,Wegmans,-
+Bell Peppers,Trader Joe's,4.99
+Bell Peppers,McLanahans,4.42
+Bell Peppers,Weis,TBD
+Bell Peppers,Target D,2.69
+Bell Peppers,Giant,4.99
+Bell Peppers,Sam's Club,3.34
+Bell Peppers,Target U,2.69
+Bell Peppers,Aldi,1.99
+Bell Peppers,Walmart,2.48
+White Onion,Wegmans,-
+White Onion,Trader Joe's,1.19
+White Onion,McLanahans,0.99
+White Onion,Weis,0.67
+White Onion,Target D,0.99
+White Onion,Giant,2.13
+White Onion,Sam's Club,0.49
+White Onion,Target U,0.89
+White Onion,Aldi,0.44
+White Onion,Walmart,1.27
+15 oz can crushed tomatoes ,Wegmans,-
+15 oz can crushed tomatoes ,Trader Joe's,-
+15 oz can crushed tomatoes ,McLanahans,1.95
+15 oz can crushed tomatoes ,Weis,0.84
+15 oz can crushed tomatoes ,Target D,1.89
+15 oz can crushed tomatoes ,Giant,0.91
+15 oz can crushed tomatoes ,Sam's Club,0.75
+15 oz can crushed tomatoes ,Target U,3.79
+15 oz can crushed tomatoes ,Aldi,0.88
+15 oz can crushed tomatoes ,Walmart,1.48
+Olive Oil,Wegmans,-
+Olive Oil,Trader Joe's,0.3
+Olive Oil,McLanahans,0.26
+Olive Oil,Weis,0.35
+Olive Oil,Target D,0.19
+Olive Oil,Giant,0.21
+Olive Oil,Sam's Club,0.1
+Olive Oil,Target U,0.19
+Olive Oil,Aldi,0.18
+Olive Oil,Walmart,0.17
+Ground Beef,Wegmans,-
+Ground Beef,Trader Joe's,6.49
+Ground Beef,McLanahans,10.59
+Ground Beef,Weis,7.29
+Ground Beef,Target D,6.19
+Ground Beef,Giant,6.89
+Ground Beef,Sam's Club,5.96
+Ground Beef,Target U,7.99
+Ground Beef,Aldi,6.95
+Ground Beef,Walmart,6.26
+beef broth,Wegmans,-
+beef broth,Trader Joe's,-
+beef broth,McLanahans,1.24
+beef broth,Weis,1.25
+beef broth,Target D,0.8
+beef broth,Giant,0.85
+beef broth,Sam's Club,1
+beef broth,Target U,0.9
+beef broth,Aldi,0.78
+beef broth,Walmart,0.75
+Rice (white?),Wegmans,-
+Rice (white?),Trader Joe's,0.67
+Rice (white?),McLanahans,1.15
+Rice (white?),Weis,0.66
+Rice (white?),Target D,0.38
+Rice (white?),Giant,0.4
+Rice (white?),Sam's Club,0.18
+Rice (white?),Target U,0.47
+Rice (white?),Aldi,0.33
+Rice (white?),Walmart,0.37
+Paprika,Wegmans,-
+Paprika,Trader Joe's,-
+Paprika,McLanahans,0.05
+Paprika,Weis,0.05
+Paprika,Target D,0.02
+Paprika,Giant,0.04
+Paprika,Sam's Club,0.09
+Paprika,Target U,0.1
+Paprika,Aldi,0.08
+Paprika,Walmart,0.06
+Salt,Wegmans,-
+Salt,Trader Joe's,0.01
+Salt,McLanahans,0.1
+Salt,Weis,0.1
+Salt,Target D,0.03
+Salt,Giant,0.03
+Salt,Sam's Club,0.08
+Salt,Target U,0.15
+Salt,Aldi,0.01
+Salt,Walmart,0.01
+garlic (minced),Wegmans,-
+garlic (minced),Trader Joe's,-
+garlic (minced),McLanahans,0.25
+garlic (minced),Weis,0.16
+garlic (minced),Target D,0.33
+garlic (minced),Giant,0.31
+garlic (minced),Sam's Club,0.12
+garlic (minced),Target U,0.24
+garlic (minced),Aldi,0.18
+garlic (minced),Walmart,0.26
+Oregano,Wegmans,-
+Oregano,Trader Joe's,-
+Oregano,McLanahans,0.11
+Oregano,Weis,0.07
+Oregano,Target D,0.05
+Oregano,Giant,0.04
+Oregano,Sam's Club,0.09
+Oregano,Target U,0.1
+Oregano,Aldi,0.22
+Oregano,Walmart,0.22
+red pepper flakes,Wegmans,-
+red pepper flakes,Trader Joe's,-
+red pepper flakes,McLanahans,0.23
+red pepper flakes,Weis,0.07
+red pepper flakes,Target D,0.02
+red pepper flakes,Giant,0.04
+red pepper flakes,Sam's Club,0.03
+red pepper flakes,Target U,0.1
+red pepper flakes,Aldi,0.11
+red pepper flakes,Walmart,0.06
+Ground Beef,Wegmans,-
+Ground Beef,Trader Joe's,6.49
+Ground Beef,McLanahans,10.59
+Ground Beef,Weis,7.29
+Ground Beef,Target D,6.19
+Ground Beef,Giant,6.89
+Ground Beef,Sam's Club,5.96
+Ground Beef,Target U,7.99
+Ground Beef,Aldi,6.95
+Ground Beef,Walmart,6.26
+White Onion,Wegmans,-
+White Onion,Trader Joe's,0.75
+White Onion,McLanahans,0.49
+White Onion,Weis,0.34
+White Onion,Target D,0.99
+White Onion,Giant,1.07
+White Onion,Sam's Club,0.49
+White Onion,Target U,0.45
+White Onion,Aldi,0.22
+White Onion,Walmart,0.64
+Italian Bread Crumbs,Wegmans,-
+Italian Bread Crumbs,Trader Joe's,2.39
+Italian Bread Crumbs,McLanahans,TBD
+Italian Bread Crumbs,Weis,0.53
+Italian Bread Crumbs,Target D,0.3
+Italian Bread Crumbs,Giant,0.5
+Italian Bread Crumbs,Sam's Club,0.24
+Italian Bread Crumbs,Target U,0.86
+Italian Bread Crumbs,Aldi,0.04
+Italian Bread Crumbs,Walmart,0.33
+Egg,Wegmans,-
+Egg,Trader Joe's,0.5
+Egg,McLanahans,0.3
+Egg,Weis,0.17
+Egg,Target D,0.17
+Egg,Giant,0.17
+Egg,Sam's Club,0.18
+Egg,Target U,0.25
+Egg,Aldi,0.18
+Egg,Walmart,0.19
+Milk (2%?),Wegmans,-
+Milk (2%?),Trader Joe's,-
+Milk (2%?),McLanahans,0.08
+Milk (2%?),Weis,0.11
+Milk (2%?),Target D,0.08
+Milk (2%?),Giant,0.1
+Milk (2%?),Sam's Club,0.13
+Milk (2%?),Target U,0.08
+Milk (2%?),Aldi,0.09
+Milk (2%?),Walmart,0.15
+Salt,Wegmans,-
+Salt,Trader Joe's,0.01
+Salt,McLanahans,0.1
+Salt,Weis,0.1
+Salt,Target D,0.06
+Salt,Giant,0.06
+Salt,Sam's Club,0.08
+Salt,Target U,0.15
+Salt,Aldi,0.1
+Salt,Walmart,0.01
+Olive Oil,Wegmans,-
+Olive Oil,Trader Joe's,0.3
+Olive Oil,McLanahans,0.26
+Olive Oil,Weis,0.35
+Olive Oil,Target D,0.19
+Olive Oil,Giant,0.21
+Olive Oil,Sam's Club,0.1
+Olive Oil,Target U,0.19
+Olive Oil,Aldi,0.18
+Olive Oil,Walmart,0.17
+Ground Beef,Wegmans,-
+Ground Beef,Trader Joe's,3.25
+Ground Beef,McLanahans,5.29
+Ground Beef,Weis,3.65
+Ground Beef,Target D,3.1
+Ground Beef,Giant,3.45
+Ground Beef,Sam's Club,2.98
+Ground Beef,Target U,4
+Ground Beef,Aldi,3.48
+Ground Beef,Walmart,3.13
+White Rice,Wegmans,-
+White Rice,Trader Joe's,0.67
+White Rice,McLanahans,1.15
+White Rice,Weis,0.66
+White Rice,Target D,0.38
+White Rice,Giant,0.4
+White Rice,Sam's Club,0.18
+White Rice,Target U,0.47
+White Rice,Aldi,0.33
+White Rice,Walmart,0.37
+Avocado,Wegmans,-
+Avocado,Trader Joe's,1.99
+Avocado,McLanahans,3.98
+Avocado,Weis,1.99
+Avocado,Target D,1.38
+Avocado,Giant,3
+Avocado,Sam's Club,1.49
+Avocado,Target U,1.18
+Avocado,Aldi,1.3
+Avocado,Walmart,1.1
+Shredded Mexican Style Cheese,Wegmans,-
+Shredded Mexican Style Cheese,Trader Joe's,2.86
+Shredded Mexican Style Cheese,McLanahans,2.68
+Shredded Mexican Style Cheese,Weis,1.2
+Shredded Mexican Style Cheese,Target D,1.14
+Shredded Mexican Style Cheese,Giant,0.5
+Shredded Mexican Style Cheese,Sam's Club,0.77
+Shredded Mexican Style Cheese,Target U,1
+Shredded Mexican Style Cheese,Aldi,1.03
+Shredded Mexican Style Cheese,Walmart,0.99
+Egg,Wegmans,-
+Egg,Trader Joe's,1
+Egg,McLanahans,0.61
+Egg,Weis,0.33
+Egg,Target D,0.33
+Egg,Giant,0.33
+Egg,Sam's Club,0.37
+Egg,Target U,0.5
+Egg,Aldi,0.37
+Egg,Walmart,0.38
+Tortilla,Wegmans,-
+Tortilla,Trader Joe's,0.99
+Tortilla,McLanahans,1.75
+Tortilla,Weis,1.35
+Tortilla,Target D,1
+Tortilla,Giant,1.5
+Tortilla,Sam's Club,0.61
+Tortilla,Target U,2.35
+Tortilla,Aldi,1.18
+Tortilla,Walmart,1.06
+Olive Oil,Wegmans,-
+Olive Oil,Trader Joe's,0.3
+Olive Oil,McLanahans,TBD
+Olive Oil,Weis,0.7
+Olive Oil,Target D,0.39
+Olive Oil,Giant,0.42
+Olive Oil,Sam's Club,0.19
+Olive Oil,Target U,0.38
+Olive Oil,Aldi,0.37
+Olive Oil,Walmart,0.35
+Sourdough Bread,Wegmans,-
+Sourdough Bread,Trader Joe's,0.58
+Sourdough Bread,McLanahans,0.41
+Sourdough Bread,Weis,0.6
+Sourdough Bread,Target D,0.57
+Sourdough Bread,Giant,1.43
+Sourdough Bread,Sam's Club,0.16
+Sourdough Bread,Target U,0.42
+Sourdough Bread,Aldi,0.61
+Sourdough Bread,Walmart,0.36
+Cheese of Choice,Wegmans,-
+Cheese of Choice,Trader Joe's,-
+Cheese of Choice,McLanahans,0.37
+Cheese of Choice,Weis,0.21
+Cheese of Choice,Target D,0.14
+Cheese of Choice,Giant,0.4
+Cheese of Choice,Sam's Club,0.18
+Cheese of Choice,Target U,0.14
+Cheese of Choice,Aldi,0.15
+Cheese of Choice,Walmart,0.12
+Mayonaisse,Wegmans,-
+Mayonaisse,Trader Joe's,0.05
+Mayonaisse,McLanahans,0.1
+Mayonaisse,Weis,0.03
+Mayonaisse,Target D,0.09
+Mayonaisse,Giant,0.07
+Mayonaisse,Sam's Club,0.04
+Mayonaisse,Target U,0.05
+Mayonaisse,Aldi,0.02
+Mayonaisse,Walmart,0.04
+Dijon Mustard,Wegmans,-
+Dijon Mustard,Trader Joe's,0.01
+Dijon Mustard,McLanahans,0.06
+Dijon Mustard,Weis,0.03
+Dijon Mustard,Target D,0.03
+Dijon Mustard,Giant,0.02
+Dijon Mustard,Sam's Club,0.03
+Dijon Mustard,Target U,0.03
+Dijon Mustard,Aldi,0.02
+Dijon Mustard,Walmart,0.02
+Avocado,Wegmans,-
+Avocado,Trader Joe's,0.5
+Avocado,McLanahans,0.99
+Avocado,Weis,0.99
+Avocado,Target D,0.35
+Avocado,Giant,0.75
+Avocado,Sam's Club,0.37
+Avocado,Target U,0.3
+Avocado,Aldi,0.33
+Avocado,Walmart,0.28
+Lettuce (Romaine?),Wegmans,-
+Lettuce (Romaine?),Trader Joe's,1
+Lettuce (Romaine?),McLanahans,0.38
+Lettuce (Romaine?),Weis,0.45
+Lettuce (Romaine?),Target D,0.51
+Lettuce (Romaine?),Giant,0.5
+Lettuce (Romaine?),Sam's Club,0.32
+Lettuce (Romaine?),Target U,0.6
+Lettuce (Romaine?),Aldi,0.55
+Lettuce (Romaine?),Walmart,0.67
+Tomato,Wegmans,-
+Tomato,Trader Joe's,-
+Tomato,McLanahans,0.26
+Tomato,Weis,0.3
+Tomato,Target D,0.49
+Tomato,Giant,0.47
+Tomato,Sam's Club,0.32
+Tomato,Target U,0.4
+Tomato,Aldi,0.07
+Tomato,Walmart,0.08
+cucumber ,Wegmans,-
+cucumber ,Trader Joe's,-
+cucumber ,McLanahans,0.42
+cucumber ,Weis,0.45
+cucumber ,Target D,0.42
+cucumber ,Giant,0.35
+cucumber ,Sam's Club,0.68
+cucumber ,Target U,0.5
+cucumber ,Aldi,0.4
+cucumber ,Walmart,0.34
+red onion,Wegmans,-
+red onion,Trader Joe's,-
+red onion,McLanahans,0.49
+red onion,Weis,0.2
+red onion,Target D,0.25
+red onion,Giant,0.4
+red onion,Sam's Club,0.48
+red onion,Target U,0.22
+red onion,Aldi,0.2
+red onion,Walmart,0.25
+sprouts,Wegmans,-
+sprouts,Trader Joe's,-
+sprouts,McLanahans,TBD
+sprouts,Weis,0.29
+sprouts,Target D,TBD
+sprouts,Giant,0.25
+sprouts,Sam's Club,0.5
+sprouts,Target U,NA
+sprouts,Aldi,NA
+sprouts,Walmart,N/A
+salt,Wegmans,-
+salt,Trader Joe's,0.01
+salt,McLanahans,0.1
+salt,Weis,0.1
+salt,Target D,0.06
+salt,Giant,0.06
+salt,Sam's Club,0.08
+salt,Target U,0.15
+salt,Aldi,0.1
+salt,Walmart,0.01
