@@ -123,7 +123,8 @@
 
 <!-- ALL INFO INPUTTED BELOW -->
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
+import axios from 'axios'
 import NutritionChart from '@/components/NutritionChart.vue'
 
 const selectedTab = ref(0)
@@ -131,6 +132,39 @@ const selectedSubTab = ref(0)
 
 const recipes = [
 
+const selectedTab = ref(0)
+
+// store results per tab
+const recommendations = ref<{ [key: number]: any[] }>({})
+const loading = ref<{ [key: number]: boolean }>({})
+
+// fetch function
+const fetchRecommendations = async (index: number) => {
+  loading.value[index] = true
+  try {
+    const res = await axios.post("http://127.0.0.1:5000/api/recommend", {
+      recipe_id: index + 1,  // make sure CSV recipe IDs match
+      min_budget: 0,        // adjust budget as needed
+      max_budget: 100
+    })
+    recommendations.value[index] = res.data.recommendations
+  } catch (err) {
+    console.error("Error fetching recommendations:", err)
+    recommendations.value[index] = []
+  } finally {
+    loading.value[index] = false
+  }
+}
+
+// run when tab changes
+watch(selectedTab, (newIndex) => {
+  if (!recommendations.value[newIndex]) {
+    fetchRecommendations(newIndex)
+  }
+})
+
+// initial fetch for first tab
+fetchRecommendations(0)
 {
   name: "Baked Feta Pasta",
 
