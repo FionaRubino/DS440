@@ -264,7 +264,7 @@ const recipes = [
    {
     name: "Pancakes",
     image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
+    ingredients: ["2 cups Whole Wheat Flour", "2 Tbsp White Sugar", "2 tsp Baking Powder", "1/2 tsp Baking Soda", "1/2 tsp Salt", "2.25 cup Buttermilk", "2 Eggs", "4 Tbsp Vegetable Oil"],
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
@@ -275,7 +275,7 @@ const recipes = [
    {
     name: "Chicken Caesar Salad",
     image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
+    ingredients: ["3 cups Romaine Lettuce", "1/2 lb Chicken Breasts", "1/4 cup Shredded Parmesean Cheese", "Croutons", "2 Tbsp Caesar Salad Dressing"],
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
@@ -286,7 +286,8 @@ const recipes = [
    {
     name: "Unstuffed Peppers",
     image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
+    ingredients: ["3 Bell Peppers", "1 White Onion", "1 can Crushed Tomatoes", "1 Tbsp Olive Oil", "1 lb Ground Beef", "2 cups Beef Broth", 
+      "1 cup White Rice", "1 tsp Paprika", "Salt", "1 Tbsp Minced Garlic", "1 tsp Oregano", "1 tsp Red Pepper Flakes"],
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
@@ -297,7 +298,7 @@ const recipes = [
    {
     name: "Meatloaf",
     image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
+    ingredients: ["1lb Ground Beef", "1/2 White Onion", "1 cup Italian Bread Crumbs", "1 Egg", "1/4 cup 2% Milk", "Salt", "Pepper", "1 Tbsp olive oil"],
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
@@ -308,7 +309,7 @@ const recipes = [
   {
     name: "Beef & Avocado Burrito",
     image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
+    ingredients: ["1/2 lb Ground Beef", "1 cup White Rice", "2 Avocados", "1 cup Shredded Mexican Style Cheese", "2 Eggs", "4 Tortillas", "2 Tbsp Olive Oil"],
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
@@ -319,7 +320,8 @@ const recipes = [
   {
     name: "Veggie Sandwich",
     image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
+    ingredients: ["2 slices Sourdough Bread", "1 Slice of Cheese", "1 tsp Mayonaisse", "1 tsp Dijon Mustard", "1/2 Avocado", 
+      "3 Leaves Romaine Lettuce", "2 Slices of Tomato", "1/2 Cucumber", "1/4 Red Onion", "1/4 cup Sprouts", "Salt", "Pepper"],
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
