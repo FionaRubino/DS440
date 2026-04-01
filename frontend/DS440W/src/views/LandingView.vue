@@ -217,7 +217,7 @@ const recipes = [
   {
     name: "Overnight Oats",
     image: "https://vegangirlsguide.com/wp-content/uploads/2024/09/overnight-oats-recipe-1725865416.jpg",
-    ingredients: ["1/2 Cup Rolled Oats", "1/2 Cup Greek YOgurt", "1/2 Cup Milk", "Salt", "1 Tsp Chia Seeds", "2 Tsp Honey", "1/4 Cup Berries"],
+    ingredients: ["1/2 Cup Rolled Oats", "1/2 Cup Greek Yogurt", "1/2 Cup Milk", "Salt", "1 Tsp Chia Seeds", "2 Tsp Honey", "1/4 Cup Berries"],
     ingredientBlurb: "An easy make-ahead breakfast that sits overnight in the fridge.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
@@ -229,21 +229,32 @@ const recipes = [
         "Enjoy!"]},
   ]},
   {
-    name: "Quesidilla",
-    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
-    ingredientBlurb: "Blurb",
+    name: "Quesadilla",
+    image: "https://www.perdue.com/sites/default/files/styles/recipe_hero_banner/public/quesadilla%20final.jpg?h=ddb1ad0c&itok=qDH1y9Je",
+    ingredients: ["8 Large Tortillas", "Tbsp Butter", "2 Chicken Breasts", "1 can Black Beans", "1 cup Shredded Cheese", "salt", "pepper", "1 Tbsp Olive Oil"],
+    ingredientBlurb: "A quick, protein-packed meal with chicken, black beans, and melted cheese in a crispy tortilla.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
-    {section: "Step Name",
+    {section: "Cook Chicken",
       steps: [
-        "Instruction"]},
+        "Heat pan over medium head and add olive oil",
+        "Add chicken and cook for 8 minutes on one side, then flip and cook for another 8 minutes",
+        "Slice into thickest part of chicken to ensure it is cooked through (no pink inside)", 
+        "If needed, put chicken back in pan for an additional 2-3 minutes"]},
+    {section: "Assembly",
+      steps:[
+        "In the same pan, melt 1/4 Tbs butter at low heat and place a tortilla",
+        "On one half of the tortilla layer the cheese, cooked chicken, and beans to your liking",
+        "Fold the tortilla over to close it",
+        "Cook for ~45s, then flip over the folded side and cook for 1 more minute",
+        "Repeat for each quesadilla",
+        "Enjoy!"]}
   ]},
    {
     name: "Taco Soup",
-    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
-    ingredientBlurb: "Blurb",
+    image: "https://farmerowned.com/images/featuredRecipesImages/featuredRecipes1532973470.jpg",
+    ingredients: ["1lb Ground Beef", "1 Yellow Onion", "1 can Diced Tomatoes", "1 Packet Taco Teasoning", "1 can Kidney Beans", "1 can Sweet Corn", "Salt", "Pepper", "1.5 cup Shredded cheese", "1 bag Fritos", "8oz Sour Cream"],
+    ingredientBlurb: "A warm, hearty soup inspired by classic taco flavors, combining seasoned meat, beans, tomatoes, and spices into a comforting one-pot meal.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
     {section: "Step Name",
