@@ -150,8 +150,7 @@
                             <p style="margin:0;">
                               <strong>#{{ index + 1 }}:</strong>
                               Total Price: ${{ rec.total_price.toFixed(2) }},
-                              Stores: {{ rec.num_stores }},
-                              Score: {{ rec.adjusted_score.toFixed(2) }}
+                              Stores: {{ rec.num_stores }}
                             </p>
                             <p style="margin:0; font-size: 0.9em; color:#555;">
                               Stores: {{ Array.isArray(rec.stores) ? rec.stores.join(', ') : rec.stores || 'N/A' }}
