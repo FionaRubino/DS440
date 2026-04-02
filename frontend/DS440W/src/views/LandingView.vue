@@ -58,11 +58,10 @@
 
               <!-- INGREDIENTS -->
               <v-window-item :value="0">
-                <div class="d-flex flex-wrap align-start ga-6">
+                <div style="display: flex; flex-direction: row; gap: 24px; align-items: flex-start; width: 100%;">
 
-                  <!-- LEFT SIDE: text + ingredients + budget + image -->
-                  <div style="flex: 1; min-width: 250px;">
-
+                  <!-- LEFT COLUMN: Ingredients + Budget + Image -->
+                  <div style="flex: 1; min-width: 300px;">
                     <!-- Recipe Description -->
                     <p class="text-subtitle-1 mb-1" style="font-weight: 700; margin-top: 16px; color: #1976d2;">
                       Recipe Description:
@@ -83,7 +82,7 @@
                       </v-chip>
                     </div>
 
-                    <!-- 💰 Budget Inputs -->
+                    <!-- Budget Inputs -->
                     <v-card class="mt-4 pa-4" elevation="2" style="border-radius: 12px;">
                       <p class="text-subtitle-1 mb-2" style="font-weight: 700; color: #1976d2;">
                         Budget Preferences
@@ -128,31 +127,39 @@
                       contain
                       style="border-radius: 12px; margin-top: 16px;"
                     />
-
                   </div>
 
-                  <!-- TOP 10 RECOMMENDATIONS -->
-                  <div v-if="recommendations.length" class="mt-4">
-                    <h3 style="color:#1976d2; font-weight:700; margin-bottom: 8px;">Top 10 Recommendations:</h3>
-                    <v-list dense>
-                      <v-list-item
-                        v-for="(rec, index) in recommendations"
-                        :key="index"
-                        style="border-bottom: 1px solid #eee;"
-                      >
-                        <div>
-                          <p style="margin:0;">
-                            <strong>#{{ index + 1 }}:</strong>
-                            Total Price: ${{ rec.total_price.toFixed(2) }},
-                            Stores: {{ rec.num_stores }},
-                            Score: {{ rec.adjusted_score.toFixed(2) }}
-                          </p>
-                          <p style="margin:0; font-size: 0.9em; color:#555;">
-                            Stores: {{ Array.isArray(rec.stores) ? rec.stores.join(', ') : rec.stores || 'N/A' }}
-                          </p>
-                        </div>
-                      </v-list-item>
-                    </v-list>
+                  <!-- RIGHT COLUMN: Recommendations -->
+                  <div style="flex: 1; min-width: 300px;">
+                    <h3 style="color:#1976d2; font-weight:700; margin-bottom: 8px;">
+                      Store Recommendations
+                    </h3>
+
+                    <div v-if="!recommendations.length" style="font-size: 1em; color: #555;">
+                      Enter budget preferences to get started.
+                    </div>
+
+                    <div v-else>
+                      <v-list dense>
+                        <v-list-item
+                          v-for="(rec, index) in recommendations"
+                          :key="index"
+                          style="border-bottom: 1px solid #eee;"
+                        >
+                          <div>
+                            <p style="margin:0;">
+                              <strong>#{{ index + 1 }}:</strong>
+                              Total Price: ${{ rec.total_price.toFixed(2) }},
+                              Stores: {{ rec.num_stores }},
+                              Score: {{ rec.adjusted_score.toFixed(2) }}
+                            </p>
+                            <p style="margin:0; font-size: 0.9em; color:#555;">
+                              Stores: {{ Array.isArray(rec.stores) ? rec.stores.join(', ') : rec.stores || 'N/A' }}
+                            </p>
+                          </div>
+                        </v-list-item>
+                      </v-list>
+                    </div>
                   </div>
 
                 </div>
