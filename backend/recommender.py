@@ -5,7 +5,7 @@ from data_utils import load_recipes, load_prices
 # Load real data
 # -------------------------
 recipes = load_recipes("data/recipes.csv")
-prices = load_prices("data/ingredients.csv")
+prices = load_prices("data/ingredients-total-cost-final.csv")
 
 
 # -------------------------

@@ -12,7 +12,7 @@ def load_recipes(file_path="data/recipes.csv"):
     return recipes
 
 
-def load_prices(file_path="data/ingredients.csv"):
+def load_prices(file_path="data/ingredients-total-cost-final.csv"):
     """
     Returns dict: prices[ingredient] = {store: price}
     Any non-numerical price is treated as None
