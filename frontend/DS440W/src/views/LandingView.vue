@@ -88,6 +88,15 @@
                         Budget Preferences
                       </p>
 
+                      <!-- ✅ NEW TOGGLE -->
+                      <v-switch
+                        v-model="useRecipePrice"
+                        label="Price per recipe"
+                        color="primary"
+                        inset
+                        class="mt-2"
+                      />
+
                       <v-row>
                         <v-col cols="6">
                           <v-text-field
@@ -149,8 +158,18 @@
                           <div>
                             <p style="margin:0;">
                               <strong>#{{ index + 1 }}:</strong>
-                              Total Price: ${{ rec.total_price.toFixed(2) }},
-                              Stores: {{ rec.num_stores }}
+
+                              <span v-if="useRecipePrice">
+                                Recipe Price: ${{ rec.recipe_price?.toFixed(2) }}
+                                (Total: ${{ rec.total_price?.toFixed(2) }})
+                              </span>
+
+                              <span v-else>
+                                Total Price: ${{ rec.total_price?.toFixed(2) }}
+                                (Recipe: ${{ rec.recipe_price?.toFixed(2) }})
+                              </span>
+
+                              , Stores: {{ rec.num_stores }}
                             </p>
                             <p style="margin:0; font-size: 0.9em; color:#555;">
                               Stores: {{ Array.isArray(rec.stores) ? rec.stores.join(', ') : rec.stores || 'N/A' }}
@@ -254,6 +273,7 @@ import NutritionChart from '@/components/NutritionChart.vue'
 
 const selectedTab = ref(0)
 const selectedSubTab = ref(0)
+const useRecipePrice = ref(false)
 const minBudget = ref<number | null>(null)
 const maxBudget = ref<number | null>(null)
 const recommendations = ref<any[]>([])
@@ -417,13 +437,15 @@ const getRecommendations = async () => {
         recipe_id: recipes[selectedTab.value].id,
         min_budget: minBudget.value,
         max_budget: maxBudget.value,
-        sort_by: null,
+        sort_by: useRecipePrice.value ? "recipe_price" : null,
+        use_recipe_price: useRecipePrice.value,   // ✅ NEW
         filters: null
       })
     })
 
     const data = await response.json()
     recommendations.value = data.recommendations.slice(0, 10)
+
     console.log("Backend response:", recommendations.value)
 
   } catch (error) {

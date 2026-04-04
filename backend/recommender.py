@@ -23,7 +23,7 @@ class Combo:
 # -------------------------
 # Generate Combinations
 # -------------------------
-def generate_combos_for_recipe(recipe_id, min_budget, max_budget):
+def generate_combos_for_recipe(recipe_id, min_budget, max_budget,use_recipe_price=False):
     recipe = recipes.get(recipe_id)
 
     if not recipe:
@@ -70,7 +70,9 @@ def generate_combos_for_recipe(recipe_id, min_budget, max_budget):
             cost_per_oz = price / available_oz
             recipe_price += cost_per_oz * required_oz
 
-        if min_budget <= total_price <= max_budget:
+        price_to_check = recipe_price if use_recipe_price else total_price
+
+        if min_budget <= price_to_check <= max_budget:
             combos.append(Combo(store_assignments, total_price, recipe_price))
 
     return combos

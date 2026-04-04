@@ -19,11 +19,12 @@ def recommend():
     except ValueError:
         return {"error": "min_budget and max_budget must be numbers"}, 400
 
+    use_recipe_price = data.get("use_recipe_price", False)
     sort_by = data.get("sort_by", None)
     filters = data.get("filters", None)
 
     try:
-        combos = generate_combos_for_recipe(recipe_id, min_budget, max_budget)
+        combos = generate_combos_for_recipe(recipe_id, min_budget, max_budget, use_recipe_price)
         results = recommend_combinations(
             combos,
             store_penalty=2,
