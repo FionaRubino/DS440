@@ -1,11 +1,11 @@
 Recipe ID,Recipe Name,Ingredient List
-1,Baked Feta Pasta,Baby Spinach;Cherry Tomatoes;Feta Block;Olive Oil;Salt/Pepper;Minced Garlic;Pasta
-2,Overnight Oats,Old Fashioned Oats;Greek Yogurt;2% Milk;Chia Seeds;Blueberries;Honey
-3,Quesadilla,Large Tortilla;Butter;Chicken Breast;Black Beans;Shredded Cheddar Cheese;Salt/Pepper;Olive Oil
-4,Taco Soup,Ground Beef;Yellow Onion;Diced Tomatoes;Taco Seasoning;Kidney Beans;Sweet Corn;Salt/Pepper;Shredded CheddarCheese;Fritos;Sour Cream;
-5,Pancakes,Whole Wheat Flour;White Sugar;Baking Powder;Baking Soda;Salt;Buttermilk;Eggs;Vegetable Oil;
-6,Chicken Caesar Salad,Romaine Lettuce;Chicken Breast;Shredded Parmesan Cheese;Croutons;Caesar Salad Dressing
-7,Unstuffed Peppers,Bell Peppers;White Onion;Crushed Tomatoes;Olive Oil;Ground Beef;Beef Broth;White Rice;Paprika;Salt;Minced Garlic;Oregano;Red Pepper Flakes;
-8,Meatloaf,Ground Beef;White Rice;Italian Bread Crumbs;Eggs;2% Milk;Salt;Olive Oil
-9,Beef & Avocado Burrito,Ground Beef;White Rice;Avocado;Shredded Mexican Style Cheese;Eggs:Regular Tortilla;Olive Oil
-10,Veggie Sandwich,Sourdough Bread;Sliced Provalone;Mayonaisse;Dijon Mustard;Avocado;Romaine Lettuce;Tomato;Cucumber;Red Onion;Sprouts;Salt
+1,Baked Feta Pasta,Baby Spinach|5;Cherry Tomatoes|12;Feta Block|8;Olive Oil|1;Salt/Pepper|.025;Minced Garlic|1;Pasta|8
+2,Overnight Oats,Old Fashioned Oats|2;Greek Yogurt|2;2% Milk|2.6;Chia Seeds|.333;Blueberries|2;Honey|.333
+3,Quesadilla,Large Tortilla|30;Butter|.5;Chicken Breast|24;Black Beans|16;Shredded Cheddar Cheese|8;Salt/Pepper|.025;Olive Oil|.5
+4,Taco Soup,Ground Beef|16;Yellow Onion|8;Diced Tomatoes|15.5;Taco Seasoning|1;Kidney Beans|15.5;Sweet Corn|15.5;Salt/Pepper|.025;Shredded CheddarCheese|12;Fritos|4.6;Sour Cream|8
+5,Pancakes,Whole Wheat Flour|16;White Sugar|1;Baking Powder|.333;Baking Soda|.083;Salt|.083;Buttermilk|18;Eggs|4;Vegetable Oil|2
+6,Chicken Caesar Salad,Romaine Lettuce|24;Chicken Breast|8;Shredded Parmesan Cheese|2;Croutons|3;Caesar Salad Dressing|1
+7,Unstuffed Peppers,Bell Peppers|15;White Onion|6;Crushed Tomatoes|14.5;Olive Oil|.5;Ground Beef|16;Beef Broth|16;White Rice|8;Paprika|.167;Salt|.167;Minced Garlic|.5;Oregano|.167;Red Pepper Flakes|.167
+8,Meatloaf,Ground Beef|16;White Onion|3;Italian Bread Crumbs|8;Eggs|2;2% Milk|2;Salt|.167;Olive Oil|.5
+9,Beef & Avocado Burrito,Ground Beef|8;White Rice|8;Avocado|12;Shredded Mexican Style Cheese|8;Eggs|4;Regular Tortilla|6;Olive Oil|1
+10,Veggie Sandwich,Sourdough Bread|3;Sliced Provalone|1;Mayonaisse|.167;Dijon Mustard|.167;Avocado|3;Romaine Lettuce|1;Tomato|1;Cucumber|3;Red Onion|2;Sprouts|2;Salt|.025
