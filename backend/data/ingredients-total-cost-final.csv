@@ -9,7 +9,7 @@ Bell Peppers,Aldi,1.99,14
 Black Beans,Aldi,0.95,15
 Blueberries,Aldi,3.09,16
 Butter,Aldi,3.29,16
-Buttermilk,Aldi,N/A,NA
+Buttermilk,Aldi,N/A,N/A
 Caesar Salad Dressing,Aldi,2.15,16
 Cherry Tomatoes,Aldi,2.19,10
 Chia Seeds,Aldi,4.09,12
@@ -47,7 +47,7 @@ Shredded Parmesan Cheese,Aldi,3.09,5
 Sliced Provalone,Aldi,1.65,8
 Sour Cream,Aldi,1.99,16
 Sourdough Bread,Aldi,3.65,24
-Sprouts,Aldi,N/A,NA
+Sprouts,Aldi,N/A,N/A
 Sweet Corn,Aldi,0.85,15
 Taco Seasoning,Aldi,0.55,1
 Tomato,Aldi,0.22,5
@@ -125,7 +125,7 @@ Bell Peppers,McLanahans,5.89,32
 Black Beans,McLanahans,1.65,15
 Blueberries,McLanahans,4.5,16
 Butter,McLanahans,5.75,15
-Buttermilk,McLanahans,NA,NA
+Buttermilk,McLanahans,N/A,N/A
 Caesar Salad Dressing,McLanahans,5.49,16
 Cherry Tomatoes,McLanahans,2.89,8
 Chia Seeds,McLanahans,4.5,8
@@ -136,17 +136,17 @@ Cucumber,McLanahans,0.85,6
 Diced Tomatoes,McLanahans,1.95,15
 Dijon Mustard,McLanahans,2.59,7.5
 Eggs,McLanahans,3.65,21
-Feta Block,McLanahans,N/A,NA
+Feta Block,McLanahans,N/A,N/A
 Fritos,McLanahans,3.99,10
 Greek Yogurt,McLanahans,8.99,32
 Ground Beef,McLanahans,10.59,16
 Honey,McLanahans,3.69,12
-Italian Bread Crumbs,McLanahans,NA,NA
+Italian Bread Crumbs,McLanahans,N/A,N/A
 Kidney Beans,McLanahans,1.55,15
 Large Tortilla,McLanahans,3.49,16
 Mayonaisse,McLanahans,4.49,8
 Minced Garlic,McLanahans,2.89,6
-Old Fashioned Oats,McLanahans,N/A,NA
+Old Fashioned Oats,McLanahans,N/A,N/A
 Olive Oil,McLanahans,8.85,17
 Oregano,McLanahans,1.69,1.25
 Paprika,McLanahans,1.69,2.5
@@ -163,7 +163,7 @@ Shredded Parmesan Cheese,McLanahans,5.49,8
 Sliced Provalone,McLanahans,5.99,16
 Sour Cream,McLanahans,2.65,16
 Sourdough Bread,McLanahans,3.28,16
-Sprouts,McLanahans,NA,NA
+Sprouts,McLanahans,N/A,N/A
 Sweet Corn,McLanahans,1.79,15
 Taco Seasoning,McLanahans,1.39,1
 Tomato,McLanahans,2.49,16
@@ -244,9 +244,9 @@ Butter,Target D,3.69,16
 Buttermilk,Target D,4.89,128
 Caesar Salad Dressing,Target D,3.39,16
 Cherry Tomatoes,Target D,2.59,10
-Chia Seeds,Target D,NA,N/A
+Chia Seeds,Target D,N/A,N/A
 Chicken Breast,Target D,4.99,16
-Croutons,Target D,NA,N/A
+Croutons,Target D,N/A,N/A
 Crushed Tomatoes,Target D,1.89,28
 Cucumber,Target D,1.69,16
 Diced Tomatoes,Target D,0.99,14.5
