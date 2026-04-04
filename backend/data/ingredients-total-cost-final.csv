@@ -1,0 +1,581 @@
+Ingredient,Store,Price,OZ
+2% Milk,Aldi,2.79,64
+Avocado,Aldi,0.65,7
+Baby Spinach,Aldi,2.85,5
+Baking Powder,Aldi,2.05,8.1
+Baking Soda,Aldi,0.99,16
+Beef Broth,Aldi,1.55,32
+Bell Peppers,Aldi,1.99,14
+Black Beans,Aldi,0.95,15
+Blueberries,Aldi,3.09,16
+Butter,Aldi,3.29,16
+Buttermilk,Aldi,N/A,N/A
+Caesar Salad Dressing,Aldi,2.15,16
+Cherry Tomatoes,Aldi,2.19,10
+Chia Seeds,Aldi,4.09,12
+Chicken Breast,Aldi,5.79,12
+Croutons,Aldi,1.49,5
+Crushed Tomatoes,Aldi,1.65,28
+Cucumber,Aldi,0.79,12
+Diced Tomatoes,Aldi,0.99,15
+Dijon Mustard,Aldi,1.65,12.24
+Eggs,Aldi,2.19,12
+Feta Block,Aldi,3.85,8
+Fritos,Aldi,1.89,9.25
+Greek Yogurt,Aldi,3.29,32
+Ground Beef,Aldi,6.95,16
+Honey,Aldi,3.69,12
+Italian Bread Crumbs,Aldi,1.35,28
+Kidney Beans,Aldi,0.95,15
+Large Tortilla,Aldi,2.35,8
+Mayonaisse,Aldi,3.29,30.6
+Minced Garlic,Aldi,2.85,8
+Old Fashioned Oats,Aldi,4.55,42
+Olive Oil,Aldi,6.25,16.9
+Oregano,Aldi,1.09,0.85
+Paprika,Aldi,1.09,2.21
+Pasta,Aldi,2.09,16
+Red Onion,Aldi,2.49,17
+Red Pepper Flakes,Aldi,1.09,1.7
+Regular Tortilla,Aldi,2.35,8
+Romaine Lettuce,Aldi,3.29,22
+Salt,Aldi,0.85,26
+Salt/Pepper,Aldi,4.9,5
+Shredded Cheddar Cheese,Aldi,2.65,11
+Shredded Mexican Style Cheese,Aldi,3.09,24
+Shredded Parmesan Cheese,Aldi,3.09,5
+Sliced Provalone,Aldi,1.65,8
+Sour Cream,Aldi,1.99,16
+Sourdough Bread,Aldi,3.65,24
+Sprouts,Aldi,N/A,N/A
+Sweet Corn,Aldi,0.85,15
+Taco Seasoning,Aldi,0.55,1
+Tomato,Aldi,0.22,5
+Vegetable Oil,Aldi,3.85,48
+White Onion,Aldi,2.19,35
+White Rice,Aldi,2.95,72
+White Sugar,Aldi,3.19,64
+Whole Wheat Flour,Aldi,2.19,80
+Yellow Onion,Aldi,2.19,5
+2% Milk,Giant,1.62,32
+Avocado,Giant,1.5,6
+Baby Spinach,Giant,3.49,6
+Baking Powder,Giant,2.59,7.82
+Baking Soda,Giant,0.99,15.3
+Beef Broth,Giant,1.69,32
+Bell Peppers,Giant,4.99,24
+Black Beans,Giant,0.89,14
+Blueberries,Giant,4.99,16
+Butter,Giant,3.29,16
+Buttermilk,Giant,1.79,32
+Caesar Salad Dressing,Giant,2.19,16
+Cherry Tomatoes,Giant,4.99,10
+Chia Seeds,Giant,5.39,22.5
+Chicken Breast,Giant,4.99,32
+Croutons,Giant,1.59,20
+Crushed Tomatoes,Giant,1.69,28
+Cucumber,Giant,0.69,6
+Diced Tomatoes,Giant,1,14
+Dijon Mustard,Giant,1.59,11.56
+Eggs,Giant,1.99,21
+Feta Block,Giant,3.99,8
+Fritos,Giant,5.49,28
+Greek Yogurt,Giant,3.79,3.75
+Ground Beef,Giant,6.89,16
+Honey,Giant,3.69,8
+Italian Bread Crumbs,Giant,1.99,32
+Kidney Beans,Giant,0.89,15.5
+Large Tortilla,Giant,2.99,16
+Mayonaisse,Giant,4.29,29.5
+Minced Garlic,Giant,2.49,8
+Old Fashioned Oats,Giant,3.99,15
+Olive Oil,Giant,6.99,16.5
+Oregano,Giant,3.19,3
+Paprika,Giant,2.59,3
+Pasta,Giant,1,16
+Red Onion,Giant,1.6,6
+Red Pepper Flakes,Giant,2.89,3
+Regular Tortilla,Giant,2.99,16
+Romaine Lettuce,Giant,3.49,7
+Salt,Giant,1.99,3
+Salt/Pepper,Giant,1.99,3
+Shredded Cheddar Cheese,Giant,1.99,8
+Shredded Mexican Style Cheese,Giant,1.99,8
+Shredded Parmesan Cheese,Giant,1.99,1.5
+Sliced Provalone,Giant,1.99,10
+Sour Cream,Giant,1.29,7
+Sourdough Bread,Giant,4.99,7
+Sprouts,Giant,3.49,28
+Sweet Corn,Giant,0.75,15.2
+Taco Seasoning,Giant,0.79,1
+Tomato,Giant,1.4,6
+Vegetable Oil,Giant,3.39,32
+White Onion,Giant,2.13,6
+White Rice,Giant,0.99,20
+White Sugar,Giant,3.49,75.5
+Whole Wheat Flour,Giant,3.69,152
+Yellow Onion,Giant,0.54,6
+2% Milk,McLanahans,4.79,128
+Avocado,McLanahans,1.99,6
+Baby Spinach,McLanahans,2.99,5
+Baking Powder,McLanahans,5.45,14
+Baking Soda,McLanahans,1.35,16
+Beef Broth,McLanahans,2.49,32
+Bell Peppers,McLanahans,5.89,32
+Black Beans,McLanahans,1.65,15
+Blueberries,McLanahans,4.5,16
+Butter,McLanahans,5.75,15
+Buttermilk,McLanahans,N/A,N/A
+Caesar Salad Dressing,McLanahans,5.49,16
+Cherry Tomatoes,McLanahans,2.89,8
+Chia Seeds,McLanahans,4.5,8
+Chicken Breast,McLanahans,12.39,56
+Croutons,McLanahans,1.99,5
+Crushed Tomatoes,McLanahans,1.95,15
+Cucumber,McLanahans,0.85,6
+Diced Tomatoes,McLanahans,1.95,15
+Dijon Mustard,McLanahans,2.59,7.5
+Eggs,McLanahans,3.65,21
+Feta Block,McLanahans,N/A,N/A
+Fritos,McLanahans,3.99,10
+Greek Yogurt,McLanahans,8.99,32
+Ground Beef,McLanahans,10.59,16
+Honey,McLanahans,3.69,12
+Italian Bread Crumbs,McLanahans,N/A,N/A
+Kidney Beans,McLanahans,1.55,15
+Large Tortilla,McLanahans,3.49,16
+Mayonaisse,McLanahans,4.49,8
+Minced Garlic,McLanahans,2.89,6
+Old Fashioned Oats,McLanahans,N/A,N/A
+Olive Oil,McLanahans,8.85,17
+Oregano,McLanahans,1.69,1.25
+Paprika,McLanahans,1.69,2.5
+Pasta,McLanahans,2.55,16
+Red Onion,McLanahans,1.99,6
+Red Pepper Flakes,McLanahans,4.99,1.75
+Regular Tortilla,McLanahans,3.49,16
+Romaine Lettuce,McLanahans,2.69,6
+Salt,McLanahans,5.59,3.4
+Salt/Pepper,McLanahans,5.89,3.4
+Shredded Cheddar Cheese,McLanahans,5.39,8
+Shredded Mexican Style Cheese,McLanahans,5.49,8
+Shredded Parmesan Cheese,McLanahans,5.49,8
+Sliced Provalone,McLanahans,5.99,16
+Sour Cream,McLanahans,2.65,16
+Sourdough Bread,McLanahans,3.28,16
+Sprouts,McLanahans,N/A,N/A
+Sweet Corn,McLanahans,1.79,15
+Taco Seasoning,McLanahans,1.39,1
+Tomato,McLanahans,2.49,16
+Vegetable Oil,McLanahans,5.99,32
+White Onion,McLanahans,0.99,6
+White Rice,McLanahans,4.59,28
+White Sugar,McLanahans,2.79,16
+Whole Wheat Flour,McLanahans,18.39,80
+Yellow Onion,McLanahans,0.99,6
+2% Milk,Sam's Club,3.94,59
+Avocado,Sam's Club,3.72,5
+Baby Spinach,Sam's Club,4.76,16
+Baking Powder,Sam's Club,7.78,44
+Baking Soda,Sam's Club,8.88,216
+Beef Broth,Sam's Club,5.98,96
+Bell Peppers,Sam's Club,6.67,48
+Black Beans,Sam's Club,5.98,84
+Blueberries,Sam's Club,6.97,32
+Butter,Sam's Club,8.44,128
+Buttermilk,Sam's Club,N/A,N/A
+Caesar Salad Dressing,Sam's Club,N/A,N/A
+Cherry Tomatoes,Sam's Club,6.65,24
+Chia Seeds,Sam's Club,N/A,N/A
+Chicken Breast,Sam's Club,16.56,128
+Croutons,Sam's Club,6.98,32
+Crushed Tomatoes,Sam's Club,11.26,224
+Cucumber,Sam's Club,4.07,18
+Diced Tomatoes,Sam's Club,9.88,112
+Dijon Mustard,Sam's Club,5.48,30.6
+Eggs,Sam's Club,4.42,42
+Feta Block,Sam's Club,9.76,32
+Fritos,Sam's Club,4.48,18.125
+Greek Yogurt,Sam's Club,4.97,48
+Ground Beef,Sam's Club,19.07,48
+Honey,Sam's Club,7.98,48
+Italian Bread Crumbs,Sam's Club,5.94,200
+Kidney Beans,Sam's Club,5.98,84
+Large Tortilla,Sam's Club,3.67,48
+Mayonaisse,Sam's Club,7.48,30.6
+Minced Garlic,Sam's Club,5.68,48
+Old Fashioned Oats,Sam's Club,7.98,160
+Olive Oil,Sam's Club,12.98,67.6
+Oregano,Sam's Club,5.98,5.5
+Paprika,Sam's Club,8.44,18
+Pasta,Sam's Club,8.52,96
+Red Onion,Sam's Club,5.72,96
+Red Pepper Flakes,Sam's Club,5.98,13.5
+Regular Tortilla,Sam's Club,3.67,48
+Romaine Lettuce,Sam's Club,2.26,112
+Salt,Sam's Club,11.16,96
+Salt/Pepper,Sam's Club,11.16,96
+Shredded Cheddar Cheese,Sam's Club,5.47,32
+Shredded Mexican Style Cheese,Sam's Club,6.16,32
+Shredded Parmesan Cheese,Sam's Club,10.74,24
+Sliced Provalone,Sam's Club,7.63,42
+Sour Cream,Sam's Club,4.97,28
+Sourdough Bread,Sam's Club,3.28,32
+Sprouts,Sam's Club,5.94,32
+Sweet Corn,Sam's Club,8.42,112
+Taco Seasoning,Sam's Club,6.98,10
+Tomato,Sam's Club,4.82,48
+Vegetable Oil,Sam's Club,12.88,192
+White Onion,Sam's Club,4.87,60
+White Rice,Sam's Club,11.48,500
+White Sugar,Sam's Club,6.58,160
+Whole Wheat Flour,Sam's Club,6.72,192
+Yellow Onion,Sam's Club,N/A,N/A
+2% Milk,Target D,4.89,128
+Avocado,Target D,0.69,6
+Baby Spinach,Target D,2.19,5
+Baking Powder,Target D,1.99,6
+Baking Soda,Target D,1.59,15
+Beef Broth,Target D,1.59,32
+Bell Peppers,Target D,2.69,12
+Black Beans,Target D,0.99,15
+Blueberries,Target D,3.99,16
+Butter,Target D,3.69,16
+Buttermilk,Target D,4.89,128
+Caesar Salad Dressing,Target D,3.39,16
+Cherry Tomatoes,Target D,2.59,10
+Chia Seeds,Target D,N/A,N/A
+Chicken Breast,Target D,4.99,16
+Croutons,Target D,N/A,N/A
+Crushed Tomatoes,Target D,1.89,28
+Cucumber,Target D,1.69,16
+Diced Tomatoes,Target D,0.99,14.5
+Dijon Mustard,Target D,1.79,11.3
+Eggs,Target D,1.99,24
+Feta Block,Target D,5.29,8
+Fritos,Target D,4.69,9
+Greek Yogurt,Target D,3.39,12
+Ground Beef,Target D,6.19,16
+Honey,Target D,4.49,8
+Italian Bread Crumbs,Target D,1.29,17
+Kidney Beans,Target D,1.19,15
+Large Tortilla,Target D,1.99,16
+Mayonaisse,Target D,2.99,5.5
+Minced Garlic,Target D,2.99,4.5
+Old Fashioned Oats,Target D,2.89,22.9
+Olive Oil,Target D,6.39,17.5
+Oregano,Target D,1.19,0.75
+Paprika,Target D,1.19,2.12
+Pasta,Target D,0.99,16
+Red Onion,Target D,0.99,6
+Red Pepper Flakes,Target D,1.19,1.15
+Regular Tortilla,Target D,1.99,16
+Romaine Lettuce,Target D,3.59,21
+Salt,Target D,1.99,0.16
+Salt/Pepper,Target D,1.99,0.16
+Shredded Cheddar Cheese,Target D,1.99,4
+Shredded Mexican Style Cheese,Target D,1.99,3.5
+Shredded Parmesan Cheese,Target D,1.99,3
+Sliced Provalone,Target D,1.69,9
+Sour Cream,Target D,1.29,8
+Sourdough Bread,Target D,3.99,28
+Sprouts,Target D,N/A,N/A
+Sweet Corn,Target D,0.59,15
+Taco Seasoning,Target D,0.99,1
+Tomato,Target D,3.89,20
+Vegetable Oil,Target D,3.99,51
+White Onion,Target D,0.99,6
+White Rice,Target D,1.89,40
+White Sugar,Target D,3.19,75.5
+Whole Wheat Flour,Target D,2.49,66
+Yellow Onion,Target D,0.99,6
+2% Milk,Target U,2.69,128
+Avocado,Target U,1.18,6
+Baby Spinach,Target U,2.29,5
+Baking Powder,Target U,2.69,6
+Baking Soda,Target U,1.59,15
+Beef Broth,Target U,1.79,32
+Bell Peppers,Target U,2.69,12
+Black Beans,Target U,1.59,15
+Blueberries,Target U,3.49,16
+Butter,Target U,3.49,16
+Buttermilk,Target U,2.69,128
+Caesar Salad Dressing,Target U,3.69,16
+Cherry Tomatoes,Target U,2.49,10
+Chia Seeds,Target U,7.99,8
+Chicken Breast,Target U,12.77,16
+Croutons,Target U,2.29,4
+Crushed Tomatoes,Target U,3.79,28
+Cucumber,Target U,0.99,16
+Diced Tomatoes,Target U,3.79,14.5
+Dijon Mustard,Target U,1.99,11.3
+Eggs,Target U,2.99,24
+Feta Block,Target U,5.29,8
+Fritos,Target U,4.69,9
+Greek Yogurt,Target U,5.99,12
+Ground Beef,Target U,7.99,16
+Honey,Target U,4.79,8
+Italian Bread Crumbs,Target U,2.79,17
+Kidney Beans,Target U,1.49,15
+Large Tortilla,Target U,4.69,16
+Mayonaisse,Target U,4.29,5.5
+Minced Garlic,Target U,3.79,4.5
+Old Fashioned Oats,Target U,4.89,22.9
+Olive Oil,Target U,6.39,17.5
+Oregano,Target U,1.19,0.75
+Paprika,Target U,1.19,2.12
+Pasta,Target U,0.99,16
+Red Onion,Target U,0.89,6
+Red Pepper Flakes,Target U,1.19,1.15
+Regular Tortilla,Target U,4.69,16
+Romaine Lettuce,Target U,2.99,21
+Salt,Target U,2.19,0.16
+Salt/Pepper,Target U,2.19,0.16
+Shredded Cheddar Cheese,Target U,1.99,4
+Shredded Mexican Style Cheese,Target U,1.99,3.5
+Shredded Parmesan Cheese,Target U,1.99,3
+Sliced Provalone,Target U,1.69,9
+Sour Cream,Target U,1.99,8
+Sourdough Bread,Target U,4.19,28
+Sprouts,Target U,N/A,N/A
+Sweet Corn,Target U,0.99,15
+Taco Seasoning,Target U,0.99,1
+Tomato,Target U,3.19,20
+Vegetable Oil,Target U,2.79,51
+White Onion,Target U,0.89,6
+White Rice,Target U,1.89,40
+White Sugar,Target U,3.19,75.5
+Whole Wheat Flour,Target U,2.49,66
+Yellow Onion,Target U,0.89,6
+2% Milk,Trader Joe's,5.99,64
+Avocado,Trader Joe's,3.99,24
+Baby Spinach,Trader Joe's,2.29,6
+Baking Powder,Trader Joe's,1.99,12
+Baking Soda,Trader Joe's,0.99,16
+Beef Broth,Trader Joe's,2.99,32
+Bell Peppers,Trader Joe's,4.99,12
+Black Beans,Trader Joe's,0.99,5
+Blueberries,Trader Joe's,6.99,32
+Butter,Trader Joe's,3.99,16
+Buttermilk,Trader Joe's,N/A,N/A
+Caesar Salad Dressing,Trader Joe's,3.99,11
+Cherry Tomatoes,Trader Joe's,4.99,12
+Chia Seeds,Trader Joe's,4.99,8
+Chicken Breast,Trader Joe's,7.49,16
+Croutons,Trader Joe's,3.99,4.5
+Crushed Tomatoes,Trader Joe's,0.99,15
+Cucumber,Trader Joe's,0.85,8
+Diced Tomatoes,Trader Joe's,0.99,15
+Dijon Mustard,Trader Joe's,2.29,13
+Eggs,Trader Joe's,5.99,24
+Feta Block,Trader Joe's,3.79,8
+Fritos,Trader Joe's,N/A,N/A
+Greek Yogurt,Trader Joe's,2.99,16
+Ground Beef,Trader Joe's,6.49,16
+Honey,Trader Joe's,3.99,8
+Italian Bread Crumbs,Trader Joe's,2.99,10
+Kidney Beans,Trader Joe's,1.19,15.5
+Large Tortilla,Trader Joe's,2.99,24
+Mayonaisse,Trader Joe's,3.79,16
+Minced Garlic,Trader Joe's,1.99,8
+Old Fashioned Oats,Trader Joe's,2.99,18
+Olive Oil,Trader Joe's,9.99,33.8
+Oregano,Trader Joe's,1.99,1
+Paprika,Trader Joe's,2.49,1
+Pasta,Trader Joe's,1.99,16
+Red Onion,Trader Joe's,0.95,6
+Red Pepper Flakes,Trader Joe's,1.99,1
+Regular Tortilla,Trader Joe's,2.99,24
+Romaine Lettuce,Trader Joe's,2.99,12
+Salt,Trader Joe's,1.69,17.6
+Salt/Pepper,Trader Joe's,1.69,17.6
+Shredded Cheddar Cheese,Trader Joe's,4.29,12
+Shredded Mexican Style Cheese,Trader Joe's,4.29,12
+Shredded Parmesan Cheese,Trader Joe's,3.99,8
+Sliced Provalone,Trader Joe's,4.99,8
+Sour Cream,Trader Joe's,2.49,16
+Sourdough Bread,Trader Joe's,3.49,24
+Sprouts,Trader Joe's,N/A,N/A
+Sweet Corn,Trader Joe's,0.99,15
+Taco Seasoning,Trader Joe's,1.19,1
+Tomato,Trader Joe's,1.99,5
+Vegetable Oil,Trader Joe's,11.99,16
+White Onion,Trader Joe's,1.19,6
+White Rice,Trader Joe's,3.99,48
+White Sugar,Trader Joe's,4.49,32
+Whole Wheat Flour,Trader Joe's,5.49,80
+Yellow Onion,Trader Joe's,1.19,6
+2% Milk,Walmart,1.18,16
+Avocado,Walmart,0.55,6
+Baby S+409:427pinach,Walmart,2.18,6
+Baking Powder,Walmart,1.98,8
+Baking Soda,Walmart,0.92,16
+Beef Broth,Walmart,1.5,32
+Bell Peppers,Walmart,2.48,12
+Black Beans,Walmart,0.86,15
+Blueberries,Walmart,2.12,8.8
+Butter,Walmart,2.57,8
+Buttermilk,Walmart,2.14,32
+Caesar Salad Dressing,Walmart,1.97,16
+Cherry Tomatoes,Walmart,2.63,10
+Chia Seeds,Walmart,7.94,8
+Chicken Breast,Walmart,8.82,32
+Croutons,Walmart,1.42,10
+Crushed Tomatoes,Walmart,1.48,28
+Cucumber,Walmart,0.68,8
+Diced Tomatoes,Walmart,0.96,15
+Dijon Mustard,Walmart,1.62,11
+Eggs,Walmart,1.13,12
+Feta Block,Walmart,5.46,8
+Fritos,Walmart,3.97,9
+Greek Yogurt,Walmart,0.82,5.3
+Ground Beef,Walmart,6.26,16
+Honey,Walmart,3.74,8
+Italian Bread Crumbs,Walmart,1.22,15
+Kidney Beans,Walmart,0.86,15
+Large Tortilla,Walmart,2.12,24
+Mayonaisse,Walmart,2.12,10
+Minced Garlic,Walmart,1.87,8
+Old Fashioned Oats,Walmart,2.66,18
+Olive Oil,Walmart,5.94,18
+Oregano,Walmart,1.08,0.5
+Paprika,Walmart,1.08,3
+Pasta,Walmart,0.98,16
+Red Onion,Walmart,0.99,6
+Red Pepper Flakes,Walmart,1.44,2
+Regular Tortilla,Walmart,2.12,24
+Romaine Lettuce,Walmart,3.34,10
+Salt,Walmart,1.94,0.05
+Salt/Pepper,Walmart,1.94,0.05
+Shredded Cheddar Cheese,Walmart,1.97,8
+Shredded Mexican Style Cheese,Walmart,1.97,8
+Shredded Parmesan Cheese,Walmart,2.08,6
+Sliced Provalone,Walmart,1.88,12
+Sour Cream,Walmart,1.24,8
+Sourdough Bread,Walmart,2.14,24
+Sprouts,Walmart,N/A,N/A
+Sweet Corn,Walmart,0.76,15
+Taco Seasoning,Walmart,0.97,1
+Tomato,Walmart,0.23,5
+Vegetable Oil,Walmart,2.97,17
+White Onion,Walmart,1.27,6
+White Rice,Walmart,0.92,20
+White Sugar,Walmart,1.72,19
+Whole Wheat Flour,Walmart,5.58,152
+Yellow Onion,Walmart,0.78,6
+2% Milk,Wegmans,2.5,64
+Avocado,Wegmans,0.99,6
+Baby Spinach,Wegmans,3.29,5
+Baking Powder,Wegmans,1.99,8
+Baking Soda,Wegmans,1.19,15
+Beef Broth,Wegmans,2.69,32
+Bell Peppers,Wegmans,6.49,24
+Black Beans,Wegmans,1.99,14
+Blueberries,Wegmans,6.99,16
+Butter,Wegmans,2.99,16
+Buttermilk,Wegmans,2.49,32
+Caesar Salad Dressing,Wegmans,1.99,10
+Cherry Tomatoes,Wegmans,6.49,12
+Chia Seeds,Wegmans,10.49,32
+Chicken Breast,Wegmans,9.65,24
+Croutons,Wegmans,1.99,20
+Crushed Tomatoes,Wegmans,1.69,28
+Cucumber,Wegmans,0.79,6
+Diced Tomatoes,Wegmans,0.99,14
+Dijon Mustard,Wegmans,2.49,12
+Eggs,Wegmans,1.69,21
+Feta Block,Wegmans,4.99,8
+Fritos,Wegmans,5.99,28
+Greek Yogurt,Wegmans,3.99,32
+Ground Beef,Wegmans,7.49,16
+Honey,Wegmans,4.79,16
+Italian Bread Crumbs,Wegmans,3.99,32
+Kidney Beans,Wegmans,0.99,16
+Large Tortilla,Wegmans,2.49,24
+Mayonaisse,Wegmans,2.49,30
+Minced Garlic,Wegmans,3.49,8
+Old Fashioned Oats,Wegmans,3.49,42
+Olive Oil,Wegmans,7.99,34
+Oregano,Wegmans,1.49,3
+Paprika,Wegmans,1.49,3
+Pasta,Wegmans,4.99,16
+Red Onion,Wegmans,0.9,6
+Red Pepper Flakes,Wegmans,1.49,3
+Regular Tortilla,Wegmans,2.49,16
+Romaine Lettuce,Wegmans,3.99,7
+Salt,Wegmans,0.99,2
+Salt/Pepper,Wegmans,2.69,5
+Shredded Cheddar Cheese,Wegmans,3.49,8
+Shredded Mexican Style Cheese,Wegmans,1.99,8
+Shredded Parmesan Cheese,Wegmans,12,2
+Sliced Provalone,Wegmans,1.99,10
+Sour Cream,Wegmans,4.49,7
+Sourdough Bread,Wegmans,5.99,7
+Sprouts,Wegmans,3.79,28
+Sweet Corn,Wegmans,0.89,15
+Taco Seasoning,Wegmans,0.99,1
+Tomato,Wegmans,1.75,6
+Vegetable Oil,Wegmans,3.49,32
+White Onion,Wegmans,1.87,6
+White Rice,Wegmans,0.99,20
+White Sugar,Wegmans,3.49,76
+Whole Wheat Flour,Wegmans,1.79,152
+Yellow Onion,Wegmans,1.99,6
+2% Milk,Weis,1.79,32
+Avocado,Weis,1.99,6
+Baby Spinach,Weis,3.79,5
+Baking Powder,Weis,2.19,4
+Baking Soda,Weis,0.89,16
+Beef Broth,Weis,2.5,32
+Bell Peppers,Weis,2.99,12
+Black Beans,Weis,0.79,16
+Blueberries,Weis,4.99,16
+Butter,Weis,1.99,8
+Buttermilk,Weis,1.89,32
+Caesar Salad Dressing,Weis,2,5
+Cherry Tomatoes,Weis,4.99,12
+Chia Seeds,Weis,6.29,14
+Chicken Breast,Weis,7.99,24
+Croutons,Weis,1.59,5
+Crushed Tomatoes,Weis,1.67,28
+Cucumber,Weis,0.89,10
+Diced Tomatoes,Weis,0.99,14.5
+Dijon Mustard,Weis,1.67,12
+Eggs,Weis,2,24
+Feta Block,Weis,4.99,8
+Fritos,Weis,4.99,15.5
+Greek Yogurt,Weis,5.99,32
+Ground Beef,Weis,7.29,16
+Honey,Weis,5.99,12
+Italian Bread Crumbs,Weis,1.59,15
+Kidney Beans,Weis,0.79,15.5
+Large Tortilla,Weis,2.69,19.2
+Mayonaisse,Weis,2.99,15
+Minced Garlic,Weis,2.99,4.5
+Old Fashioned Oats,Weis,2.59,18
+Olive Oil,Weis,10.99,16
+Oregano,Weis,1.99,1
+Paprika,Weis,1.39,2.5
+Pasta,Weis,1.25,12
+Red Onion,Weis,1.99,16
+Red Pepper Flakes,Weis,1.79,1.75
+Regular Tortilla,Weis,2.69,12
+Romaine Lettuce,Weis,1.99,16
+Salt,Weis,2.99,5.25
+Salt/Pepper,Weis,2.99,10.5
+Shredded Cheddar Cheese,Weis,3.79,16
+Shredded Mexican Style Cheese,Weis,2.39,8
+Shredded Parmesan Cheese,Weis,2.39,6
+Sliced Provalone,Weis,2,8
+Sour Cream,Weis,1.69,8
+Sourdough Bread,Weis,4.79,17.64
+Sprouts,Weis,1.99,14
+Sweet Corn,Weis,0.89,15.25
+Taco Seasoning,Weis,0.59,1
+Tomato,Weis,2.49,16
+Vegetable Oil,Weis,1.99,16
+White Onion,Weis,1.99,16
+White Rice,Weis,9.39,80
+White Sugar,Weis,3.69,64
+Whole Wheat Flour,Weis,3.49,80
+Yellow Onion,Weis,2.99,48

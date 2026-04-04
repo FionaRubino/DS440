@@ -5,16 +5,17 @@ from data_utils import load_recipes, load_prices
 # Load real data
 # -------------------------
 recipes = load_recipes("data/recipes.csv")
-prices = load_prices("data/ingredients.csv")
+prices = load_prices("data/ingredients-total-cost-final.csv")
 
 
 # -------------------------
 # Combo Class
 # -------------------------
 class Combo:
-    def __init__(self, store_assignments, total_price):
+    def __init__(self, store_assignments, total_price, recipe_price):
         self.store_assignments = store_assignments  # {ingredient: store}
         self.total_price = total_price
+        self.recipe_price = recipe_price
         self.num_stores = len(set(store_assignments.values()))
         self.adjusted_score = None
 
@@ -30,32 +31,47 @@ def generate_combos_for_recipe(recipe_id, min_budget, max_budget):
 
     ingredients = recipe["ingredients"]
 
-    # Build list of options for each ingredient
+    # Build list of options
     options_per_ingredient = []
     for ing in ingredients:
-        if ing not in prices:
+        name = ing["name"]
+
+        if name not in prices:
             continue
-        # Only include stores with valid prices
-        options = [(store, price) for store, price in prices[ing].items() if price is not None]
+
+        options = [
+            (store, data["price"], data["oz"])
+            for store, data in prices[name].items()
+            if data["price"] is not None and data["oz"] is not None
+        ]
+
         if not options:
-            # If no valid price for ingredient, skip the recipe entirely
             return []
+
         options_per_ingredient.append(options)
 
     combos = []
 
-    # Generate all combinations
     for combination in product(*options_per_ingredient):
         store_assignments = {}
         total_price = 0
+        recipe_price = 0  # NEW
 
-        for ing, (store, price) in zip(ingredients, combination):
-            store_assignments[ing] = store
+        for ing, (store, price, available_oz) in zip(ingredients, combination):
+            name = ing["name"]
+            required_oz = ing["required_oz"]
+
+            store_assignments[name] = store
+
+            # Existing total price (full purchase)
             total_price += price
 
-        # Keep only combos within budget
+            # NEW: proportional cost
+            cost_per_oz = price / available_oz
+            recipe_price += cost_per_oz * required_oz
+
         if min_budget <= total_price <= max_budget:
-            combos.append(Combo(store_assignments, total_price))
+            combos.append(Combo(store_assignments, total_price, recipe_price))
 
     return combos
 
