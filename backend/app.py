@@ -35,13 +35,14 @@ def recommend():
         return {"error": str(e)}, 500
 
     output = [
-        {
-            "total_price": c.total_price,
-            "num_stores": c.num_stores,
-            "adjusted_score": c.adjusted_score,
-            "stores": c.store_assignments
-        }
-        for c in results
+    {
+        "total_price": c.total_price,
+        "recipe_price": c.recipe_price,  # NEW
+        "num_stores": c.num_stores,
+        "adjusted_score": c.adjusted_score,
+        "stores": c.store_assignments
+    }
+    for c in results
     ]
 
     return jsonify({"recipe": recipe_id, "recommendations": output})
