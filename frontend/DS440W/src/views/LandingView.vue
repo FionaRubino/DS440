@@ -144,9 +144,23 @@
                       Store Recommendations
                     </h3>
 
-                    <div v-if="!recommendations.length" style="font-size: 1em; color: #555;">
+                    <div v-if="!recommendations.length && !loading" style="font-size: 1em; color: #555;">
                       Enter budget preferences to get started.
                     </div>
+
+                    <!-- Loading spinner -->
+                      <div
+                        v-if="loading"
+                        class="d-flex flex-column align-center justify-center mt-4"
+                        style="gap: 8px;"
+                      >
+                        <v-progress-circular
+                          indeterminate
+                          color="primary"
+                          size="36"
+                        ></v-progress-circular>
+                        <span>Loading recommendations...</span>
+                      </div>
 
                     <div v-else>
                       <v-list dense>
@@ -277,6 +291,7 @@ const useRecipePrice = ref(false)
 const minBudget = ref<number | null>(null)
 const maxBudget = ref<number | null>(null)
 const recommendations = ref<any[]>([])
+const loading = ref(false)
 const recipes = [
   {
     name: "Baked Feta Pasta",
@@ -428,28 +443,28 @@ watch(selectedTab, (newVal) => {
 
 const getRecommendations = async () => {
   try {
+    loading.value = true   // ✅ show spinner
     const response = await fetch("http://localhost:8000/api/recommend", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         recipe_id: recipes[selectedTab.value].id,
         min_budget: minBudget.value,
         max_budget: maxBudget.value,
         sort_by: useRecipePrice.value ? "recipe_price" : null,
-        use_recipe_price: useRecipePrice.value,   // ✅ NEW
+        use_recipe_price: useRecipePrice.value,
         filters: null
       })
     })
 
     const data = await response.json()
     recommendations.value = data.recommendations.slice(0, 10)
-
     console.log("Backend response:", recommendations.value)
 
   } catch (error) {
     console.error("Error fetching recommendations:", error)
+  } finally {
+    loading.value = false   // ✅ hide spinner
   }
 }
 </script>
