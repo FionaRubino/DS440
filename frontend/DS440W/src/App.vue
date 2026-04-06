@@ -12,6 +12,36 @@
 
         <v-spacer />
 
+        <! Help Button>
+        <v-btn  class="mr-4" color="secondary" variant="elevated" @click="helpDialog = true">
+          Introduction
+        </v-btn>
+
+        <v-dialog v-model="helpDialog" max-width="500">
+          <v-card>
+            <v-card-title class="text-h6">
+              How to Use This Website
+            </v-card-title>
+
+            <v-card-text>
+              <ul>
+                <li>Welcome to our App to help you shop, cook, and learn all about your nutrition. This app is made for Penn State students by Penn State students! </li>
+                <li>Below you can scroll through 10 unique recipes. On each recipie there are 3 types to help you!</li>
+                <li>Ingredients: Lists all the ingredients you need. </li>
+                <li>Nutrition:  blrub... </li>
+                <li>Instruciton: blrub... </li>
+              </ul>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-spacer />
+              <v-btn color="primary" @click="helpDialog = false">
+                Got it
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+
         <!-- Simple Menu -->
         <v-menu offset-y>
           <template v-slot:activator="{ props }">
@@ -96,6 +126,9 @@ const navigateToReports = () => {
   router.push(`/inventory/${route.params.slug}/report`)
   sidebarVisible.value = false
 }
+
+const helpDialog = ref(false)
+
 </script>
 
 
