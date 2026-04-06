@@ -88,6 +88,15 @@
                         Budget Preferences
                       </p>
 
+                      <!-- ✅ NEW TOGGLE -->
+                      <v-switch
+                        v-model="useRecipePrice"
+                        label="Price per recipe"
+                        color="primary"
+                        inset
+                        class="mt-2"
+                      />
+
                       <v-row>
                         <v-col cols="6">
                           <v-text-field
@@ -107,6 +116,21 @@
                             variant="outlined"
                             density="comfortable"
                           />
+                        </v-col>
+
+                        <v-col cols="12">
+                          <v-slider
+                            v-model="maxStores"
+                            :min="1"
+                            :max="10"
+                            :step="1"
+                            label="Max Stores to Visit"
+                            thumb-label="always"
+                            color="primary"
+                          ></v-slider>
+                          <div class="text-caption mt-1">
+                            Maximum Stores: {{ maxStores }}
+                          </div>
                         </v-col>
                       </v-row>
 
@@ -135,9 +159,23 @@
                       Store Recommendations
                     </h3>
 
-                    <div v-if="!recommendations.length" style="font-size: 1em; color: #555;">
+                    <div v-if="!recommendations.length && !loading" style="font-size: 1em; color: #555;">
                       Enter budget preferences to get started.
                     </div>
+
+                    <!-- Loading spinner -->
+                      <div
+                        v-if="loading"
+                        class="d-flex flex-column align-center justify-center mt-4"
+                        style="gap: 8px;"
+                      >
+                        <v-progress-circular
+                          indeterminate
+                          color="primary"
+                          size="36"
+                        ></v-progress-circular>
+                        <span>Loading recommendations...</span>
+                      </div>
 
                     <div v-else>
                       <v-list dense>
@@ -146,19 +184,82 @@
                           :key="index"
                           style="border-bottom: 1px solid #eee;"
                         >
-                          <div>
-                            <p style="margin:0;">
+                          <div style="display: flex; align-items: center; justify-content: space-between; margin:0;">
+                            <div>
                               <strong>#{{ index + 1 }}:</strong>
-                              Total Price: ${{ rec.total_price.toFixed(2) }},
-                              Stores: {{ rec.num_stores }}
-                            </p>
-                            <p style="margin:0; font-size: 0.9em; color:#555;">
-                              Stores: {{ Array.isArray(rec.stores) ? rec.stores.join(', ') : rec.stores || 'N/A' }}
-                            </p>
+
+                              <span v-if="useRecipePrice">
+                                Recipe Price: ${{ rec.recipe_price?.toFixed(2) }}
+                                (Total: ${{ rec.total_price?.toFixed(2) }})
+                              </span>
+
+                              <span v-else>
+                                Total Price: ${{ rec.total_price?.toFixed(2) }}
+                                (Recipe: ${{ rec.recipe_price?.toFixed(2) }})
+                              </span>
+
+                              , Stores: {{ rec.num_stores }}
+                            </div>
+
+                            <v-btn
+                              variant="text"
+                              color="primary"
+                              size="small"
+                              @click="openDialog(rec)"
+                              style="border: 1px solid #1976d2; border-radius: 4px;"
+                            >
+                              See More →
+                            </v-btn>
                           </div>
                         </v-list-item>
                       </v-list>
                     </div>
+                    <v-dialog v-model="dialog" max-width="500">
+                      <v-card>
+                        <v-card-title>
+                          Ingredient Breakdown
+                          <v-spacer></v-spacer>
+                        </v-card-title>
+
+                        <v-card-text>
+                          <v-list-item v-for="(ing, i) in selectedRecIngredients" :key="i">
+                            <v-list-item-content>
+                              <v-list-item-title>
+                                {{ ing.name }} ({{ ing.store }})
+                              </v-list-item-title>
+
+                              <v-list-item-subtitle>
+                                <strong>Store Price:</strong> ${{ ing.total.toFixed(2) }}
+                                <br />
+                                <span style="color: #777;">
+                                  Used in Recipe: ${{ ing.used.toFixed(2) }}
+                                </span>
+                              </v-list-item-subtitle>
+                            </v-list-item-content>
+                          </v-list-item>
+
+                          <!-- Optional totals at the bottom -->
+                          <v-divider></v-divider>
+                          <v-list-item>
+                            <v-list-item-content>
+                              <v-list-item-title>
+                                <strong>Total Store Price:</strong> ${{ selectedRecIngredients.reduce((sum, i) => sum + i.total, 0).toFixed(2) }}
+                              </v-list-item-title>
+                              <v-list-item-title>
+                                <strong>Total Recipe Cost:</strong> ${{ selectedRecIngredients.reduce((sum, i) => sum + i.used, 0).toFixed(2) }}
+                              </v-list-item-title>
+                            </v-list-item-content>
+                          </v-list-item>
+                          
+                        </v-card-text>
+                        <v-card-actions>
+                          <v-spacer></v-spacer>
+                          <v-btn color="primary" text @click="dialog = false">
+                            Close
+                          </v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </v-dialog>
                   </div>
 
                 </div>
@@ -249,14 +350,35 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { ref, watch, computed } from 'vue'
 import NutritionChart from '@/components/NutritionChart.vue'
 
 const selectedTab = ref(0)
 const selectedSubTab = ref(0)
+const useRecipePrice = ref(false)
 const minBudget = ref<number | null>(null)
 const maxBudget = ref<number | null>(null)
+const maxStores = ref(10)
 const recommendations = ref<any[]>([])
+const dialog = ref(false)
+const selectedRecIngredients = ref([])
+const totalStoreCost = computed(() =>
+  selectedRecIngredients.value.reduce((sum, i) => sum + i.total, 0)
+)
+const totalUsedCost = computed(() =>
+  selectedRecIngredients.value.reduce((sum, i) => sum + i.used, 0)
+)
+
+function openDialog(rec) {
+  selectedRecIngredients.value = rec.breakdown.map(item => ({
+    name: item.ingredient,
+    store: item.store,
+    total: item.total_item_price, // full price at store
+    used: item.used_cost           // proportional price for recipe
+  }));
+  dialog.value = true;
+}
+const loading = ref(false)
 const recipes = [
   {
     name: "Baked Feta Pasta",
@@ -554,26 +676,39 @@ watch(selectedTab, (newVal) => {
 
 const getRecommendations = async () => {
   try {
+    loading.value = true
+
+    const payload = {
+      recipe_id: recipes[selectedTab.value].id,
+      min_budget: minBudget.value,
+      max_budget: maxBudget.value,
+      sort_by: useRecipePrice.value ? "recipe_price" : null,
+      use_recipe_price: useRecipePrice.value,
+      filters: {}
+    }
+
+    if (maxStores.value) {
+      payload.filters.num_stores = maxStores.value
+    }
+
     const response = await fetch("http://localhost:8000/api/recommend", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        recipe_id: recipes[selectedTab.value].id,
-        min_budget: minBudget.value,
-        max_budget: maxBudget.value,
-        sort_by: null,
-        filters: null
-      })
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
     })
 
+    // ✅ THIS WAS MISSING
     const data = await response.json()
-    recommendations.value = data.recommendations.slice(0, 10)
-    console.log("Backend response:", recommendations.value)
+
+    console.log("Backend response:", data)
+
+    // ✅ THIS IS WHY YOU SEE NOTHING
+    recommendations.value = data.recommendations || []
 
   } catch (error) {
     console.error("Error fetching recommendations:", error)
+  } finally {
+    loading.value = false
   }
 }
 </script>
