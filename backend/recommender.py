@@ -24,13 +24,15 @@ class Combo:
 # -------------------------
 # Generate Combinations
 # -------------------------
+
 def generate_combos_for_recipe(
     recipe_id,
     min_budget,
     max_budget,
     use_recipe_price=False,
-    top_stores_per_ingredient=3,
-    max_results=10
+    top_stores_per_ingredient=6,
+    max_results=10,
+    max_stores=None,  # NEW: limit number of stores
 ):
     recipe = recipes.get(recipe_id)
     if not recipe:
@@ -63,18 +65,15 @@ def generate_combos_for_recipe(
                 (store, price, oz, price / oz * required_oz)
                 for store, price, oz in all_options
             ]
-            # Take top stores by lowest used cost
             top_options = nsmallest(top_stores_per_ingredient, all_options, key=lambda x: x[3])
-            # Remove the precomputed used_cost for zipping
             options_per_ingredient.append([(s, p, oz) for s, p, oz, _ in top_options])
         else:
-            # Top stores by full item price
             top_options = nsmallest(top_stores_per_ingredient, all_options, key=lambda x: x[1])
             options_per_ingredient.append(top_options)
 
     combos = []
 
-    # Generate all combinations
+    # Generate all combinations with early store filtering
     for combination in product(*options_per_ingredient):
         store_assignments = {}
         total_price = 0
@@ -82,32 +81,39 @@ def generate_combos_for_recipe(
         ingredient_breakdown = []
 
         for ing, (store, price, available_oz) in zip(ingredients, combination):
-            name = ing["name"]
-            required_oz = ing["required_oz"]
-
-            store_assignments[name] = store
+            store_assignments[ing["name"]] = store
             total_price += price
-
-            # Proportional cost for recipe
             cost_per_oz = price / available_oz
-            used_cost = round(cost_per_oz * required_oz, 2)
+            used_cost = round(cost_per_oz * ing["required_oz"], 2)
             recipe_price += used_cost
-            recipe_price = round(recipe_price, 2)
-
             ingredient_breakdown.append({
-                "ingredient": name,
+                "ingredient": ing["name"],
                 "store": store,
                 "total_item_price": price,
                 "used_cost": used_cost,
-                "required_oz": required_oz,
+                "required_oz": ing["required_oz"],
                 "available_oz": available_oz
             })
 
-        price_to_check = recipe_price if use_recipe_price else total_price
-        if min_budget <= price_to_check <= max_budget:
-            combos.append(Combo(store_assignments, total_price, recipe_price, ingredient_breakdown))
+        recipe_price = round(recipe_price, 2)
 
-    return combos[:max_results]  # Return top N only
+        # EARLY SKIP: too many stores
+        unique_stores = set(store_assignments.values())
+        if max_stores is not None and len(unique_stores) > max_stores:
+            continue
+
+        # Skip if combo outside budget
+        price_to_check = recipe_price if use_recipe_price else total_price
+        if not (min_budget <= price_to_check <= max_budget):
+            continue
+
+        combos.append(Combo(store_assignments, total_price, recipe_price, ingredient_breakdown))
+
+        # Stop early if we reach max_results
+        if len(combos) >= max_results:
+            break
+
+    return combos
 
 
 # -------------------------
@@ -118,10 +124,7 @@ def recommend_combinations(combos, store_penalty=2, user_sort=None, user_filter=
     for combo in combos:
         combo.adjusted_score = combo.total_price + store_penalty * (combo.num_stores - 1)
 
-    # Apply filters
-    if user_filter:
-        for key, value in user_filter.items():
-            combos = [c for c in combos if getattr(c, key) <= value]
+    print("Remaining combos after filter:", len(combos))
 
     # Apply sorting
     if user_sort:

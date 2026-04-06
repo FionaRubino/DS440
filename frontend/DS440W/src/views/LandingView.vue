@@ -117,6 +117,21 @@
                             density="comfortable"
                           />
                         </v-col>
+
+                        <v-col cols="12">
+                          <v-slider
+                            v-model="maxStores"
+                            :min="1"
+                            :max="10"
+                            :step="1"
+                            label="Max Stores to Visit"
+                            thumb-label="always"
+                            color="primary"
+                          ></v-slider>
+                          <div class="text-caption mt-1">
+                            Maximum Stores: {{ maxStores }}
+                          </div>
+                        </v-col>
                       </v-row>
 
                       <v-btn
@@ -343,6 +358,7 @@ const selectedSubTab = ref(0)
 const useRecipePrice = ref(false)
 const minBudget = ref<number | null>(null)
 const maxBudget = ref<number | null>(null)
+const maxStores = ref(10)
 const recommendations = ref<any[]>([])
 const dialog = ref(false)
 const selectedRecIngredients = ref([])
@@ -514,31 +530,41 @@ watch(selectedTab, (newVal) => {
 
 const getRecommendations = async () => {
   try {
-    loading.value = true   // ✅ show spinner
+    loading.value = true
+
+    const payload = {
+      recipe_id: recipes[selectedTab.value].id,
+      min_budget: minBudget.value,
+      max_budget: maxBudget.value,
+      sort_by: useRecipePrice.value ? "recipe_price" : null,
+      use_recipe_price: useRecipePrice.value,
+      filters: {}
+    }
+
+    if (maxStores.value) {
+      payload.filters.num_stores = maxStores.value
+    }
+
     const response = await fetch("http://localhost:8000/api/recommend", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        recipe_id: recipes[selectedTab.value].id,
-        min_budget: minBudget.value,
-        max_budget: maxBudget.value,
-        sort_by: useRecipePrice.value ? "recipe_price" : null,
-        use_recipe_price: useRecipePrice.value,
-        filters: null
-      })
+      body: JSON.stringify(payload)
     })
 
+    // ✅ THIS WAS MISSING
     const data = await response.json()
-    recommendations.value = data.recommendations.slice(0, 10)
-    console.log("Backend response:", recommendations.value)
+
+    console.log("Backend response:", data)
+
+    // ✅ THIS IS WHY YOU SEE NOTHING
+    recommendations.value = data.recommendations || []
 
   } catch (error) {
     console.error("Error fetching recommendations:", error)
   } finally {
-    loading.value = false   // ✅ hide spinner
+    loading.value = false
   }
 }
-
 </script>
 
 <style scoped>
