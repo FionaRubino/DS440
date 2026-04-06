@@ -41,7 +41,8 @@ def recommend():
         "recipe_price": c.recipe_price,  # NEW
         "num_stores": c.num_stores,
         "adjusted_score": c.adjusted_score,
-        "stores": c.store_assignments
+        "stores": c.store_assignments,
+        "breakdown": c.breakdown  # NEW
     }
     for c in results
     ]

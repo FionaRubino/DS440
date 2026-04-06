@@ -169,8 +169,8 @@
                           :key="index"
                           style="border-bottom: 1px solid #eee;"
                         >
-                          <div>
-                            <p style="margin:0;">
+                          <div style="display: flex; align-items: center; justify-content: space-between; margin:0;">
+                            <div>
                               <strong>#{{ index + 1 }}:</strong>
 
                               <span v-if="useRecipePrice">
@@ -184,14 +184,67 @@
                               </span>
 
                               , Stores: {{ rec.num_stores }}
-                            </p>
-                            <p style="margin:0; font-size: 0.9em; color:#555;">
-                              Stores: {{ Array.isArray(rec.stores) ? rec.stores.join(', ') : rec.stores || 'N/A' }}
-                            </p>
+                            </div>
+
+                            <v-btn
+                              variant="text"
+                              color="primary"
+                              size="small"
+                              @click="openDialog(rec)"
+                              style="border: 1px solid #1976d2; border-radius: 4px;"
+                            >
+                              See More →
+                            </v-btn>
                           </div>
                         </v-list-item>
                       </v-list>
                     </div>
+                    <v-dialog v-model="dialog" max-width="500">
+                      <v-card>
+                        <v-card-title>
+                          Ingredient Breakdown
+                          <v-spacer></v-spacer>
+                        </v-card-title>
+
+                        <v-card-text>
+                          <v-list-item v-for="(ing, i) in selectedRecIngredients" :key="i">
+                            <v-list-item-content>
+                              <v-list-item-title>
+                                {{ ing.name }} ({{ ing.store }})
+                              </v-list-item-title>
+
+                              <v-list-item-subtitle>
+                                <strong>Store Price:</strong> ${{ ing.total.toFixed(2) }}
+                                <br />
+                                <span style="color: #777;">
+                                  Used in Recipe: ${{ ing.used.toFixed(2) }}
+                                </span>
+                              </v-list-item-subtitle>
+                            </v-list-item-content>
+                          </v-list-item>
+
+                          <!-- Optional totals at the bottom -->
+                          <v-divider></v-divider>
+                          <v-list-item>
+                            <v-list-item-content>
+                              <v-list-item-title>
+                                <strong>Total Store Price:</strong> ${{ selectedRecIngredients.reduce((sum, i) => sum + i.total, 0).toFixed(2) }}
+                              </v-list-item-title>
+                              <v-list-item-title>
+                                <strong>Total Recipe Cost:</strong> ${{ selectedRecIngredients.reduce((sum, i) => sum + i.used, 0).toFixed(2) }}
+                              </v-list-item-title>
+                            </v-list-item-content>
+                          </v-list-item>
+                          
+                        </v-card-text>
+                        <v-card-actions>
+                          <v-spacer></v-spacer>
+                          <v-btn color="primary" text @click="dialog = false">
+                            Close
+                          </v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </v-dialog>
                   </div>
 
                 </div>
@@ -282,7 +335,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { ref, watch, computed } from 'vue'
 import NutritionChart from '@/components/NutritionChart.vue'
 
 const selectedTab = ref(0)
@@ -291,6 +344,24 @@ const useRecipePrice = ref(false)
 const minBudget = ref<number | null>(null)
 const maxBudget = ref<number | null>(null)
 const recommendations = ref<any[]>([])
+const dialog = ref(false)
+const selectedRecIngredients = ref([])
+const totalStoreCost = computed(() =>
+  selectedRecIngredients.value.reduce((sum, i) => sum + i.total, 0)
+)
+const totalUsedCost = computed(() =>
+  selectedRecIngredients.value.reduce((sum, i) => sum + i.used, 0)
+)
+
+function openDialog(rec) {
+  selectedRecIngredients.value = rec.breakdown.map(item => ({
+    name: item.ingredient,
+    store: item.store,
+    total: item.total_item_price, // full price at store
+    used: item.used_cost           // proportional price for recipe
+  }));
+  dialog.value = true;
+}
 const loading = ref(false)
 const recipes = [
   {
@@ -467,6 +538,7 @@ const getRecommendations = async () => {
     loading.value = false   // ✅ hide spinner
   }
 }
+
 </script>
 
 <style scoped>
