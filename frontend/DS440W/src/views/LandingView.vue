@@ -60,7 +60,7 @@
               <v-window-item :value="0">
                 <div style="display: flex; flex-direction: row; gap: 24px; align-items: flex-start; width: 100%;">
 
-                  <!-- LEFT COLUMN: Ingredients + Budget + Image -->
+                  <!-- LEFT COLUMN: Ingredients + Image -->
                   <div style="flex: 1; min-width: 300px;">
                     <!-- Recipe Description -->
                     <p class="text-subtitle-1 mb-1" style="font-weight: 700; margin-top: 16px; color: #1976d2;">
@@ -82,6 +82,19 @@
                       </v-chip>
                     </div>
 
+                    <!-- Image BELOW the budget -->
+                    <v-img
+                      :src="recipe.image"
+                      height="350"
+                      contain
+                      style="border-radius: 12px; margin-top: 16px;"
+                    />
+                   
+                  </div>
+
+                  <!-- RIGHT COLUMN: Budget &  Recs-->
+                  
+                  <div style="flex: 1; min-width: 300px;">
                     <!-- Budget Inputs -->
                     <v-card class="mt-4 pa-4" elevation="2" style="border-radius: 12px;">
                       <p class="text-subtitle-1 mb-2" style="font-weight: 700; color: #1976d2;">
@@ -144,17 +157,7 @@
                       </v-btn>
                     </v-card>
 
-                    <!-- Image BELOW the budget -->
-                    <v-img
-                      :src="recipe.image"
-                      height="350"
-                      contain
-                      style="border-radius: 12px; margin-top: 16px;"
-                    />
-                  </div>
 
-                  <!-- RIGHT COLUMN: Recommendations -->
-                  <div style="flex: 1; min-width: 300px;">
                     <h3 style="color:#1976d2; font-weight:700; margin-bottom: 8px;">
                       Store Recommendations
                     </h3>
