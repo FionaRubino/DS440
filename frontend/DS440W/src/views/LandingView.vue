@@ -429,9 +429,30 @@ const recipes = [
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
-    {section: "Step Name",
+    {section: "Filling",
       steps: [
-        "Instruction"]},
+        "Season chicken breast with salt and pepper",
+        "Heat a pan over medium heat and add olive oil",
+        "Cook chicken breast for 5–7 minutes per side until fully cooked",
+        "Remove chicken from pan and let rest for a few minutes",
+        "Slice or shred the chicken into small pieces",
+        "Rinse and drain black beans",
+        "Add black beans to the pan and cook for 2–3 minutes until warmed"]},
+
+    {section: "Tortilla (While filling is cooking)",
+      steps: [
+        "Heat a separate pan or skillet over medium heat",
+        "Lightly butter one side of a large tortilla",
+        "Place tortilla in the pan, buttered side down",
+        "Sprinkle shredded cheddar cheese evenly over half of the tortilla"]},
+
+    {section: "Assembly",
+      steps: [
+        "Add cooked chicken and black beans on top of the cheese",
+        "Fold the tortilla in half over the filling",
+        "Cook for 2–3 minutes until bottom is golden brown",
+        "Flip and cook the other side until cheese is melted",
+        "Remove from pan, slice into wedges, and enjoy!"]}
   ]},
    {
     name: "Taco Soup",
@@ -441,9 +462,30 @@ const recipes = [
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
-    {section: "Step Name",
+    {section: "Base",
       steps: [
-        "Instruction"]},
+        "Heat a large pot over medium heat",
+        "Add ground beef and cook until browned, breaking it up as it cooks",
+        "Drain excess grease if needed",
+        "Add diced onion and cook for 3–5 minutes until softened",
+        "Season with salt and pepper"]},
+
+    {section: "Soup (Build the flavor)",
+      steps: [
+        "Stir in taco seasoning and mix well",
+        "Add diced tomatoes (with juices)",
+        "Add kidney beans (drained and rinsed)",
+        "Add sweet corn (drained)",
+        "Stir everything together and bring to a simmer",
+        "Reduce heat and let cook for 10–15 minutes, stirring occasionally"]},
+
+    {section: "Assembly",
+      steps: [
+        "Ladle soup into bowls",
+        "Top with shredded cheddar cheese",
+        "Add sour cream on top",
+        "Sprinkle Fritos for crunch",
+        "Enjoy!"]}
   ]},
    {
     name: "Pancakes",
@@ -453,9 +495,24 @@ const recipes = [
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
-    {section: "Step Name",
+    {section: "Dry Ingredients",
       steps: [
-        "Instruction"]},
+        "In a large bowl, combine whole wheat flour, white sugar, baking powder, baking soda, and salt",
+        "Whisk together until evenly mixed"]},
+
+    {section: "Wet Ingredients",
+      steps: [
+        "In a separate bowl, whisk together buttermilk, eggs, and vegetable oil until smooth"]},
+
+    {section: "Batter & Cooking",
+      steps: [
+        "Pour wet ingredients into the dry ingredients and stir until just combined (do not overmix)",
+        "Heat a pan or griddle over medium heat and lightly grease if needed",
+        "Pour batter onto the pan to form pancakes",
+        "Cook until bubbles form on the surface and edges look set (about 2–3 minutes)",
+        "Flip and cook the other side until golden brown",
+        "Remove from pan and repeat with remaining batter",
+        "Serve warm and enjoy!"]}
   ]},
    {
     name: "Chicken Caesar Salad",
@@ -465,9 +522,26 @@ const recipes = [
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
-    {section: "Step Name",
+    {section: "Chicken",
       steps: [
-        "Instruction"]},
+        "Season chicken breast with salt and pepper",
+        "Heat a pan over medium heat and add a small amount of oil",
+        "Cook chicken for 5–7 minutes per side until fully cooked",
+        "Remove from heat and let rest for a few minutes",
+        "Slice chicken into strips"]},
+
+    {section: "Salad Base",
+      steps: [
+        "Wash and chop romaine lettuce into bite-sized pieces",
+        "Place lettuce in a large bowl",
+        "Add croutons and shredded parmesan cheese"]},
+
+    {section: "Assembly",
+      steps: [
+        "Add sliced chicken on top of the salad",
+        "Drizzle Caesar dressing over everything",
+        "Toss until evenly coated",
+        "Serve and enjoy!"]}
   ]},
    {
     name: "Unstuffed Peppers",
@@ -477,9 +551,34 @@ const recipes = [
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
-    {section: "Step Name",
+    {section: "Rice",
       steps: [
-        "Instruction"]},
+        "Cook white rice according to package instructions",
+        "Set aside once fully cooked"]},
+
+    {section: "Base",
+      steps: [
+        "Heat a large pot or deep pan over medium heat",
+        "Add olive oil",
+        "Add diced white onion and cook for 3–5 minutes until softened",
+        "Add minced garlic and cook for 1 minute until fragrant",
+        "Add ground beef and cook until browned, breaking it up as it cooks",
+        "Drain excess grease if needed",
+        "Season with salt, paprika, oregano, and red pepper flakes"]},
+
+    {section: "Peppers & Sauce",
+      steps: [
+        "Chop bell peppers into bite-sized pieces",
+        "Add bell peppers to the pot and cook for 4–5 minutes until slightly softened",
+        "Stir in crushed tomatoes",
+        "Add beef broth and mix well",
+        "Bring to a simmer and cook for 10–15 minutes, stirring occasionally"]},
+
+    {section: "Assembly",
+      steps: [
+        "Stir in cooked rice until evenly combined",
+        "Taste and adjust seasoning if needed",
+        "Serve hot and enjoy!"]}
   ]},
    {
     name: "Meatloaf",
@@ -489,9 +588,24 @@ const recipes = [
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
-    {section: "Step Name",
+    {section: "Prep",
       steps: [
-        "Instruction"]},
+        "Preheat oven to 375 degrees",
+        "Dice white onion into small pieces",
+        "Lightly grease a loaf pan or baking dish with olive oil"]},
+
+    {section: "Meat Mixture",
+      steps: [
+        "In a large bowl, combine ground beef, diced onion, Italian bread crumbs, egg, and milk",
+        "Season with salt",
+        "Mix everything together until just combined (do not overmix)"]},
+
+    {section: "Assembly & Baking",
+      steps: [
+        "Transfer the mixture into the prepared pan and shape into a loaf",
+        "Place in the oven and bake for 45–55 minutes or until fully cooked",
+        "Remove from oven and let rest for 5–10 minutes before slicing",
+        "Serve and enjoy!"]}
   ]},
   {
     name: "Beef & Avocado Burrito",
@@ -501,9 +615,27 @@ const recipes = [
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
-    {section: "Step Name",
+    {section: "Rice",
       steps: [
-        "Instruction"]},
+        "Cook white rice according to package instructions",
+        "Set aside once fully cooked"]},
+
+    {section: "Filling",
+      steps: [
+        "Heat a pan over medium heat and add olive oil",
+        "Add ground beef and cook until browned, breaking it up as it cooks",
+        "Season with salt (and pepper if desired)",
+        "In a separate pan, cook egg to preference (scrambled or fried)",
+        "Slice avocado into thin pieces"]},
+
+    {section: "Assembly",
+      steps: [
+        "Warm tortilla in a pan or microwave until soft",
+        "Add a layer of rice to the center of the tortilla",
+        "Top with cooked ground beef",
+        "Add egg, avocado slices, and shredded Mexican style cheese",
+        "Fold in the sides and roll into a burrito",
+        "Serve and enjoy!"]}
   ]},
   {
     name: "Veggie Sandwich",
@@ -513,9 +645,23 @@ const recipes = [
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
-    {section: "Step Name",
+    {section: "Prep",
       steps: [
-        "Instruction"]},
+        "Slice tomato, cucumber, red onion, and avocado",
+        "Wash and dry lettuce and sprouts",
+        "Lightly season tomato and avocado with salt"]},
+
+    {section: "Bread",
+      steps: [
+        "Spread mayonnaise on one slice of sourdough bread",
+        "Spread Dijon mustard on the other slice",
+        "Add cheese of choice to one side"]},
+
+    {section: "Assembly",
+      steps: [
+        "Layer lettuce, tomato, cucumber, red onion, avocado, and sprouts onto the bread",
+        "Close the sandwich with the other slice of bread",
+        "Slice in half and serve"]}
   ]}
 ]
 
