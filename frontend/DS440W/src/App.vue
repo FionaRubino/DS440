@@ -29,7 +29,7 @@
                 <li>Below you can scroll through 10 unique recipes. On each recipe there are 3 tabs that will help you</li>
                 <li>Ingredients: The left side listsa ll of the ingredients you will need. On the right side, input your desired budget and number of stoes you want to go to, and it will output your shopping list. </li>
                 <li>Nutrition:  The left side will give you your overall nutritional value. The right side will give you a calculated nutrition score  </li>
-                <li>Instructions: This will will give you step by step instructions to make the recipe. /li>
+                <li>Instructions: This will will give you step by step instructions to make the recipe. </li>
               </ul>
             </v-card-text>
 
@@ -42,15 +42,6 @@
           </v-card>
         </v-dialog>
 
-        <!-- Simple Menu -->
-        <v-menu offset-y>
-          <template v-slot:activator="{ props }">
-            <v-btn v-bind="props" color="secondary" variant="elevated">
-              <v-icon start>mdi-account-circle</v-icon>
-              Menu
-            </v-btn>
-          </template>
-        </v-menu>
 
       </v-container>
     </v-app-bar>
