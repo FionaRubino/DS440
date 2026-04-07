@@ -156,7 +156,8 @@
                         Get Recommendations
                       </v-btn>
                     </v-card>
-
+                    
+                    <v-divider class="my-6"></v-divider>
 
                     <h3 style="color:#1976d2; font-weight:700; margin-bottom: 8px;">
                       Store Recommendations
