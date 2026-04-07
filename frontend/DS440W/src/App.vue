@@ -25,11 +25,11 @@
 
             <v-card-text>
               <ul>
-                <li>Welcome to our App to help you shop, cook, and learn all about your nutrition. This app is made for Penn State students by Penn State students! </li>
-                <li>Below you can scroll through 10 unique recipes. On each recipie there are 3 types to help you!</li>
-                <li>Ingredients: Lists all the ingredients you need. </li>
-                <li>Nutrition:  blrub... </li>
-                <li>Instruciton: blrub... </li>
+                <li>Welcome to Penn State Nutrition App! This app will help you shop, cook, and learn all about your nutrition. It is made for Penn State students by Penn State students! </li>
+                <li>Below you can scroll through 10 unique recipes. On each recipe there are 3 tabs that will help you</li>
+                <li>Ingredients: The left side listsa ll of the ingredients you will need. On the right side, input your desired budget and number of stoes you want to go to, and it will output your shopping list. </li>
+                <li>Nutrition:  The left side will give you your overall nutritional value. The right side will give you a calculated nutrition score  </li>
+                <li>Instructions: This will will give you step by step instructions to make the recipe. /li>
               </ul>
             </v-card-text>
 
