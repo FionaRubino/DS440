@@ -413,7 +413,7 @@ const recipes = [
     name: "Overnight Oats",
     id: 2,
     image: "https://vegangirlsguide.com/wp-content/uploads/2024/09/overnight-oats-recipe-1725865416.jpg",
-    ingredients: ["1/2 Cup Rolled Oats", "1/2 Cup Greek YOgurt", "1/2 Cup Milk", "Salt", "1 Tsp Chia Seeds", "2 Tsp Honey", "1/4 Cup Berries"],
+    ingredients: ["1/2 Cup Rolled Oats", "1/2 Cup Greek Yogurt", "1/2 Cup Milk", "Salt", "1 Tsp Chia Seeds", "2 Tsp Honey", "1/4 Cup Berries"],
     ingredientBlurb: "An easy make-ahead breakfast that sits overnight in the fridge.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
@@ -427,9 +427,9 @@ const recipes = [
   {
     name: "Quesidilla",
     id: 3,
-    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
-    ingredientBlurb: "Blurb",
+    image: "https://www.perdue.com/sites/default/files/styles/recipe_hero_banner/public/quesadilla%20final.jpg?h=ddb1ad0c&itok=qDH1y9Je",
+    ingredients: ["8 Large Tortillas", "Tbsp Butter", "2 Chicken Breasts", "1 can Black Beans", "1 cup Shredded Cheese", "Salt", "Pepper", "1 Tbsp Olive Oil"],
+    ingredientBlurb: "A quick, protein-packed meal with chicken, black beans, and melted cheese in a crispy tortilla.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
     {section: "Filling",
@@ -460,9 +460,9 @@ const recipes = [
    {
     name: "Taco Soup",
     id: 4,
-    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
-    ingredientBlurb: "Blurb",
+    image: "https://farmerowned.com/images/featuredRecipesImages/featuredRecipes1532973470.jpg",
+    ingredients: ["1lb Ground Beef", "1 Yellow Onion", "1 can Diced Tomatoes", "1 Packet Taco Teasoning", "1 can Kidney Beans", "1 can Sweet Corn", "Salt", "Pepper", "1.5 cup Shredded cheese", "1 bag Fritos", "8oz Sour Cream"],
+    ingredientBlurb: "A warm, hearty soup inspired by classic taco flavors, combining seasoned meat, beans, tomatoes, and spices into a comforting one-pot meal.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
     {section: "Base",
@@ -493,8 +493,8 @@ const recipes = [
    {
     name: "Pancakes",
     id: 5,
-    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
+    image: "https://www.whitneyerd.com/wp-content/uploads/2015/01/healthy-whole-wheat-pancakes-recipe.jpg",
+    ingredients: ["2 cups Whole Wheat Flour", "2 Tbsp White Sugar", "2 tsp Baking Powder", "1/2 tsp Baking Soda", "1/2 tsp Salt", "2.25 cup Buttermilk", "2 Eggs", "4 Tbsp Vegetable Oil"],
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
@@ -520,8 +520,8 @@ const recipes = [
    {
     name: "Chicken Caesar Salad",
     id: 6,
-    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
+    image: "https://www.hauteandhealthyliving.com/wp-content/uploads/2024/02/healthy-chicken-caesar-salad-12-1.jpg",
+    ingredients: ["3 cups Romaine Lettuce", "1/2 lb Chicken Breasts", "1/4 cup Shredded Parmesean Cheese", "Croutons", "2 Tbsp Caesar Salad Dressing"],
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
@@ -549,8 +549,9 @@ const recipes = [
    {
     name: "Unstuffed Peppers",
     id: 7,
-    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
+    image: "https://www.budgetbytes.com/wp-content/uploads/2014/08/Unstuffed-Bell-Peppers-bowl.jpg",
+    ingredients: ["3 Bell Peppers", "1 White Onion", "1 can Crushed Tomatoes", "1 Tbsp Olive Oil", "1 lb Ground Beef", "2 cups Beef Broth", 
+      "1 cup White Rice", "1 tsp Paprika", "Salt", "1 Tbsp Minced Garlic", "1 tsp Oregano", "1 tsp Red Pepper Flakes"],
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
@@ -586,8 +587,8 @@ const recipes = [
    {
     name: "Meatloaf",
     id: 8,
-    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
+    image: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/4/2/3/LS-Library_Classic-Meatloaf_s4x3.jpg.rend.hgtvcom.616.462.suffix/1522739893995.webp",
+    ingredients: ["1lb Ground Beef", "1/2 White Onion", "1 cup Italian Bread Crumbs", "1 Egg", "1/4 cup 2% Milk", "Salt", "Pepper", "1 Tbsp olive oil"],
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
@@ -613,8 +614,8 @@ const recipes = [
   {
     name: "Beef & Avocado Burrito",
     id: 9,
-    image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
+    image: "https://www.chowhound.com/img/gallery/ultimate-breakfast-burrito-recipe/intro-1709578226.jpg",
+    ingredients: ["1/2 lb Ground Beef", "1 cup White Rice", "2 Avocados", "1 cup Shredded Mexican Style Cheese", "2 Eggs", "4 Tortillas", "2 Tbsp Olive Oil"],
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
@@ -644,7 +645,8 @@ const recipes = [
     name: "Veggie Sandwich",
     id: 10,
     image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
-    ingredients: ["enter here"],
+    ingredients: ["2 slices Sourdough Bread", "1 Slice of Cheese", "1 tsp Mayonaisse", "1 tsp Dijon Mustard", "1/2 Avocado", 
+      "3 Leaves Romaine Lettuce", "2 Slices of Tomato", "1/2 Cucumber", "1/4 Red Onion", "1/4 cup Sprouts", "Salt", "Pepper"],
     ingredientBlurb: "Blurb",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
