@@ -415,7 +415,7 @@ const recipes = [
     id: 2,
     image: "https://vegangirlsguide.com/wp-content/uploads/2024/09/overnight-oats-recipe-1725865416.jpg",
     ingredients: ["1/2 Cup Rolled Oats", "1/2 Cup Greek Yogurt", "1/2 Cup Milk", "Salt", "1 Tsp Chia Seeds", "2 Tsp Honey", "1/4 Cup Berries"],
-    ingredientBlurb: "An easy make-ahead breakfast that sits overnight in the fridge.",
+    ingredientBlurb: "An easy make-ahead breakfast that sits overnight in the fridge. Serves 1.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
     {section: "Assembly",
@@ -430,7 +430,7 @@ const recipes = [
     id: 3,
     image: "https://www.perdue.com/sites/default/files/styles/recipe_hero_banner/public/quesadilla%20final.jpg?h=ddb1ad0c&itok=qDH1y9Je",
     ingredients: ["8 Large Tortillas", "1 Tbsp Butter", "2 Chicken Breasts", "1 Can Black Beans", "1 Cup Shredded Cheese", "Salt", "Pepper", "1 Tbsp Olive Oil"],
-    ingredientBlurb: "A quick, protein-packed meal with chicken, black beans, and melted cheese in a crispy tortilla.",
+    ingredientBlurb: "A quick, protein-packed meal with chicken, black beans, and melted cheese in a crispy tortilla. Serves 4.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
     {section: "Filling",
@@ -463,7 +463,7 @@ const recipes = [
     id: 4,
     image: "https://farmerowned.com/images/featuredRecipesImages/featuredRecipes1532973470.jpg",
     ingredients: ["1lb Ground Beef", "1 Yellow Onion", "1 Can Diced Tomatoes", "1 Packet Taco Teasoning", "1 Can Kidney Beans", "1 Can Sweet Corn", "Salt", "Pepper", "1.5 Cup Shredded cheese", "1 Bag Fritos", "8oz Sour Cream"],
-    ingredientBlurb: "A warm, hearty soup inspired by classic taco flavors, combining seasoned meat, beans, tomatoes, and spices into a comforting one-pot meal.",
+    ingredientBlurb: "A warm, hearty soup inspired by classic taco flavors, combining seasoned meat, beans, tomatoes, and spices into a comforting one-pot meal. Serves 6.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
     {section: "Base",
@@ -496,7 +496,7 @@ const recipes = [
     id: 5,
     image: "https://www.whitneyerd.com/wp-content/uploads/2015/01/healthy-whole-wheat-pancakes-recipe.jpg",
     ingredients: ["2 Cups Whole Wheat Flour", "2 Tbsp White Sugar", "2 Tsp Baking Powder", "1/2 Tsp Baking Soda", "1/2 Tsp Salt", "2.25 Cup Buttermilk", "2 Eggs", "4 Tbsp Vegetable Oil"],
-    ingredientBlurb: "A simple batter of flour, eggs, and milk cooked on a hot griddle into soft, golden pancakes with lightly crisp edges.",
+    ingredientBlurb: "A simple batter of flour, eggs, and milk cooked on a hot griddle into soft, golden pancakes with lightly crisp edges. Serves 4.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
     {section: "Dry Ingredients",
@@ -523,7 +523,7 @@ const recipes = [
     id: 6,
     image: "https://www.hauteandhealthyliving.com/wp-content/uploads/2024/02/healthy-chicken-caesar-salad-12-1.jpg",
     ingredients: ["3 Cups Romaine Lettuce", "1/2 lb Chicken Breasts", "1/4 Cup Shredded Parmesean Cheese", "Croutons", "2 Tbsp Caesar Salad Dressing"],
-    ingredientBlurb: "Crisp romaine tossed with Caesar dressing, topped with grilled chicken, croutons, and parmesan.",
+    ingredientBlurb: "Crisp romaine tossed with Caesar dressing, topped with grilled chicken, croutons, and parmesan. Serves 2.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
     {section: "Chicken",
@@ -553,7 +553,7 @@ const recipes = [
     image: "https://www.budgetbytes.com/wp-content/uploads/2014/08/Unstuffed-Bell-Peppers-bowl.jpg",
     ingredients: ["3 Bell Peppers", "1 White Onion", "1 Can Crushed Tomatoes", "1 Tbsp Olive Oil", "1 lb Ground Beef", "2 Cups Beef Broth", 
       "1 Cup White Rice", "1 Tsp Paprika", "Salt", "1 Tbsp Minced Garlic", "1 Tsp Oregano", "1 Tsp Red Pepper Flakes"],
-    ingredientBlurb: "A hearty mix of ground beef, peppers, and rice simmered in a savory tomato sauce.",
+    ingredientBlurb: "A hearty mix of ground beef, peppers, and rice simmered in a savory tomato sauce. Serves 4.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
     {section: "Rice",
@@ -590,7 +590,7 @@ const recipes = [
     id: 8,
     image: "https://www.garlicandzest.com/wp-content/uploads/2024/04/Brown-Sugar-glazed-meatloaf-14.jpg",
     ingredients: ["1lb Ground Beef", "1/2 White Onion", "1 Cup Italian Bread Crumbs", "1 Egg", "1/4 Cup 2% Milk", "Salt", "Pepper", "1 Tbsp olive oil"],
-    ingredientBlurb: "Seasoned ground beef, herbs, and breadcrumbs baked until juicy and tender with a savory, browned crust.",
+    ingredientBlurb: "Seasoned ground beef, herbs, and breadcrumbs baked until juicy and tender with a savory, browned crust. Serves 4.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
     {section: "Prep",
@@ -617,7 +617,7 @@ const recipes = [
     id: 9,
     image: "https://www.chowhound.com/img/gallery/ultimate-breakfast-burrito-recipe/intro-1709578226.jpg",
     ingredients: ["1/2 lb Ground Beef", "1 Cup White Rice", "2 Avocados", "1 Cup Shredded Mexican Style Cheese", "2 Eggs", "4 Tortillas", "2 Tbsp Olive Oil"],
-    ingredientBlurb: "A warm flour tortilla filled with seasoned beef, scrambled egg, and sliced avocado for a rich, savory burrito.",
+    ingredientBlurb: "A warm flour tortilla filled with seasoned beef, scrambled egg, and sliced avocado for a rich, savory burrito. Serves 4.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
     {section: "Rice",
@@ -648,7 +648,7 @@ const recipes = [
     image: "https://iheartvegetables.com/wp-content/uploads/2022/10/Mediterranean-Veggie-Sandwich-3-of-5.jpg",
     ingredients: ["2 slices Sourdough Bread", "1 Slice of Cheese", "1 Tsp Mayonaisse", "1 Tsp Dijon Mustard", "1/2 Avocado", 
       "3 Leaves Romaine Lettuce", "2 Slices of Tomato", "1/2 Cucumber", "1/4 Red Onion", "1/4 Cup Sprouts", "Salt", "Pepper"],
-    ingredientBlurb: "Toasted sourdough spread with creamy and tangy condiments, layered with avocado and a mix of fresh, crisp vegetables.",
+    ingredientBlurb: "Toasted sourdough spread with creamy and tangy condiments, layered with avocado and a mix of fresh, crisp vegetables. Serves 1.",
     nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
     instructions: [
     {section: "Prep",
