@@ -408,7 +408,7 @@ const totalUsedCost = computed(() =>
   selectedRecIngredients.value.reduce((sum, i) => sum + i.used, 0)
 )
 // 1. Import your JSON data (make sure the path matches your folder structure!)
-import leaderboardData from '../data/Young_Adult_Nutrition_Leaderboards.json'
+import leaderboardData from '../assets/Young_Adult_Nutrition_Leaderboards.json'
 
 // 2. Setup the Dropdown State and Data
 const selectedProfile = ref(null)
