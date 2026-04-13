@@ -303,11 +303,46 @@
 
                   <!-- RIGHT COLUMN: Nutrition Score) -->
                   <v-col cols="12" md="6">
-                    <div>
-                      <!-- Example placeholder -->
-                      <p class="text-body-1">Nutrition score blurb goes here and score goes below</p>
-                    </div>
+                    <v-card class="pa-4" variant="outlined" style="border-radius: 12px; height: 100%;">
+                      <h3 style="color: #1976d2; font-weight: 700; margin-bottom: 16px;">
+                        Nutritional Profile Match
+                      </h3>
 
+                      <v-select
+                        v-model="selectedProfile"
+                        :items="nutritionProfiles"
+                        item-title="title"
+                        item-value="key"
+                        label="Select a Dietary Goal"
+                        variant="outlined"
+                        density="comfortable"
+                        return-object
+                      ></v-select>
+
+                      <div v-if="selectedProfile" class="mt-2">
+                        <p class="text-body-2 mb-4">
+                          <strong>Purpose:</strong> {{ selectedProfile.purpose }}
+                        </p>
+                        
+                        <div class="d-flex align-center justify-center my-4">
+                          <span 
+                            class="text-h2 font-weight-bold" 
+                            :style="{ color: getScoreColor(getRecipeScore(recipe.name)) }"
+                          >
+                            {{ getRecipeScore(recipe.name) }}
+                          </span>
+                          <span class="text-h5 text-grey ml-2 mt-4">/ 100</span>
+                        </div>
+
+                        <p class="text-body-2" style="background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
+                          <strong>How it fits:</strong> {{ getScoreReflection(getRecipeScore(recipe.name)) }}
+                        </p>
+                      </div>
+
+                      <div v-else class="text-center mt-6 text-grey">
+                        Please select a profile above to see how this recipe scores!
+                      </div>
+                    </v-card>
                   </v-col>
 
                 </v-row>
@@ -372,7 +407,53 @@ const totalStoreCost = computed(() =>
 const totalUsedCost = computed(() =>
   selectedRecIngredients.value.reduce((sum, i) => sum + i.used, 0)
 )
+// 1. Import your JSON data (make sure the path matches your folder structure!)
+import leaderboardData from '../data/Young_Adult_Nutrition_Leaderboards.json'
 
+// 2. Setup the Dropdown State and Data
+const selectedProfile = ref(null)
+
+const nutritionProfiles = [
+  { key: "1. General Wellness", title: "General Wellness", purpose: "A balanced 2,000-calorie diet with moderate targets across all macros. Avoids excessive sodium." },
+  { key: "2. Muscle Building", title: "Muscle Building", purpose: "A 2,500-calorie surplus aiming for high carbohydrates for training energy and 150g+ of daily protein for hypertrophy." },
+  { key: "3. Fat Loss", title: "Fat Loss", purpose: "A 1,500-calorie deficit. Heavily penalizes caloric and fat density while rewarding protein to preserve lean muscle mass." },
+  { key: "4. Endurance Athlete", title: "Endurance Athlete", purpose: "Fueling massive energy expenditure. Targets 3,000+ calories and 350g+ of carbohydrates to replenish glycogen stores." },
+  { key: "5. Keto / Low Carb", title: "Keto / Low Carb", purpose: "Staying in ketosis. Applies a massive penalty for carbohydrates (restricting to <30g daily) but rewards dietary fats for energy." },
+  { key: "6. Brain Health", title: "Brain Health & Focus", purpose: "Avoiding sugar/carb crashes. Heavily penalizes high carbs to prevent blood sugar spikes while rewarding fats and proteins for sustained cognitive energy." },
+  { key: "7. Hangover Recovery", title: "Hangover Recovery", purpose: "Replenishing electrolytes and energy. Actively rewards what is normally penalized: high sodium, heavy carbs, and high calories." },
+  { key: "8. High Satiety", title: "High Satiety / Fasting", purpose: "Maximizing fullness on lower calories. Applies massive rewards for protein and fat (which digest slowly) while penalizing simple carbs." },
+  { key: "9. Heart Healthy", title: "Heart Healthy", purpose: "A clinically strict DASH diet targeting under 1,500mg of sodium and very low saturated fats to protect cardiovascular health." },
+  { key: "10. Lean Body Recomp", title: "Lean Body Recomp", purpose: "Staying at maintenance calories (2,000) while shifting body composition via high protein (150g) and moderate carbs." }
+]
+
+// 3. Helper Functions for the UI
+const getRecipeScore = (recipeName) => {
+  if (!selectedProfile.value) return null;
+  // Look up the recipe inside our JSON file
+  const recipeData = leaderboardData.find(r => r.Recipe === recipeName);
+  
+  if (recipeData && recipeData[selectedProfile.value.key] !== undefined) {
+    // Round it so we don't get ugly decimals on the UI
+    return Math.round(recipeData[selectedProfile.value.key]);
+  }
+  return 'N/A';
+}
+
+const getScoreReflection = (score) => {
+  if (score === 'N/A') return 'Score data not available.';
+  if (score >= 90) return 'Excellent! This meal perfectly aligns with this goal and provides the ideal ratio of macros.';
+  if (score >= 75) return 'Good fit. It generally aligns well but might be slightly high or low in one specific macro target.';
+  if (score >= 50) return 'Moderate fit. You may need to balance your other meals heavily to stay on track for the day.';
+  return 'Poor fit. This meal directly conflicts with the primary targets of this nutritional profile.';
+}
+
+const getScoreColor = (score) => {
+  if (score === 'N/A') return '#9e9e9e'; // Grey
+  if (score >= 90) return '#4caf50';     // Green
+  if (score >= 75) return '#8bc34a';     // Light Green
+  if (score >= 50) return '#ffb300';     // Yellow/Orange
+  return '#f44336';                      // Red
+}
 function openDialog(rec) {
   selectedRecIngredients.value = rec.breakdown.map(item => ({
     name: item.ingredient,
