@@ -76,7 +76,7 @@ watch(
             ctx.textAlign = "center"
             ctx.textBaseline = "middle"
 
-            ctx.fillText(`${props.calories} kcal`, centerX, centerY)
+            ctx.fillText(`${props.calories} cals`, centerX, centerY)
 
             ctx.restore()
           }

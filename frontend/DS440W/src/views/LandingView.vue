@@ -281,7 +281,7 @@
                     <p class="text-body-1">
                       This chart shows how calories are distributed between protein, carbs, and fat.
                       Each section represents the percentage of total calories from each macronutrient.
-                      It is listed in kcals/grams.
+                      It is listed in calories.
                     </p>
 
                     <!-- Pie Chart -->
