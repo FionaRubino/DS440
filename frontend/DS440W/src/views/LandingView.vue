@@ -284,7 +284,7 @@
                     </p>
 
                     <!-- Chart -->
-                    <div class="mt-4">
+                    <div  class="d-flex align-center justify-center my-4">
                       <NutritionChart
                         :protein="recipe.nutrition.protein"
                         :carbs="recipe.nutrition.carbs"
@@ -294,7 +294,7 @@
                     </div>
 
                     <!-- Sodium -->
-                    <p class="mt-4">
+                    <p class="mt-4 text-center">
                       <strong>Sodium:</strong> {{ recipe.nutrition.sodium }} mg
                     </p>
 
