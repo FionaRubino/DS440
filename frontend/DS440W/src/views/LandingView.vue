@@ -270,22 +270,21 @@
               </v-window-item>
 
               <!-- NUTRITION -->
-               <v-window-item :value="1" class="pa-4">
+              <v-window-item :value="1">
+                <div style="display: flex; flex-direction: row; gap: 24px; align-items: flex-start; width: 100%;">
 
-                <v-row>
+                  <!-- LEFT COLUMN -->
+                  <div style="flex: 1; min-width: 300px;">
 
-                  <!-- LEFT COLUMN: Pie Chart -->
-                  <v-col cols="12" md="6">
-
-                    <!-- 📘 Top-left explanation -->
-                    <p class="text-body-1">
+                    <!-- Description -->
+                    <p class="text-body-1" style="margin-bottom: 16px">
                       This chart shows how calories are distributed between protein, carbs, and fat.
                       Each section represents the percentage of total calories from each macronutrient.
-                      It is listed in kcals/grams.
+                      It is listed in calories.
                     </p>
 
-                    <!-- Pie Chart -->
-                    <div class="d-flex justify-center mt-4">
+                    <!-- Chart -->
+                    <div  class="d-flex align-center justify-center my-4">
                       <NutritionChart
                         :protein="recipe.nutrition.protein"
                         :carbs="recipe.nutrition.carbs"
@@ -295,15 +294,16 @@
                     </div>
 
                     <!-- Sodium -->
-                    <p class="text-center mt-4">
+                    <p class="mt-4 text-center">
                       <strong>Sodium:</strong> {{ recipe.nutrition.sodium }} mg
                     </p>
 
-                  </v-col>
+                  </div>
 
-                  <!-- RIGHT COLUMN: Nutrition Score) -->
-                  <v-col cols="12" md="6">
-                    <v-card class="pa-4" variant="outlined" style="border-radius: 12px; height: 100%;">
+                  <!-- RIGHT COLUMN -->
+                  <div style="flex: 1; min-width: 300px;">
+
+                    <v-card class="pa-4" elevation="2" style="border-radius: 12px;">
                       <h3 style="color: #1976d2; font-weight: 700; margin-bottom: 16px;">
                         Nutritional Profile Match
                       </h3>
@@ -323,7 +323,7 @@
                         <p class="text-body-2 mb-4">
                           <strong>Purpose:</strong> {{ selectedProfile.purpose }}
                         </p>
-                        
+
                         <div class="d-flex align-center justify-center my-4">
                           <span 
                             class="text-h2 font-weight-bold" 
@@ -343,10 +343,10 @@
                         Please select a profile above to see how this recipe scores!
                       </div>
                     </v-card>
-                  </v-col>
 
-                </v-row>
+                  </div>
 
+                </div>
               </v-window-item>
 
               <!-- INSTRUCTIONS -->
