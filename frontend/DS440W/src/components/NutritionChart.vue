@@ -24,9 +24,9 @@ watch(
     if (chartInstance) chartInstance.destroy()
 
     // 👉 Convert grams to calories
-    const proteinCal = (props.protein || 0) * 4
-    const carbsCal = (props.carbs || 0) * 4
-    const fatCal = (props.fat || 0) * 9
+    const proteinCal = props.protein
+    const carbsCal = props.carbs
+    const fatCal = props.fat
 
     chartInstance = new Chart(chartRef.value, {
       type: "doughnut",

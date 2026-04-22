@@ -280,7 +280,7 @@
                     <p class="text-body-1" style="margin-bottom: 16px">
                       This chart shows how calories are distributed between protein, carbs, and fat.
                       Each section represents the percentage of total calories from each macronutrient.
-                      It is listed in calories.
+                      It is listed in calories and grams.
                     </p>
 
                     <!-- Chart -->
@@ -392,6 +392,7 @@
 import { ref, watch, computed } from 'vue'
 import NutritionChart from '@/components/NutritionChart.vue'
 
+
 const selectedTab = ref(0)
 const selectedSubTab = ref(0)
 const useRecipePrice = ref(false)
@@ -471,7 +472,7 @@ const recipes = [
     image: "https://helloyummy.co/wp-content/uploads/2021/02/baked-feta-pasta-recipe12.jpg",
     ingredients: ["8oz Baby Spinach", "1 Cup Cherry Tomatoes", "8oz Pasta (Any)", "2 Tbsp Olive Oil", "1 Feta Cheese Block", "Salt",  "Pepper",  "1 Tbsp Minced Garlic"],
     ingredientBlurb: "A creamy baked pasta dish where feta and tomatoes roast together to create a rich sauce. Serves 4.",
-    nutrition: {calories: "382", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    nutrition: {calories: "291.1", protein: 11.36, carbs: 33.2, fat: 13.45, sodium: 749.83 },
     instructions: [
     {section: "Sauce",
       steps: [
@@ -497,7 +498,7 @@ const recipes = [
     image: "https://vegangirlsguide.com/wp-content/uploads/2024/09/overnight-oats-recipe-1725865416.jpg",
     ingredients: ["1/2 Cup Rolled Oats", "1/2 Cup Greek Yogurt", "1/2 Cup Milk", "Salt", "1 Tsp Chia Seeds", "2 Tsp Honey", "1/4 Cup Berries"],
     ingredientBlurb: "An easy make-ahead breakfast that sits overnight in the fridge. Serves 1.",
-    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    nutrition: {calories: "332.9", protein: 12.1, carbs: 40.4, fat: 14.2, sodium: 48.1 },
     instructions: [
     {section: "Assembly",
       steps: [
@@ -512,7 +513,7 @@ const recipes = [
     image: "https://www.perdue.com/sites/default/files/styles/recipe_hero_banner/public/quesadilla%20final.jpg?h=ddb1ad0c&itok=qDH1y9Je",
     ingredients: ["8 Large Tortillas", "1 Tbsp Butter", "2 Chicken Breasts", "1 Can Black Beans", "1 Cup Shredded Cheese", "Salt", "Pepper", "1 Tbsp Olive Oil"],
     ingredientBlurb: "A quick, protein-packed meal with chicken, black beans, and melted cheese in a crispy tortilla. Serves 4.",
-    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    nutrition: {calories: "648.8", protein: 30.9, carbs: 85.5, fat: 20.5, sodium: 1567.6 },
     instructions: [
     {section: "Filling",
       steps: [
@@ -545,7 +546,7 @@ const recipes = [
     image: "https://farmerowned.com/images/featuredRecipesImages/featuredRecipes1532973470.jpg",
     ingredients: ["1lb Ground Beef", "1 Yellow Onion", "1 Can Diced Tomatoes", "1 Packet Taco Teasoning", "1 Can Kidney Beans", "1 Can Sweet Corn", "Salt", "Pepper", "1.5 Cup Shredded cheese", "1 Bag Fritos", "8oz Sour Cream"],
     ingredientBlurb: "A warm, hearty soup inspired by classic taco flavors, combining seasoned meat, beans, tomatoes, and spices into a comforting one-pot meal. Serves 6.",
-    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    nutrition: {calories: "625.8", protein: 25.9, carbs: 48.2, fat: 36.1, sodium: 1382},
     instructions: [
     {section: "Base",
       steps: [
@@ -578,7 +579,7 @@ const recipes = [
     image: "https://www.whitneyerd.com/wp-content/uploads/2015/01/healthy-whole-wheat-pancakes-recipe.jpg",
     ingredients: ["2 Cups Whole Wheat Flour", "2 Tbsp White Sugar", "2 Tsp Baking Powder", "1/2 Tsp Baking Soda", "1/2 Tsp Salt", "2.25 Cup Buttermilk", "2 Eggs", "4 Tbsp Vegetable Oil"],
     ingredientBlurb: "A simple batter of flour, eggs, and milk cooked on a hot griddle into soft, golden pancakes with lightly crisp edges. Serves 4.",
-    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    nutrition: {calories: "436.5", protein: 15, carbs: 55.7, fat: 19, sodium: 870.5 },
     instructions: [
     {section: "Dry Ingredients",
       steps: [
@@ -605,7 +606,7 @@ const recipes = [
     image: "https://www.hauteandhealthyliving.com/wp-content/uploads/2024/02/healthy-chicken-caesar-salad-12-1.jpg",
     ingredients: ["3 Cups Romaine Lettuce", "1/2 lb Chicken Breasts", "1/4 Cup Shredded Parmesean Cheese", "Croutons", "2 Tbsp Caesar Salad Dressing"],
     ingredientBlurb: "Crisp romaine tossed with Caesar dressing, topped with grilled chicken, croutons, and parmesan. Serves 2.",
-    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    nutrition: {calories: "426.8", protein: 35, carbs: 16.85, fat: 24.7, sodium: 704.5 },
     instructions: [
     {section: "Chicken",
       steps: [
@@ -635,7 +636,7 @@ const recipes = [
     ingredients: ["3 Bell Peppers", "1 White Onion", "1 Can Crushed Tomatoes", "1 Tbsp Olive Oil", "1 lb Ground Beef", "2 Cups Beef Broth", 
       "1 Cup White Rice", "1 Tsp Paprika", "Salt", "1 Tbsp Minced Garlic", "1 Tsp Oregano", "1 Tsp Red Pepper Flakes"],
     ingredientBlurb: "A hearty mix of ground beef, peppers, and rice simmered in a savory tomato sauce. Serves 4.",
-    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    nutrition: {calories: "571.5", protein: 27, carbs: 55.6, fat: 26.9, sodium: 1354.8 },
     instructions: [
     {section: "Rice",
       steps: [
@@ -672,7 +673,7 @@ const recipes = [
     image: "https://www.garlicandzest.com/wp-content/uploads/2024/04/Brown-Sugar-glazed-meatloaf-14.jpg",
     ingredients: ["1lb Ground Beef", "1/2 White Onion", "1 Cup Italian Bread Crumbs", "1 Egg", "1/4 Cup 2% Milk", "Salt", "Pepper", "1 Tbsp olive oil"],
     ingredientBlurb: "Seasoned ground beef, herbs, and breadcrumbs baked until juicy and tender with a savory, browned crust. Serves 4.",
-    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    nutrition: {calories: "459", protein: 25.4, carbs: 22.2, fat: 29, sodium: 925.6 },
     instructions: [
     {section: "Prep",
       steps: [
@@ -699,7 +700,7 @@ const recipes = [
     image: "https://www.chowhound.com/img/gallery/ultimate-breakfast-burrito-recipe/intro-1709578226.jpg",
     ingredients: ["1/2 lb Ground Beef", "1 Cup White Rice", "2 Avocados", "1 Cup Shredded Mexican Style Cheese", "2 Eggs", "4 Tortillas", "2 Tbsp Olive Oil"],
     ingredientBlurb: "A warm flour tortilla filled with seasoned beef, scrambled egg, and sliced avocado for a rich, savory burrito. Serves 4.",
-    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    nutrition: {calories: "793.3", protein: 28.5, carbs: 68.7, fat: 45.4, sodium: 553.5},
     instructions: [
     {section: "Rice",
       steps: [
@@ -730,7 +731,7 @@ const recipes = [
     ingredients: ["2 slices Sourdough Bread", "1 Slice of Cheese", "1 Tsp Mayonaisse", "1 Tsp Dijon Mustard", "1/2 Avocado", 
       "3 Leaves Romaine Lettuce", "2 Slices of Tomato", "1/2 Cucumber", "1/4 Red Onion", "1/4 Cup Sprouts", "Salt", "Pepper"],
     ingredientBlurb: "Toasted sourdough spread with creamy and tangy condiments, layered with avocado and a mix of fresh, crisp vegetables. Serves 1.",
-    nutrition: {calories: "352", protein: 7.5, carbs: 46.47, fat: 9.9, sodium: 318.11 },
+    nutrition: {calories: "692", protein: 26, carbs: 100.6, fat: 24.7, sodium: 3465 },
     instructions: [
     {section: "Prep",
       steps: [
