@@ -1,120 +1,120 @@
 Ingredient,Amount (Meal),Amount (USDA),Calories,Fat,Sodium,Carbs ,Protein,Link,Unnamed: 9,Recipe Servings,Calories / Serving,Fat / Serving (g),Sodium / Serving (mg),Carbs / Serving (g),Protein / Serving (g)
-"USDA: https://fdc.nal.usda.gov/ *if you cant find it on usda, just go to nutrition info on the website link*",,,,,,,,,,1.0,,,,,
-Baked Feta Pasta - Taryn,,,,,,,,,,6.0,,,,,
-Baby Spinach,1 bag ,100g,32.2kcal,0.6g,110.6mg,5.0g,4.1g,"Spinach, baby - Components - Foundation | USDA FoodData Central",,6.0,5.366666666666667,0.09999999999999999,18.433333333333334,0.8333333333333334,0.6833333333333332
-Cherry Tomatoes,1 container ,100g,50.4kcal,0.6g,14.0mg,10.9g,2.5g,"Pasta, dry, enriched - Nutrients - SR Legacy | USDA FoodData Central",,6.0,8.4,0.09999999999999999,2.3333333333333335,1.8166666666666667,0.4166666666666667
-Feta block,1 container ,100g,596.6kcal,47.5g,2072.4mg,9.3g,31.6g,"Cheese, feta - Nutrients - SR Legacy | USDA FoodData Central",,6.0,99.43333333333334,7.916666666666667,345.40000000000003,1.55,5.266666666666667
-Olive oil  ,2 tbsp ,1tbsp,238.0kcal,28.0g,0.0mg,0.0g,0.0g,"Oil, olive, salad or cooking - Nutrients - SR Legacy | USDA FoodData Central",,6.0,39.666666666666664,4.666666666666667,0.0,0.0,0.0
-Salt/Pepper,generous amount,1tsp,0.0kcal,0.0g,2300.0mg,0.0g,0.0g,"Salt, table, iodized - Nutrients - Foundation | USDA FoodData Central","Spices, pepper, black - Nutrients - SR Legacy | USDA FoodData Central",6.0,0.0,0.0,383.3333333333333,0.0,0.0
-Minced garlic,2 tbsp ,1tbsp,30.0kcal,0.0g,2.0mg,6.0g,2.0g,"Garlic, raw - Nutrients - Foundation | USDA FoodData Central",,6.0,5.0,0.0,0.3333333333333333,1.0,0.3333333333333333
-Pasta ,8 oz ,1oz_dry,800.0kcal,4.0g,0.0mg,168.0g,28.0g,"Pasta, dry, enriched - Nutrients - SR Legacy | USDA FoodData Central",,6.0,133.33333333333334,0.6666666666666666,0.0,28.0,4.666666666666667
-Totals/Meal Total,,,,,,,,,,6.0,,,,,
+"USDA: https://fdc.nal.usda.gov/ *if you cant find it on usda, just go to nutrition info on the website link*",,,,,,,,,,1,,,,,
+Baked Feta Pasta - Taryn,,,,,,,,,,6,,,,,
+Baby Spinach,1 bag ,100g,32.2kcal,0.6g,110.6mg,5.0g,4.1g,"Spinach, baby - Components - Foundation | USDA FoodData Central",,6,5.366666667,0.1,18.43333333,0.833333333,0.683333333
+Cherry Tomatoes,1 container ,100g,50.4kcal,0.6g,14.0mg,10.9g,2.5g,"Pasta, dry, enriched - Nutrients - SR Legacy | USDA FoodData Central",,6,8.4,0.1,2.333333333,1.816666667,0.416666667
+Feta block,1 container ,100g,596.6kcal,47.5g,2072.4mg,9.3g,31.6g,"Cheese, feta - Nutrients - SR Legacy | USDA FoodData Central",,6,99.43333333,7.916666667,345.4,1.55,5.266666667
+Olive oil  ,2 tbsp ,1tbsp,238.0kcal,28.0g,0.0mg,0.0g,0.0g,"Oil, olive, salad or cooking - Nutrients - SR Legacy | USDA FoodData Central",,6,39.66666667,4.666666667,0,0,0
+Salt/Pepper,generous amount,1tsp,0.0kcal,0.0g,2300.0mg,0.0g,0.0g,"Salt, table, iodized - Nutrients - Foundation | USDA FoodData Central","Spices, pepper, black - Nutrients - SR Legacy | USDA FoodData Central",6,0,0,383.3333333,0,0
+Minced garlic,2 tbsp ,1tbsp,30.0kcal,0.0g,2.0mg,6.0g,2.0g,"Garlic, raw - Nutrients - Foundation | USDA FoodData Central",,6,5,0,0.333333333,1,0.333333333
+Pasta ,8 oz ,1oz_dry,800.0kcal,4.0g,0.0mg,168.0g,28.0g,"Pasta, dry, enriched - Nutrients - SR Legacy | USDA FoodData Central",,6,133.3333333,0.666666667,0,28,4.666666667
+Totals/Meal Total,,,,,,,,,,6,291.2,13.45,749.8333333,33.2,11.36666667
 Recipe Reference: https://thespicegirlkitchen.com/creamy-salmon-pasta/,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
-Overnight Oats - Taryn ,,,,,,,,,,1.0,,,,,
-Old fashioned oats,1/4 cup,1/4 cup,37.5kcal,0.6g,0.0mg,6.8g,1.2g,"Oats, whole grain, rolled, old fashioned - Nutrients - Foundation | USDA FoodData Central",,1.0,37.5,0.6,0.0,6.8,1.2
-Greek yogurt,1/4 cup,1/4 cup,7.5kcal,0.0g,3.8mg,0.4g,1.1g,"Yogurt, Greek, plain, nonfat - Nutrients - Foundation | USDA FoodData Central",,1.0,7.5,0.0,3.8,0.4,1.1
-Milk (2%?),1/3 cup,1 cup,40.7kcal,1.6g,38.3mg,4.0g,2.7g,"Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D - Nutrients - Foundation | USDA FoodData Central",,1.0,40.7,1.6,38.3,4.0,2.7
-Chia Seeds,2 tsp,2 tsp,200.0kcal,12.0g,6.0mg,16.0g,7.0g,"Chia seeds, dry, raw - Nutrients - Foundation | USDA FoodData Central",,1.0,200.0,12.0,6.0,16.0,7.0
-Blueberries,1/4 cup,1/4 cup,5.2kcal,0.0g,0.0mg,1.2g,0.1g,"Chia seeds, dry, raw - Nutrients - Foundation | USDA FoodData Central",,1.0,5.2,0.0,0.0,1.2,0.1
-Honey,2 tsp,1 tsp,42.0kcal,0.0g,0.0mg,12.0g,0.0g,Honey - Nutrients - SR Legacy | USDA FoodData Central,,1.0,42.0,0.0,0.0,12.0,0.0
-Totals/Meal Total,,,,,,,,,,1.0,,,,,
+Overnight Oats - Taryn ,,,,,,,,,,1,,,,,
+Old fashioned oats,1/4 cup,1/4 cup,37.5kcal,0.6g,0.0mg,6.8g,1.2g,"Oats, whole grain, rolled, old fashioned - Nutrients - Foundation | USDA FoodData Central",,1,37.5,0.6,0,6.8,1.2
+Greek yogurt,1/4 cup,1/4 cup,7.5kcal,0.0g,3.8mg,0.4g,1.1g,"Yogurt, Greek, plain, nonfat - Nutrients - Foundation | USDA FoodData Central",,1,7.5,0,3.8,0.4,1.1
+Milk (2%?),1/3 cup,1 cup,40.7kcal,1.6g,38.3mg,4.0g,2.7g,"Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D - Nutrients - Foundation | USDA FoodData Central",,1,40.7,1.6,38.3,4,2.7
+Chia Seeds,2 tsp,2 tsp,200.0kcal,12.0g,6.0mg,16.0g,7.0g,"Chia seeds, dry, raw - Nutrients - Foundation | USDA FoodData Central",,1,200,12,6,16,7
+Blueberries,1/4 cup,1/4 cup,5.2kcal,0.0g,0.0mg,1.2g,0.1g,"Chia seeds, dry, raw - Nutrients - Foundation | USDA FoodData Central",,1,5.2,0,0,1.2,0.1
+Honey,2 tsp,1 tsp,42.0kcal,0.0g,0.0mg,12.0g,0.0g,Honey - Nutrients - SR Legacy | USDA FoodData Central,,1,42,0,0,12,0
+Totals/Meal Total,,,,,,,,,,1,332.9,14.2,48.1,40.4,12.1
 Recipe reference: https://www.allrecipes.com/recipe/244251/no-cook-overnight-oatmeal/,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
-Quesidilla - Liliana ,,,,,,,,,,4.0,,,,,
-Tortilla (Large?),8,1 piece,1680.0kcal,40.0g,3600.0mg,280.0g,48.0g,"Tortillas, ready-to-bake or -fry, flour, shelf stable",,4.0,420.0,10.0,900.0,70.0,12.0
-Butter,1 tbs,1 tbsp,102.0kcal,12.0g,90.0mg,0.0g,0.1g,"Butter, salted",,4.0,25.5,3.0,22.5,0.0,0.025
-Chicken breast,2 breasts,100g_raw,240.0kcal,5.2g,90.0mg,0.0g,46.0g,"Chicken, breast, boneless, skinless, raw",,4.0,60.0,1.3,22.5,0.0,11.5
-Black beans,1 can,1 cup,340.5kcal,1.5g,15.0mg,61.5g,22.5g,"Beans, black, canned, sodium added, drained and rinsed",,4.0,85.125,0.375,3.75,15.375,5.625
-Shredded cheddar cheese,1/4 cup,1 cup,113.8kcal,9.2g,175.5mg,0.4g,7.0g,"Cheese, cheddar",,4.0,28.45,2.3,43.875,0.1,1.75
-Salt/Pepper,1 tsp,1tsp,0.0kcal,0.0g,2300.0mg,0.0g,0.0g,Repeat Item,,4.0,0.0,0.0,575.0,0.0,0.0
-Olive oil (sub with vegetable),1 Tbs,1tbsp,119.0kcal,14.0g,0.0mg,0.0g,0.0g,Repeat Item,,4.0,29.75,3.5,0.0,0.0,0.0
-Totals/Meal Total,,,,,,,,,,4.0,,,,,
+Quesidilla - Liliana ,,,,,,,,,,4,,,,,
+Tortilla (Large?),8,1 piece,1680.0kcal,40.0g,3600.0mg,280.0g,48.0g,"Tortillas, ready-to-bake or -fry, flour, shelf stable",,4,420,10,900,70,12
+Butter,1 tbs,1 tbsp,102.0kcal,12.0g,90.0mg,0.0g,0.1g,"Butter, salted",,4,25.5,3,22.5,0,0.025
+Chicken breast,2 breasts,100g_raw,240.0kcal,5.2g,90.0mg,0.0g,46.0g,"Chicken, breast, boneless, skinless, raw",,4,60,1.3,22.5,0,11.5
+Black beans,1 can,1 cup,340.5kcal,1.5g,15.0mg,61.5g,22.5g,"Beans, black, canned, sodium added, drained and rinsed",,4,85.125,0.375,3.75,15.375,5.625
+Shredded cheddar cheese,1/4 cup,1 cup,113.8kcal,9.2g,175.5mg,0.4g,7.0g,"Cheese, cheddar",,4,28.45,2.3,43.875,0.1,1.75
+Salt/Pepper,1 tsp,1tsp,0.0kcal,0.0g,2300.0mg,0.0g,0.0g,Repeat Item,,4,0,0,575,0,0
+Olive oil (sub with vegetable),1 Tbs,1tbsp,119.0kcal,14.0g,0.0mg,0.0g,0.0g,Repeat Item,,4,29.75,3.5,0,0,0
+Totals/Meal Total,,,,,,,,,,4,648.825,20.475,1567.625,85.475,30.9
 Recipe Reference:,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
-Taco Soup - Liliana ,,,,,,,,,,6.0,,,,,
-Ground Beef,1lb,1 lb,1152.0kcal,91.0g,300.0mg,0.0g,78.0g,"Beef, grass-fed, ground, raw",,6.0,192.0,15.166666666666666,50.0,0.0,13.0
-Onion (yellow?),1,1 medium,45.0kcal,0.1g,5.0mg,11.0g,1.2g,"Onions, yellow, raw",,6.0,7.5,0.016666666666666666,0.8333333333333334,1.8333333333333333,0.19999999999999998
-Diced tomatos,1 can,1 can_14.5oz,100.0kcal,0.0g,600.0mg,22.0g,4.0g,"Tomatoes, canned, red, ripe, diced",,6.0,16.666666666666668,0.0,100.0,3.6666666666666665,0.6666666666666666
-Taco seasoning,1 packet,1 packet,90.0kcal,0.0g,2200.0mg,18.0g,0.0g,"Seasoning mix, dry, taco, original",,6.0,15.0,0.0,366.6666666666667,3.0,0.0
-Kidney beans,1 can,1 cup,322.5kcal,1.5g,15.0mg,55.5g,19.5g,"Kidney beans, from canned, no added fat",,6.0,53.75,0.25,2.5,9.25,3.25
-Sweet corn,1 can,1 can_15oz,280.0kcal,4.0g,800.0mg,60.0g,8.0g,"Corn, sweet, white, canned, whole kernel, drained solids",,6.0,46.666666666666664,0.6666666666666666,133.33333333333334,10.0,1.3333333333333333
-Salt/Pepper,A pinch,1tsp,0.0kcal,0.0g,2300.0mg,0.0g,0.0g,Repeat Item,,6.0,0.0,0.0,383.3333333333333,0.0,0.0
-Shredded cheddar cheese,1.5 cup bag,1 cup,455.0kcal,37.0g,702.0mg,1.5g,28.0g,Repeat Item,,6.0,75.83333333333333,6.166666666666667,117.0,0.25,4.666666666666667
-Fritos,half bag,1 oz,1280.0kcal,80.0g,1360.0mg,120.0g,16.0g,"Corn chips, plain (Fritos)",,6.0,213.33333333333334,13.333333333333334,226.66666666666666,20.0,2.6666666666666665
-Sour cream,1 small tub,1 tbsp,30.0kcal,3.0g,10.0mg,1.0g,0.5g,"Cream, sour, full fat",,6.0,5.0,0.5,1.6666666666666667,0.16666666666666666,0.08333333333333333
-Totals/Meal Total,,,,,,,,,,6.0,,,,,
+Taco Soup - Liliana ,,,,,,,,,,6,,,,,
+Ground Beef,1lb,1 lb,1152.0kcal,91.0g,300.0mg,0.0g,78.0g,"Beef, grass-fed, ground, raw",,6,192,15.16666667,50,0,13
+Onion (yellow?),1,1 medium,45.0kcal,0.1g,5.0mg,11.0g,1.2g,"Onions, yellow, raw",,6,7.5,0.016666667,0.833333333,1.833333333,0.2
+Diced tomatos,1 can,1 can_14.5oz,100.0kcal,0.0g,600.0mg,22.0g,4.0g,"Tomatoes, canned, red, ripe, diced",,6,16.66666667,0,100,3.666666667,0.666666667
+Taco seasoning,1 packet,1 packet,90.0kcal,0.0g,2200.0mg,18.0g,0.0g,"Seasoning mix, dry, taco, original",,6,15,0,366.6666667,3,0
+Kidney beans,1 can,1 cup,322.5kcal,1.5g,15.0mg,55.5g,19.5g,"Kidney beans, from canned, no added fat",,6,53.75,0.25,2.5,9.25,3.25
+Sweet corn,1 can,1 can_15oz,280.0kcal,4.0g,800.0mg,60.0g,8.0g,"Corn, sweet, white, canned, whole kernel, drained solids",,6,46.66666667,0.666666667,133.3333333,10,1.333333333
+Salt/Pepper,A pinch,1tsp,0.0kcal,0.0g,2300.0mg,0.0g,0.0g,Repeat Item,,6,0,0,383.3333333,0,0
+Shredded cheddar cheese,1.5 cup bag,1 cup,455.0kcal,37.0g,702.0mg,1.5g,28.0g,Repeat Item,,6,75.83333333,6.166666667,117,0.25,4.666666667
+Fritos,half bag,1 oz,1280.0kcal,80.0g,1360.0mg,120.0g,16.0g,"Corn chips, plain (Fritos)",,6,213.3333333,13.33333333,226.6666667,20,2.666666667
+Sour cream,1 small tub,1 tbsp,30.0kcal,3.0g,10.0mg,1.0g,0.5g,"Cream, sour, full fat",,6,5,0.5,1.666666667,0.166666667,0.083333333
+Totals/Meal Total,,,,,,,,,,6,625.75,36.1,1382,48.16666667,25.86666667
 Recipe Reference:,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
-Pancakes - Nate,,,,,,,,,,4.0,,,,,
-Whole Wheat Flour,2 cups,1 cup,816.0kcal,6.0g,10.0mg,172.0g,32.0g,"Flour, whole wheat, unenriched",,4.0,204.0,1.5,2.5,43.0,8.0
-White Sugar,2 tbsp,1 tbsp,96.0kcal,0.0g,0.0mg,24.0g,0.0g,"sugars, granulated",,4.0,24.0,0.0,0.0,6.0,0.0
-Baking Powder,2 tsp,1 tsp,10.0kcal,0.0g,960.0mg,2.0g,0.0g,"Leavening agents, baking powder, low-sodium",,4.0,2.5,0.0,240.0,0.5,0.0
-Baking Soda,1/2 tsp,1/2 tsp,0.0kcal,0.0g,300.0mg,0.0g,0.0g,"Leavening agents, baking soda",,4.0,0.0,0.0,75.0,0.0,0.0
-Salt,1/2 tsp,1 tsp,0.0kcal,0.0g,1150.0mg,0.0g,0.0g,"Salt, table",,4.0,0.0,0.0,287.5,0.0,0.0
-Buttermilk,2 1/4 cup,1 cup,200.0kcal,4.0g,920.0mg,24.0g,16.0g,"Milk, buttermilk, fluid, whole",,4.0,50.0,1.0,230.0,6.0,4.0
-Eggs,2,1 piece,144.0kcal,10.0g,142.0mg,0.8g,12.0g,"Eggs, Grade A, Large, egg whole",,4.0,36.0,2.5,35.5,0.2,3.0
-Vegetable Oil,4 tbsp,1 tbsp,480.0kcal,56.0g,0.0mg,0.0g,0.0g,"Oil, vegetable, soybean, refined",,4.0,120.0,14.0,0.0,0.0,0.0
-Totals/Meal Total,,,,,,,,,,4.0,,,,,
-Recipe: https://www.allrecipes.com/recipe/232131/100-whole-wheat-pancakes/,,,,,,,,,,1.0,,,,,
-,,,,,,,,,,1.0,,,,,
-Chicken Caesar Salad - Nate,,,,,,,,,,2.0,,,,,
-Romaine Lettuce,3 cups,1 cup,24.0kcal,0.3g,12.0mg,4.5g,1.8g,"Lettuce, cos or romaine, raw",,2.0,12.0,0.15,6.0,2.25,0.9
-Chicken Breast,1/2 lb,1 piece (196g),296 kcal,6.21g,102mg,0g,59.8g,"Chicken, broiler or fryers, breast, skinless, boneless, meat only, cooked, grilled",,2.0,148.0,3.105,51.0,0.0,29.9
-Shredded Parmesan Cheese,1/4 cup,1/4 cup,27.5kcal,1.9g,100.0mg,0.2g,2.5g,"Cheese, parmesan, shredded",,2.0,13.75,0.95,50.0,0.1,1.25
-Croutons,handful,1 cup,186.0kcal,7.0g,495.0mg,25.0g,4.0g,"Croutons, seasoned",,2.0,93.0,3.5,247.5,12.5,2.0
-Caesar Salad Dressing,2 tbsp ,2 tbsp,320.0kcal,34.0g,700.0mg,4.0g,2.0g,"Salad dressing, caesar, fat-free",,2.0,160.0,17.0,350.0,2.0,1.0
-Totals/Meal Total,,,,,,,,,,2.0,,,,,
+Pancakes - Nate,,,,,,,,,,4,,,,,
+Whole Wheat Flour,2 cups,1 cup,816.0kcal,6.0g,10.0mg,172.0g,32.0g,"Flour, whole wheat, unenriched",,4,204,1.5,2.5,43,8
+White Sugar,2 tbsp,1 tbsp,96.0kcal,0.0g,0.0mg,24.0g,0.0g,"sugars, granulated",,4,24,0,0,6,0
+Baking Powder,2 tsp,1 tsp,10.0kcal,0.0g,960.0mg,2.0g,0.0g,"Leavening agents, baking powder, low-sodium",,4,2.5,0,240,0.5,0
+Baking Soda,1/2 tsp,1/2 tsp,0.0kcal,0.0g,300.0mg,0.0g,0.0g,"Leavening agents, baking soda",,4,0,0,75,0,0
+Salt,1/2 tsp,1 tsp,0.0kcal,0.0g,1150.0mg,0.0g,0.0g,"Salt, table",,4,0,0,287.5,0,0
+Buttermilk,2 1/4 cup,1 cup,200.0kcal,4.0g,920.0mg,24.0g,16.0g,"Milk, buttermilk, fluid, whole",,4,50,1,230,6,4
+Eggs,2,1 piece,144.0kcal,10.0g,142.0mg,0.8g,12.0g,"Eggs, Grade A, Large, egg whole",,4,36,2.5,35.5,0.2,3
+Vegetable Oil,4 tbsp,1 tbsp,480.0kcal,56.0g,0.0mg,0.0g,0.0g,"Oil, vegetable, soybean, refined",,4,120,14,0,0,0
+Totals/Meal Total,,,,,,,,,,4,436.5,19,870.5,55.7,15
+Recipe: https://www.allrecipes.com/recipe/232131/100-whole-wheat-pancakes/,,,,,,,,,,1,,,,,
+,,,,,,,,,,1,,,,,
+Chicken Caesar Salad - Nate,,,,,,,,,,2,,,,,
+Romaine Lettuce,3 cups,1 cup,24.0kcal,0.3g,12.0mg,4.5g,1.8g,"Lettuce, cos or romaine, raw",,2,12,0.15,6,2.25,0.9
+Chicken Breast,1/2 lb,1 piece (196g),296 kcal,6.21g,102mg,0g,59.8g,"Chicken, broiler or fryers, breast, skinless, boneless, meat only, cooked, grilled",,2,148,3.105,51,0,29.9
+Shredded Parmesan Cheese,1/4 cup,1/4 cup,27.5kcal,1.9g,100.0mg,0.2g,2.5g,"Cheese, parmesan, shredded",,2,13.75,0.95,50,0.1,1.25
+Croutons,handful,1 cup,186.0kcal,7.0g,495.0mg,25.0g,4.0g,"Croutons, seasoned",,2,93,3.5,247.5,12.5,2
+Caesar Salad Dressing,2 tbsp ,2 tbsp,320.0kcal,34.0g,700.0mg,4.0g,2.0g,"Salad dressing, caesar, fat-free",,2,160,17,350,2,1
+Totals/Meal Total,,,,,,,,,,2,426.75,24.705,704.5,16.85,35.05
 Recipe: https://www.allrecipes.com/recipe/246106/classic-chicken-caesar-salad/,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
-Unstuffed Peppers - Fiona,,,,,,,,,,4.0,,,,,
-Bell Peppers,3,1 medium,90.0kcal,0.9g,12.0mg,21.0g,3.0g,,,4.0,22.5,0.225,3.0,5.25,0.75
-White Onion,1,1 medium,45.0kcal,0.1g,5.0mg,11.0g,1.2g,,,4.0,11.25,0.025,1.25,2.75,0.3
-15 oz can crushed tomatoes ,1,1 can,140.0kcal,0.0g,1000.0mg,32.0g,7.0g,,,4.0,35.0,0.0,250.0,8.0,1.75
-Olive Oil,1 Tbsp,1tbsp,119.0kcal,14.0g,0.0mg,0.0g,0.0g,,,4.0,29.75,3.5,0.0,0.0,0.0
-Ground Beef,1 lb,1 lb,1152.0kcal,91.0g,300.0mg,0.0g,78.0g,,,4.0,288.0,22.75,75.0,0.0,19.5
-beef broth,2 cups,1 cup,30.0kcal,0.0g,1800.0mg,2.0g,4.0g,,,4.0,7.5,0.0,450.0,0.5,1.0
-Rice (white?),1 cup,1 cup_dry,680.0kcal,1.0g,0.0mg,150.0g,13.0g,,,4.0,170.0,0.25,0.0,37.5,3.25
-Paprika,1 tsp,1 tsp,6.0kcal,0.3g,1.0mg,1.2g,0.3g,,,4.0,1.5,0.075,0.25,0.3,0.075
-Salt,1 tsp,1 tsp,0.0kcal,0.0g,2300.0mg,0.0g,0.0g,,,4.0,0.0,0.0,575.0,0.0,0.0
-garlic (minced),1 Tbsp,1tbsp,15.0kcal,0.0g,1.0mg,3.0g,1.0g,,,4.0,3.75,0.0,0.25,0.75,0.25
-Oregano,1 tsp,1 tsp,3.0kcal,0.0g,0.0mg,1.0g,0.0g,,,4.0,0.75,0.0,0.0,0.25,0.0
-red pepper flakes,1 tsp,1 tsp,6.0kcal,0.3g,0.0mg,1.0g,0.3g,,,4.0,1.5,0.075,0.0,0.25,0.075
-Totals/Meal Total,,,,,,,,,,4.0,,,,,
+Unstuffed Peppers - Fiona,,,,,,,,,,4,,,,,
+Bell Peppers,3,1 medium,90.0kcal,0.9g,12.0mg,21.0g,3.0g,,,4,22.5,0.225,3,5.25,0.75
+White Onion,1,1 medium,45.0kcal,0.1g,5.0mg,11.0g,1.2g,,,4,11.25,0.025,1.25,2.75,0.3
+15 oz can crushed tomatoes ,1,1 can,140.0kcal,0.0g,1000.0mg,32.0g,7.0g,,,4,35,0,250,8,1.75
+Olive Oil,1 Tbsp,1tbsp,119.0kcal,14.0g,0.0mg,0.0g,0.0g,,,4,29.75,3.5,0,0,0
+Ground Beef,1 lb,1 lb,1152.0kcal,91.0g,300.0mg,0.0g,78.0g,,,4,288,22.75,75,0,19.5
+beef broth,2 cups,1 cup,30.0kcal,0.0g,1800.0mg,2.0g,4.0g,,,4,7.5,0,450,0.5,1
+Rice (white?),1 cup,1 cup_dry,680.0kcal,1.0g,0.0mg,150.0g,13.0g,,,4,170,0.25,0,37.5,3.25
+Paprika,1 tsp,1 tsp,6.0kcal,0.3g,1.0mg,1.2g,0.3g,,,4,1.5,0.075,0.25,0.3,0.075
+Salt,1 tsp,1 tsp,0.0kcal,0.0g,2300.0mg,0.0g,0.0g,,,4,0,0,575,0,0
+garlic (minced),1 Tbsp,1tbsp,15.0kcal,0.0g,1.0mg,3.0g,1.0g,,,4,3.75,0,0.25,0.75,0.25
+Oregano,1 tsp,1 tsp,3.0kcal,0.0g,0.0mg,1.0g,0.0g,,,4,0.75,0,0,0.25,0
+red pepper flakes,1 tsp,1 tsp,6.0kcal,0.3g,0.0mg,1.0g,0.3g,,,4,1.5,0.075,0,0.25,0.075
+Totals/Meal Total,,,,,,,,,,4,571.5,26.9,1354.75,55.55,26.95
 Recipe Reference:,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
-Meatloaf - Nick,,,,,,,,,,4.0,,,,,
-Ground Beef,1 lb,1 lb,1152.0kcal,91.0g,300.0mg,0.0g,78.0g,,,4.0,288.0,22.75,75.0,0.0,19.5
-White Onion,0.5,1 medium,22.5kcal,0.1g,2.5mg,5.5g,0.6g,,,4.0,5.625,0.025,0.625,1.375,0.15
-Italian Bread Crumbs,1 cup,1 cup,440.0kcal,5.0g,1000.0mg,80.0g,15.0g,,,4.0,110.0,1.25,250.0,20.0,3.75
-Egg,1,1 piece,72.0kcal,5.0g,71.0mg,0.4g,6.0g,,,4.0,18.0,1.25,17.75,0.1,1.5
-Milk (2%?),1/4 cup,1 cup,30.5kcal,1.2g,28.8mg,3.0g,2.0g,,,4.0,7.625,0.3,7.2,0.75,0.5
-Salt,1 tsp,1 tsp,0.0kcal,0.0g,2300.0mg,0.0g,0.0g,,,4.0,0.0,0.0,575.0,0.0,0.0
-Olive Oil,1 Tbsp,1tbsp,119.0kcal,14.0g,0.0mg,0.0g,0.0g,,,4.0,29.75,3.5,0.0,0.0,0.0
-Totals/Meal Total,,,,,,,,,,4.0,,,,,
+Meatloaf - Nick,,,,,,,,,,4,,,,,
+Ground Beef,1 lb,1 lb,1152.0kcal,91.0g,300.0mg,0.0g,78.0g,,,4,288,22.75,75,0,19.5
+White Onion,0.5,1 medium,22.5kcal,0.1g,2.5mg,5.5g,0.6g,,,4,5.625,0.025,0.625,1.375,0.15
+Italian Bread Crumbs,1 cup,1 cup,440.0kcal,5.0g,1000.0mg,80.0g,15.0g,,,4,110,1.25,250,20,3.75
+Egg,1,1 piece,72.0kcal,5.0g,71.0mg,0.4g,6.0g,,,4,18,1.25,17.75,0.1,1.5
+Milk (2%?),1/4 cup,1 cup,30.5kcal,1.2g,28.8mg,3.0g,2.0g,,,4,7.625,0.3,7.2,0.75,0.5
+Salt,1 tsp,1 tsp,0.0kcal,0.0g,2300.0mg,0.0g,0.0g,,,4,0,0,575,0,0
+Olive Oil,1 Tbsp,1tbsp,119.0kcal,14.0g,0.0mg,0.0g,0.0g,,,4,29.75,3.5,0,0,0
+Totals/Meal Total,,,,,,,,,,4,459,29.075,925.575,22.225,25.4
 Recipe Reference:,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
-Beef & Avocado Burrito - Nick,,,,,,,,,,4.0,,,,,
-Ground Beef,0.5 lb,1 lb,576.0kcal,45.5g,150.0mg,0.0g,39.0g,,,4.0,144.0,11.375,37.5,0.0,9.75
-White Rice,1 cup,1 cup_dry,680.0kcal,1.0g,0.0mg,150.0g,13.0g,,,4.0,170.0,0.25,0.0,37.5,3.25
-Avocado,2,1 piece,480.0kcal,44.0g,22.0mg,26.0g,6.0g,,,4.0,120.0,11.0,5.5,6.5,1.5
-Shredded Mexican Style Cheese,1 cup,1 cup,455.0kcal,37.0g,700.0mg,2.0g,28.0g,,,4.0,113.75,9.25,175.0,0.5,7.0
-Egg,2,1 piece,144.0kcal,10.0g,142.0mg,0.8g,12.0g,,,4.0,36.0,2.5,35.5,0.2,3.0
-Tortilla,4,1 piece,600.0kcal,16.0g,1200.0mg,96.0g,16.0g,,,4.0,150.0,4.0,300.0,24.0,4.0
-Olive Oil,2 tbsp ,1tbsp,238.0kcal,28.0g,0.0mg,0.0g,0.0g,,,4.0,59.5,7.0,0.0,0.0,0.0
-Totals/Meal Total,,,,,,,,,,4.0,,,,,
+Beef & Avocado Burrito - Nick,,,,,,,,,,4,,,,,
+Ground Beef,0.5 lb,1 lb,576.0kcal,45.5g,150.0mg,0.0g,39.0g,,,4,144,11.375,37.5,0,9.75
+White Rice,1 cup,1 cup_dry,680.0kcal,1.0g,0.0mg,150.0g,13.0g,,,4,170,0.25,0,37.5,3.25
+Avocado,2,1 piece,480.0kcal,44.0g,22.0mg,26.0g,6.0g,,,4,120,11,5.5,6.5,1.5
+Shredded Mexican Style Cheese,1 cup,1 cup,455.0kcal,37.0g,700.0mg,2.0g,28.0g,,,4,113.75,9.25,175,0.5,7
+Egg,2,1 piece,144.0kcal,10.0g,142.0mg,0.8g,12.0g,,,4,36,2.5,35.5,0.2,3
+Tortilla,4,1 piece,600.0kcal,16.0g,1200.0mg,96.0g,16.0g,,,4,150,4,300,24,4
+Olive Oil,2 tbsp ,1tbsp,238.0kcal,28.0g,0.0mg,0.0g,0.0g,,,4,59.5,7,0,0,0
+Totals/Meal Total,,,,,,,,,,4,793.25,45.375,553.5,68.7,28.5
 Recipe Reference:,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
-Veggie Sandwhich,,,,,,,,,,1.0,,,,,
-Sourdough Bread,2 slices,1 slice,200.0kcal,2.0g,400.0mg,40.0g,8.0g,,,1.0,200.0,2.0,400.0,40.0,8.0
-Cheese of Choice,1 slice,1 slice,80.0kcal,6.0g,200.0mg,1.0g,6.0g,,,1.0,80.0,6.0,200.0,1.0,6.0
-Mayonaisse,1 tsp,1 tsp,33.0kcal,3.5g,30.0mg,0.1g,0.0g,,,1.0,33.0,3.5,30.0,0.1,0.0
-Dijon Mustard,1tsp,1tsp,5.0kcal,0.0g,120.0mg,0.0g,0.0g,,,1.0,5.0,0.0,120.0,0.0,0.0
-Avocado,1 half,1 piece,240.0kcal,22.0g,11.0mg,13.0g,3.0g,,,1.0,240.0,22.0,11.0,13.0,3.0
-Lettuce (Romaine?),2-3 leaves,1 leaf,4.0kcal,0.0g,2.0mg,1.0g,0.4g,,,1.0,4.0,0.0,2.0,1.0,0.4
-Tomato,2 slices,1 slice,8.0kcal,0.0g,2.0mg,2.0g,0.4g,,,1.0,8.0,0.0,2.0,2.0,0.4
-cucumber ,1 half,1/2 cucumber,23.0kcal,0.2g,3.0mg,5.0g,1.0g,,,1.0,23.0,0.2,3.0,5.0,1.0
-red onion,1 fourth,1/4 onion,11.0kcal,0.0g,1.0mg,3.0g,0.3g,,,1.0,11.0,0.0,1.0,3.0,0.3
-sprouts,1/4 cup,,,,,,,,,1.0,,,,,
-salt,pinch,1 tsp,0.0kcal,0.0g,2300.0mg,0.0g,0.0g,,,1.0,0.0,0.0,2300.0,0.0,0.0
-Totals/Meal Total,,,,,,,,,,1.0,,,,,
+Veggie Sandwhich,,,,,,,,,,1,,,,,
+Sourdough Bread,2 slices,1 slice,200.0kcal,2.0g,400.0mg,40.0g,8.0g,,,1,400,4,800,80,16
+Cheese of Choice,1 slice,1 slice,80.0kcal,6.0g,200.0mg,1.0g,6.0g,,,1,80,6,200,1,6
+Mayonaisse,1 tsp,1 tsp,33.0kcal,3.5g,30.0mg,0.1g,0.0g,,,1,33,3.5,30,0.1,0
+Dijon Mustard,1tsp,1tsp,5.0kcal,0.0g,120.0mg,0.0g,0.0g,,,1,5,0,120,0,0
+Avocado,1 half,1 piece,240.0kcal,22.0g,11.0mg,13.0g,3.0g,,,1,120,11,5.5,6.5,1.5
+Lettuce (Romaine?),2-3 leaves,1 leaf,4.0kcal,0.0g,2.0mg,1.0g,0.4g,,,1,4,0,2,1,0.4
+Tomato,2 slices,1 slice,8.0kcal,0.0g,2.0mg,2.0g,0.4g,,,1,16,0,4,4,0.8
+cucumber ,1 half,1/2 cucumber,23.0kcal,0.2g,3.0mg,5.0g,1.0g,,,1,23,0.2,3,5,1
+red onion,1 fourth,1/4 onion,11.0kcal,0.0g,1.0mg,3.0g,0.3g,,,1,11,0,1,3,0.3
+sprouts,1/4 cup,,,,,,,,,1,,,,,
+salt,pinch,1 tsp,0.0kcal,0.0g,2300.0mg,0.0g,0.0g,,,1,0,0,2300,0,0
+Totals/Meal Total,,,,,,,,,,1,692,24.7,3465.5,100.6,26
