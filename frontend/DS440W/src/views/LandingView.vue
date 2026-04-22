@@ -353,11 +353,11 @@
               <v-window-item :value="2">
                 <div v-for="(section, sIndex) in recipes[selectedTab].instructions" :key="section.section || sIndex">
                   <!-- Optional section title -->
-                  <h3 v-if="section.section" style="margin-top: 16px; color:#000000;">
+                  <h3 v-if="section.section" class = "text-center" style="margin-top: 16px; color:#000000;">
                     {{ section.section }}
                   </h3>
 
-                  <ol class="recipe-checklist" style="max-width: 600px; margin: 0;">
+                  <ol class="recipe-checklist" style="max-width: 600px; margin: 0 auto;">
                     <li v-for="(step, stepIndex) in section.steps" :key="step">
                       <label style="cursor: pointer; display: flex; align-items: center;">
                         <input
